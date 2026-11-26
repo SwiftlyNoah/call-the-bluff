@@ -8,8 +8,8 @@ Reads only files already in the repo; computes nothing new:
                   20 tilts per class; values already in exploitability = nash_conv / 2).
                   No longer used by main.tex (the endgame book is not served); kept for the archive.
   fig_bound.pdf   the BOUND_ROWS table below, copied by hand from board/rb-track/bound-ledger.md
-                  (upper bounds and probe lower bounds) and board/rb-track/progress.md (probe,
-                  2026-11-21 03:50). Sum units (the papers' eps_G, cap 2).
+                  (upper bounds and probe lower bounds), board/rb-track/served-now.json and
+                  board/rb-track/progress.md (probe readings). Sum units (the papers' eps_G, cap 2).
 """
 
 import json
@@ -51,7 +51,7 @@ plt.rcParams.update({
 def fig_guards():
     d = json.loads((ROOT / "deck/assets/rb_before_after.json").read_text())
     rows = sorted(d["rows"], key=lambda r: (r["old"], r["new"]), reverse=True)
-    names = [("old", "Old guards\n(served to Nov 21)"),
+    names = [("old", "Original guards"),
              ("new", "Fixed guards"),
              ("book", "Endgame book\n(certified, not served)")]
     floor = 1e-7
@@ -116,26 +116,27 @@ def fig_tilt():
     fig.savefig(OUT / "fig_tilt.png", dpi=220)
 
 
-# One row per bot the site has served, oldest first:
-#   (when, what the bot played, certified bound or None, probe take or None, probe SE,
+# One row per stage of the site's bot, in order:
+#   (what the bot played, certified bound or None, probe take or None, probe SE,
 #    True when the probe reading is interim: it then gets an asterisk, explained in the caption)
-# Sources: bound-ledger.md "Upper bounds" (0.6992, 0.30206458009, 0.2522332185, 0.2197367419),
-# "Probe lower bounds" (0.232, 0.2632, 0.2407) and the r4y deploy record (0.189, SE 0.045, at 900
-# of 2,000 pairs); progress.md probe 2026-11-21 03:50 (a_old 1.1880 SE 0.0201, c_noprune_book
-# 1.1227 SE 0.0206, 3,000 pairs each).
-# REFRESH: the LAST row is what prod serves (store r4y, since 2026-11-23 12:55 ET). If a later
-# store replaces it, drop "(served now)" from that row and append the new one (take None while it
-# has no probe reading); when the r4y probe finishes its 2,000 pairs, replace 0.2097 / 0.0356 (1,450 pairs), set
-# its flag to False and drop the "starred reading" sentence from the caption in main.tex.
+# Stages are named, never dated. Sources: bound-ledger.md "Upper bounds" (0.6992, 0.30206458009,
+# 0.2522332185, 0.2197367419, 0.1952587231, 0.1524517272), "Probe lower bounds" (0.232, 0.2632,
+# 0.2407), served-now.json history (0.2097 SE 0.0356 final; 0.2560 SE 0.0429 final) and
+# progress.md (original bot 1.1880 SE 0.0201, fixed guards with the book 1.1227 SE 0.0206, 3,000
+# pairs each; current bot interim 0.0880 SE 0.0502 at 750 of 1,000 pairs).
+# REFRESH: the LAST row is the current bot (served-now.json). If a later store replaces it, drop
+# "(current bot)" from that row and append the new one (take None while it has no probe reading);
+# when the probe on the current bot finishes, replace 0.0880 / 0.0502, set its flag to False and
+# drop the "starred reading" sentence from the caption in main.tex.
 BOUND_ROWS = [
-    ("to Nov 21", "per-round solver, pruning guards", None, 1.1880, 0.0201, False),
-    ("Nov 21", "guards fixed, endgame book", None, 1.1227, 0.0206, False),
-    ("Nov 22", "told-type policy over the book", 0.6992, 0.232, 0.030, False),
-    ("Nov 23", "told-type policy everywhere", 0.3021, 0.2632, 0.0192, False),
-    ("Nov 23", "hand hidden for one round", 0.2522, 0.2407, 0.0249, False),
-    ("Nov 23", "hidden for two rounds", 0.2197, 0.2097, 0.0356, False),
-    ("Nov 23", "hidden at every round end", 0.1953, 0.2560, 0.0429, False),
-    ("Nov 23", "keeps drawing (served now)", 0.1525, 0.0880, 0.0502, True),
+    ("original bot: per-round solver, guards", None, 1.1880, 0.0201, False),
+    ("guards fixed, endgame book", None, 1.1227, 0.0206, False),
+    ("told-type policy over the book", 0.6992, 0.232, 0.030, False),
+    ("told-type policy in every class", 0.3021, 0.2632, 0.0192, False),
+    ("hand hidden for one round", 0.2522, 0.2407, 0.0249, False),
+    ("hand hidden for two rounds", 0.2197, 0.2097, 0.0356, False),
+    ("hand hidden at every round end", 0.1953, 0.2560, 0.0429, False),
+    ("keeps drawing policies (current bot)", 0.1525, 0.0880, 0.0502, True),
 ]
 
 
@@ -143,10 +144,10 @@ def fig_bound():
     rows = BOUND_ROWS
     n = len(rows)
     xmax = 1.3
-    fig, ax = plt.subplots(figsize=(6.5, 1.6))
-    fig.subplots_adjust(left=0.345, right=0.8, top=0.86, bottom=0.2)
+    fig, ax = plt.subplots(figsize=(6.5, 1.45))
+    fig.subplots_adjust(left=0.32, right=0.8, top=0.85, bottom=0.22)
     half = 0.3
-    for i, (when, what, bound, take, se, interim) in enumerate(rows):
+    for i, (what, bound, take, se, interim) in enumerate(rows):
         y = n - 1 - i
         if bound is not None:
             ax.fill_between([bound, xmax], y - half, y + half, color="#e3edfa", lw=0, zorder=1)
@@ -155,9 +156,7 @@ def fig_bound():
             ax.plot([take - 1.96 * se, take + 1.96 * se], [y, y], color=ORANGE, lw=1.1, zorder=4,
                     solid_capstyle="butt")
             ax.scatter([take], [y], s=17, color=ORANGE, edgecolors="white", linewidths=0.6, zorder=5)
-        ax.text(-0.755, y, when, transform=ax.get_yaxis_transform(), ha="left", va="center",
-                fontsize=7, color=INK2, clip_on=False)
-        ax.text(-0.595, y, what, transform=ax.get_yaxis_transform(), ha="left", va="center",
+        ax.text(-0.68, y, what, transform=ax.get_yaxis_transform(), ha="left", va="center",
                 fontsize=7, color=INK, clip_on=False)
         probe = "not yet run" if take is None else f"{take:.3f} ({se:.3f}){'*' if interim else ''}"
         ax.text(1.03, y, "none" if bound is None else f"{bound:.4f}", ha="left", va="center",
