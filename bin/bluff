@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# bin/bluff check GAME.game.json STRATEGY.strategy.json
+# Prints a bluff-verdict-v1 verdict computed by the compiled, verified Dafny core
+# (dafny/core) and exits 0. Exit 2 on a malformed or contract-breaking game or strategy
+# (including imperfect recall) or one past a stated size limit, with the reason on stderr.
+# Exit 1 on an internal error (never with a verdict), including a missing, stale or edited
+# compiled core: run bin/audit (it verifies, then compiles and stamps). See dafny/core/README.md.
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+usage() { echo "usage: bin/bluff check GAME.game.json STRATEGY.strategy.json" >&2; exit 2; }
+[ $# -eq 3 ] && [ "$1" = check ] || usage
+exec uv run --quiet --project "$ROOT" python "$ROOT/dafny/core/adapter.py" "$2" "$3"

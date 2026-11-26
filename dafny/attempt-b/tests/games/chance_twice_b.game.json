@@ -1,0 +1,328 @@
+{
+ "format": "bluff-game-v1",
+ "name": "chance_twice_b",
+ "description": "chance at two depths, opponent blind to the second draw",
+ "root": 0,
+ "nodes": [
+  {
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "u",
+     "prob": "1/4",
+     "child": 1
+    },
+    {
+     "label": "d",
+     "prob": "3/4",
+     "child": 16
+    }
+   ],
+   "id": 0
+  },
+  {
+   "kind": "decision",
+   "player": 0,
+   "infoset": "p0:u",
+   "actions": [
+    {
+     "label": "A",
+     "child": 2
+    },
+    {
+     "label": "B",
+     "child": 9
+    }
+   ],
+   "id": 1
+  },
+  {
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "x",
+     "prob": "1/3",
+     "child": 3
+    },
+    {
+     "label": "y",
+     "prob": "2/3",
+     "child": 6
+    }
+   ],
+   "id": 2
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "p1:A",
+   "actions": [
+    {
+     "label": "l",
+     "child": 4
+    },
+    {
+     "label": "r",
+     "child": 5
+    }
+   ],
+   "id": 3
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "2",
+   "id": 4
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-2",
+   "id": 5
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "p1:A",
+   "actions": [
+    {
+     "label": "l",
+     "child": 7
+    },
+    {
+     "label": "r",
+     "child": 8
+    }
+   ],
+   "id": 6
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "1/2",
+   "id": 7
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "0",
+   "id": 8
+  },
+  {
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "x",
+     "prob": "1/3",
+     "child": 10
+    },
+    {
+     "label": "y",
+     "prob": "2/3",
+     "child": 13
+    }
+   ],
+   "id": 9
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "p1:B",
+   "actions": [
+    {
+     "label": "l",
+     "child": 11
+    },
+    {
+     "label": "r",
+     "child": 12
+    }
+   ],
+   "id": 10
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "2",
+   "id": 11
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "1",
+   "id": 12
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "p1:B",
+   "actions": [
+    {
+     "label": "l",
+     "child": 14
+    },
+    {
+     "label": "r",
+     "child": 15
+    }
+   ],
+   "id": 13
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "1/2",
+   "id": 14
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "0",
+   "id": 15
+  },
+  {
+   "kind": "decision",
+   "player": 0,
+   "infoset": "p0:d",
+   "actions": [
+    {
+     "label": "A",
+     "child": 17
+    },
+    {
+     "label": "B",
+     "child": 24
+    }
+   ],
+   "id": 16
+  },
+  {
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "x",
+     "prob": "1/3",
+     "child": 18
+    },
+    {
+     "label": "y",
+     "prob": "2/3",
+     "child": 21
+    }
+   ],
+   "id": 17
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "p1:A",
+   "actions": [
+    {
+     "label": "l",
+     "child": 19
+    },
+    {
+     "label": "r",
+     "child": 20
+    }
+   ],
+   "id": 18
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-1",
+   "id": 19
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-2",
+   "id": 20
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "p1:A",
+   "actions": [
+    {
+     "label": "l",
+     "child": 22
+    },
+    {
+     "label": "r",
+     "child": 23
+    }
+   ],
+   "id": 21
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "1/2",
+   "id": 22
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "3",
+   "id": 23
+  },
+  {
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "x",
+     "prob": "1/3",
+     "child": 25
+    },
+    {
+     "label": "y",
+     "prob": "2/3",
+     "child": 28
+    }
+   ],
+   "id": 24
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "p1:B",
+   "actions": [
+    {
+     "label": "l",
+     "child": 26
+    },
+    {
+     "label": "r",
+     "child": 27
+    }
+   ],
+   "id": 25
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-1",
+   "id": 26
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "1",
+   "id": 27
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "p1:B",
+   "actions": [
+    {
+     "label": "l",
+     "child": 29
+    },
+    {
+     "label": "r",
+     "child": 30
+    }
+   ],
+   "id": 28
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "1/2",
+   "id": 29
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "3",
+   "id": 30
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "format": "bluff-strategy-v1",
+ "game": "rb-h1",
+ "producer": "games/redblack/solve.py CFR+ 2000 iters, rounded limit_denominator(2), exact NashConv 0",
+ "probs": {
+  "p0|deal:B r1:s0 ro:B": {
+   "bid 1R": "1/2",
+   "bid 2R": "0",
+   "bid 1B": "1/2",
+   "bid 2B": "0"
+  },
+  "p1|deal:B r1:s0 ro:B 0:1R": {
+   "challenge": "1",
+   "bid 2R": "0"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0",
+   "flip1": "1"
+  },
+  "p1|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "1/2",
+   "flip1": "1/2"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:ch": {
+   "flip0": "1/2",
+   "flip1": "1/2"
+  },
+  "p1|deal:B r1:s0 ro:B 0:1B": {
+   "challenge": "0",
+   "bid 2B": "1"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1",
+   "flip1": "0"
+  },
+  "p1|deal:B r1:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "1/2",
+   "flip1": "1/2"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:ch": {
+   "flip0": "1/2",
+   "flip1": "1/2"
+  },
+  "p1|deal:R r1:s0 ro:R 0:1R": {
+   "challenge": "0",
+   "bid 2R": "1"
+  },
+  "p1|deal:R r1:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "1/2",
+   "flip1": "1/2"
+  },
+  "p1|deal:R r1:s0 ro:R 0:1B": {
+   "challenge": "1",
+   "bid 2B": "0"
+  },
+  "p1|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "1/2",
+   "flip1": "1/2"
+  },
+  "p0|deal:R r1:s0 ro:R": {
+   "bid 1R": "1/2",
+   "bid 2R": "0",
+   "bid 1B": "1/2",
+   "bid 2B": "0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1",
+   "flip1": "0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:ch": {
+   "flip0": "1/2",
+   "flip1": "1/2"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0",
+   "flip1": "1"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:ch": {
+   "flip0": "1/2",
+   "flip1": "1/2"
+  }
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "format": "bluff-strategy-v1",
+ "game": "rb-pennies-inner",
+ "producer": "zoo/mutants/regret_floor_instantaneous.py --algo cfrplus",
+ "probs": {
+  "p1|start:R|RB L1": {
+   "discard R": "0.4990506482987309",
+   "discard B": "0.5009493517012691"
+  },
+  "p0|start:R|RB L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.24998458462921347",
+   "bid 2R": "0.5000308307415731",
+   "bid 1B": "0.24998458462921347",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "9.446607148948983e-08",
+   "bid 2R": "0.9999999055339285"
+  },
+  "p1|start:R|RB L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9999999055339285",
+   "bid 2B": "9.446607148948983e-08"
+  },
+  "p1|start:R|RB L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  }
+ }
+}

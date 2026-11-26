@@ -1,0 +1,100 @@
+{
+ "format": "bluff-game-v1",
+ "name": "forgetful_a",
+ "description": "imperfect recall (attempt-a test, must be rejected)",
+ "root": 0,
+ "nodes": [
+  {
+   "id": 0,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "l",
+     "prob": "1/2",
+     "child": 1
+    },
+    {
+     "label": "r",
+     "prob": "1/2",
+     "child": 2
+    }
+   ]
+  },
+  {
+   "id": 1,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "Y1",
+   "actions": [
+    {
+     "label": "go",
+     "child": 3
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "Y2",
+   "actions": [
+    {
+     "label": "go",
+     "child": 4
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "X",
+   "actions": [
+    {
+     "label": "a",
+     "child": 5
+    },
+    {
+     "label": "b",
+     "child": 6
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "X",
+   "actions": [
+    {
+     "label": "a",
+     "child": 7
+    },
+    {
+     "label": "b",
+     "child": 8
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 6,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 7,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 8,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  }
+ ]
+}

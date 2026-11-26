@@ -1,0 +1,5003 @@
+{
+ "format": "bluff-strategy-v1",
+ "game": "rb-12",
+ "producer": "zoo/mutants/info_leak_key.py --algo cfrplus",
+ "probs": {
+  "p0|deal:B r1:s0 ro:B": {
+   "bid 1R": "1.3786210343104313e-07",
+   "bid 2R": "0.49199031732586074",
+   "bid 3R": "0.0",
+   "bid 1B": "0.5080094844973656",
+   "bid 2B": "6.031467025108135e-08",
+   "bid 3B": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R": {
+   "challenge": "0.3333333333333333",
+   "bid 2R": "0.3333333333333333",
+   "bid 3R": "0.3333333333333333"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R": {
+   "challenge": "1.0",
+   "bid 3R": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f0B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:2R 0:ch f0B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f0B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:2R 0:ch f0B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f0B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:2R 0:ch f0B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f0B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:2R 0:ch f0B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f0B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f1B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.4285714285714286",
+   "bid 2R": "0.0",
+   "bid 1B": "0.4285714285714286",
+   "bid 2B": "0.1428571428571428"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:2R 0:ch f1B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f1B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:2R 0:ch f1B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f1B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:2R 0:ch f1B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f1B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:2R 0:ch f1B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f1B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:3R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:3R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f0B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f0B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f0B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f0B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f0B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.4285714285714286",
+   "bid 2R": "0.0",
+   "bid 1B": "0.4285714285714286",
+   "bid 2B": "0.1428571428571428"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2R": {
+   "challenge": "0.9999997501249376",
+   "bid 3R": "2.498750624687656e-07"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2R 1:3R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f0B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f0B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f0B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f0B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f0B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.42857142857142855",
+   "bid 2R": "0.0",
+   "bid 1B": "0.42857142857142855",
+   "bid 2B": "0.14285714285714285"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:3R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B": {
+   "challenge": "1.6658337497917706e-07",
+   "bid 2B": "0.99999966683325",
+   "bid 3B": "1.6658337497917706e-07"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:ch f0B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:ch f0B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:ch f0B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:ch f0B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:ch f0B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:ch f0B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:ch f0B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:ch f0B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:ch f0B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:ch f1B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:ch f1B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:ch f1B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:ch f1B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:ch f1B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:ch f1B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:ch f1B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:ch f1B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:ch f1B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B": {
+   "challenge": "1.0",
+   "bid 3B": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:ch": {
+   "flip0": "8.329171523961861e-08",
+   "flip1": "0.9999999167082847"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:ch f1B": {
+   "flip0": "4.16458610885645e-08",
+   "flip1": "0.9999999583541389"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:3B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:3B 1:ch f0B f1B f1B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:3B 1:ch f0B f1B f1B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:3B 1:ch f0B f1B f1B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:3B 1:ch f0B f1B f1B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:3B 1:ch f0B f1B f1B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:3B 1:ch f0B f1B f1B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:3B 1:ch f0B f1B f1B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:3B 1:ch f0B f1B f1B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:3B 1:ch f0B f1B f1B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:3B 1:ch f1B": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:3B 1:ch f1B f0B f1B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:3B 1:ch f1B f0B f1B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:3B 1:ch f1B f0B f1B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:3B 1:ch f1B f0B f1B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:3B 1:ch f1B f0B f1B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:3B 1:ch f1B f0B f1B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:3B 1:ch f1B f0B f1B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:3B 1:ch f1B f0B f1B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:3B 1:ch f1B f0B f1B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:3B 1:ch f1B f1B f0B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:3B 1:ch f1B f1B f0B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:3B 1:ch f1B f1B f0B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:3B 1:ch f1B f1B f0B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:3B 1:ch f1B f1B f0B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:3B 1:ch f1B f1B f0B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:3B 1:ch f1B f1B f0B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:3B 1:ch f1B f1B f0B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:3B 1:ch f1B f1B f0B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:3B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:3B 0:ch f1B": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B": {
+   "challenge": "0.5",
+   "bid 3B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:ch f0B f1B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.24957217090875766",
+   "bid 2R": "0.0",
+   "bid 1B": "0.24957217090875766",
+   "bid 2B": "0.5008556581824847"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:ch f0B f1B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:ch f0B f1B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:ch f0B f1B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:ch f0B f1B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:ch f0B f1B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:ch f0B f1B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:ch f0B f1B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:ch f0B f1B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:ch f1B": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:ch f1B f0B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.25005989167387493",
+   "bid 2R": "0.0",
+   "bid 1B": "0.25005989167387493",
+   "bid 2B": "0.4998802166522502"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:ch f1B f0B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:ch f1B f0B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:ch f1B f0B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:ch f1B f0B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:ch f1B f0B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:ch f1B f0B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:ch f1B f0B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:ch f1B f0B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:ch f1B f1B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:ch f1B f1B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:ch f1B f1B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:ch f1B f1B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:ch f1B f1B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:ch f1B f1B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:ch f1B f1B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:ch f1B f1B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:ch f1B f1B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:3B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:3B 0:ch f1B": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:3B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:3B 1:ch f0B f1B f1B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.0",
+   "bid 2R": "0.0",
+   "bid 1B": "0.0",
+   "bid 2B": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:3B 1:ch f0B f1B f1B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:3B 1:ch f0B f1B f1B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:3B 1:ch f0B f1B f1B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:3B 1:ch f0B f1B f1B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:3B 1:ch f0B f1B f1B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:3B 1:ch f0B f1B f1B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:3B 1:ch f0B f1B f1B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:3B 1:ch f0B f1B f1B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:3B 1:ch f1B": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:3B 1:ch f1B f0B f1B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.0",
+   "bid 2R": "0.0",
+   "bid 1B": "0.0",
+   "bid 2B": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:3B 1:ch f1B f0B f1B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:3B 1:ch f1B f0B f1B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:3B 1:ch f1B f0B f1B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:3B 1:ch f1B f0B f1B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:3B 1:ch f1B f0B f1B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:3B 1:ch f1B f0B f1B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:3B 1:ch f1B f0B f1B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:3B 1:ch f1B f0B f1B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:3B 1:ch f1B f1B f0B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.0",
+   "bid 2R": "0.0",
+   "bid 1B": "0.0",
+   "bid 2B": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:3B 1:ch f1B f1B f0B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:3B 1:ch f1B f1B f0B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:3B 1:ch f1B f1B f0B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:3B 1:ch f1B f1B f0B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:3B 1:ch f1B f1B f0B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:3B 1:ch f1B f1B f0B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:3B 1:ch f1B f1B f0B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:3B 1:ch f1B f1B f0B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0": {
+   "BR": "0.49943285298428797",
+   "RB": "0.500567147015712"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R": {
+   "challenge": "0.08125678908993057",
+   "bid 2R": "0.4593716054550347",
+   "bid 3R": "0.4593716054550347"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0B L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f1B L1": {
+   "discard R": "0.5001078329552716",
+   "discard B": "0.4998921670447284"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "1.8156163442713676e-07",
+   "bid 2R": "0.9999998184383656"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9999998184383656",
+   "bid 2B": "1.8156163442713676e-07"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0B L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f1B L1": {
+   "discard R": "0.5001078329552716",
+   "discard B": "0.4998921670447284"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "1.8156163442713676e-07",
+   "bid 2R": "0.9999998184383656"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9999998184383656",
+   "bid 2B": "1.8156163442713676e-07"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R": {
+   "challenge": "0.9999997498411839",
+   "bid 3R": "2.5015881612079956e-07"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0B L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f1B L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B": {
+   "challenge": "0.11503497922377705",
+   "bid 2B": "0.4424825103881115",
+   "bid 3B": "0.4424825103881115"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:ch f0B L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:ch f0B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:ch f0B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:ch f0B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:ch f0B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:ch f0B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:ch f0B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:ch f0B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:ch f0B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:ch f1B L1": {
+   "discard R": "0.5007023716387433",
+   "discard B": "0.49929762836125674"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:ch f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:ch f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:ch f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:ch f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:ch f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "7.258972330565511e-07",
+   "bid 2R": "0.999999274102767"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:ch f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:ch f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.999999274102767",
+   "bid 2B": "7.258972330565511e-07"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:ch f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch": {
+   "flip0": "0.8854950319169856",
+   "flip1": "0.11450496808301427"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f1R L1": {
+   "discard R": "0.49820800543388377",
+   "discard B": "0.5017919945661163"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:ch f1B f1R L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.4285714285714283",
+   "bid 2R": "0.0",
+   "bid 1B": "0.4285714285714283",
+   "bid 2B": "0.14285714285714335"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:ch f1B f1R L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:ch f1B f1R L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:ch f1B f1R L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:ch f1B f1R L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "8.19955718437448e-07",
+   "bid 2R": "0.9999991800442816"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9999991800442816",
+   "bid 2B": "8.19955718437448e-07"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch": {
+   "flip0": "0.8854950319169856",
+   "flip1": "0.11450496808301427"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0B f1B f1R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f0B f1B f1R L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.4285714285714283",
+   "bid 2R": "0.0",
+   "bid 1B": "0.4285714285714283",
+   "bid 2B": "0.14285714285714335"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0B f1B f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f0B f1B f1R L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0B f1B f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f0B f1B f1R L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0B f1B f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f0B f1B f1R L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0B f1B f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f0B f1B f1R L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0B f1B f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0B f1B f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0B f1B f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0B f1B f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0B f1R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f1B f0B f1R L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.4285714285714283",
+   "bid 2R": "0.0",
+   "bid 1B": "0.4285714285714283",
+   "bid 2B": "0.14285714285714335"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0B f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f1B f0B f1R L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0B f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f1B f0B f1R L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0B f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f1B f0B f1R L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0B f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f1B f0B f1R L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0B f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0B f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0B f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0B f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f1R L1": {
+   "discard R": "0.49820800543388377",
+   "discard B": "0.5017919945661163"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.4285714285714283",
+   "bid 2R": "0.0",
+   "bid 1B": "0.4285714285714283",
+   "bid 2B": "0.14285714285714335"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "8.19955718437448e-07",
+   "bid 2R": "0.9999991800442816"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9999991800442816",
+   "bid 2B": "8.19955718437448e-07"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B": {
+   "challenge": "0.9999997498411839",
+   "bid 3B": "2.5015881612079956e-07"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:ch f0B f1B L1": {
+   "discard R": "0.5012091428389754",
+   "discard B": "0.4987908571610246"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:ch f0B f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.9999998140788051",
+   "bid 2R": "1.8592119483172487e-07"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:ch f0B f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:ch f0B f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "1.8592119483172487e-07",
+   "bid 2B": "0.9999998140788051"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:ch f0B f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:ch f0B f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:ch f0B f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:ch f0B f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:ch f0B f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:ch f1B f0B L1": {
+   "discard R": "0.4998291484241296",
+   "discard B": "0.5001708515758704"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:ch f1B f0B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.9999987016268683",
+   "bid 2R": "1.2983731316472526e-06"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:ch f1B f0B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:ch f1B f0B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "1.2983731316472526e-06",
+   "bid 2B": "0.9999987016268683"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:ch f1B f0B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:ch f1B f0B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:ch f1B f0B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:ch f1B f0B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:ch f1B f0B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0B f1B f1R L1": {
+   "discard R": "0.4982152845310124",
+   "discard B": "0.5017847154689876"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f0B f1B f1R L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.2492122432136176",
+   "bid 2R": "0.0",
+   "bid 1B": "0.2492122432136176",
+   "bid 2B": "0.5015755135727649"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0B f1B f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.9999996209223295",
+   "bid 2R": "3.790776704481357e-07"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f0B f1B f1R L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0B f1B f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f0B f1B f1R L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0B f1B f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "3.790776704481357e-07",
+   "bid 2B": "0.9999996209223295"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f0B f1B f1R L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0B f1B f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f0B f1B f1R L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0B f1B f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0B f1B f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0B f1B f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0B f1B f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0B f1R L1": {
+   "discard R": "0.4982152845310124",
+   "discard B": "0.5017847154689876"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f1B f0B f1R L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.2492122432136176",
+   "bid 2R": "0.0",
+   "bid 1B": "0.2492122432136176",
+   "bid 2B": "0.5015755135727649"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0B f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.9999996209223295",
+   "bid 2R": "3.790776704481357e-07"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f1B f0B f1R L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0B f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f1B f0B f1R L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0B f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "3.790776704481357e-07",
+   "bid 2B": "0.9999996209223295"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f1B f0B f1R L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0B f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f1B f0B f1R L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0B f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0B f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0B f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0B f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f1R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.2492122432136176",
+   "bid 2R": "0.0",
+   "bid 1B": "0.2492122432136176",
+   "bid 2B": "0.5015755135727649"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R": {
+   "challenge": "1.663946345383592e-07",
+   "bid 2R": "0.9999996672107309",
+   "bid 3R": "1.663946345383592e-07"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:ch f1R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:ch f1R L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:ch f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:ch f1R L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:ch f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:ch f1R L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:ch f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:ch f1R L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:ch f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:ch f1R L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:ch f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:ch f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:ch f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:ch f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch": {
+   "flip0": "0.999999916802655",
+   "flip1": "8.319734495636323e-08"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f0B L1": {
+   "discard R": "0.49993201203154913",
+   "discard B": "0.5000679879684508"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.999999893575558",
+   "bid 2R": "1.064244420163405e-07"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "1.064244420163405e-07",
+   "bid 2B": "0.999999893575558"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f0B L1": {
+   "discard R": "0.5017919945661163",
+   "discard B": "0.49820800543388377"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f1R f0B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f0B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.9999991800442816",
+   "bid 2R": "8.19955718437448e-07"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f1R f0B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f0B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f1R f0B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f0B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "8.19955718437448e-07",
+   "bid 2B": "0.9999991800442816"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f1R f0B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f0B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f1R f0B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f0B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f0B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f0B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f0B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f1B L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f1R f1B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.24971369777217597",
+   "bid 2R": "0.0",
+   "bid 1B": "0.24971369777217597",
+   "bid 2B": "0.5005726044556481"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f1R f1B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f1R f1B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f1R f1B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch f1R f1B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:2R 0:3R 1:ch f1R": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0B L1": {
+   "discard R": "0.49993201203154913",
+   "discard B": "0.5000679879684508"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.999999893575558",
+   "bid 2R": "1.064244420163405e-07"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "1.064244420163405e-07",
+   "bid 2B": "0.999999893575558"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0B L1": {
+   "discard R": "0.5017919945661163",
+   "discard B": "0.49820800543388377"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1R f0B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.9999991800442816",
+   "bid 2R": "8.19955718437448e-07"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1R f0B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1R f0B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "8.19955718437448e-07",
+   "bid 2B": "0.9999991800442816"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1R f0B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1R f0B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f1B L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.24971369777217597",
+   "bid 2R": "0.0",
+   "bid 1B": "0.24971369777217597",
+   "bid 2B": "0.5005726044556481"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R": {
+   "challenge": "0.6696111852908792",
+   "bid 3R": "0.33038881470912085"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:ch f1R": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0B L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0B L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1R f0B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1R f0B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1R f0B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1R f0B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1R f0B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f1B L1": {
+   "discard R": "0.5017847154689876",
+   "discard B": "0.4982152845310124"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.42857142857142855",
+   "bid 2R": "0.0",
+   "bid 1B": "0.42857142857142855",
+   "bid 2B": "0.14285714285714285"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "3.790776704481357e-07",
+   "bid 2R": "0.9999996209223295"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9999996209223295",
+   "bid 2B": "3.790776704481357e-07"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:3R 1:ch f1R": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B": {
+   "challenge": "0.9999996672107309",
+   "bid 2B": "1.663946345383592e-07",
+   "bid 3B": "1.663946345383592e-07"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:ch f0B L1": {
+   "discard R": "0.5036089949776661",
+   "discard B": "0.4963910050223339"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:ch f0B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.999998981147238",
+   "bid 2R": "1.018852762132991e-06"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:ch f0B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:ch f0B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "1.018852762132991e-06",
+   "bid 2B": "0.999998981147238"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:ch f0B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:ch f0B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:ch f0B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:ch f0B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:ch f0B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0B f1R L1": {
+   "discard R": "0.4998921670447284",
+   "discard B": "0.5001078329552716"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:ch f0B f1R L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0B f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.9999998184383656",
+   "bid 2R": "1.8156163442713676e-07"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:ch f0B f1R L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0B f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:ch f0B f1R L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0B f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "1.8156163442713676e-07",
+   "bid 2B": "0.9999998184383656"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:ch f0B f1R L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0B f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:ch f0B f1R L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0B f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0B f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0B f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0B f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f1R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:ch f1R L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:ch f1R L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:ch f1R L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:ch f1R L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:2B 0:ch f1R L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0B f1R L1": {
+   "discard R": "0.4998921670447284",
+   "discard B": "0.5001078329552716"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f0B f1R L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0B f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.9999998184383656",
+   "bid 2R": "1.8156163442713676e-07"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f0B f1R L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0B f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f0B f1R L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0B f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "1.8156163442713676e-07",
+   "bid 2B": "0.9999998184383656"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f0B f1R L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0B f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f0B f1R L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0B f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0B f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0B f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0B f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f1R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f1R L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f1R L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f1R L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f1R L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:3B 0:ch f1R L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B": {
+   "challenge": "0.9999997504080482",
+   "bid 3B": "2.4959195180753885e-07"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0B f1R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f0B f1R L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0B f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f0B f1R L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0B f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f0B f1R L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0B f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f0B f1R L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0B f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f0B f1R L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0B f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0B f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0B f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0B f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f1R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f1R L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f1R L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f1R L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f1R L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:3B 0:ch f1R L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R": {
+   "challenge": "0.3333333333333333",
+   "bid 2R": "0.3333333333333333",
+   "bid 3R": "0.3333333333333333"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:ch f1R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:ch f1R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:ch f1R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:ch f1R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:ch f0B L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:ch f0B L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:ch f0B L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:ch f0B L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:ch f1R": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:ch f1R f0B L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:ch f1R f0B L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:ch f1R f0B L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:ch f1R f0B L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:3R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:3R 0:ch f1R": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:3R 0:ch f1R f0B L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:3R 0:ch f1R f0B L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:3R 0:ch f1R f0B L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:3R 0:ch f1R f0B L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1R f1R f0B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:3R 0:ch f1R f1R f0B L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1R f1R f0B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:3R 0:ch f1R f1R f0B L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1R f1R f0B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:3R 0:ch f1R f1R f0B L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1R f1R f0B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:3R 0:ch f1R f1R f0B L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:3R 0:ch f1R f1R f0B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R": {
+   "challenge": "0.5",
+   "bid 3R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:ch f1R f1R L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:ch f1R f1R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:ch f1R f1R L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:ch f1R f1R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:ch f1R f1R L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:ch f1R f1R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:ch f1R f1R L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:ch f1R f1R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:ch f1R f1R L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:3R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:3R 0:ch f0B L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:3R 0:ch f1R": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:3R 0:ch f1R f0B L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:3R 0:ch f1R f0B L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:3R 0:ch f1R f0B L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:3R 0:ch f1R f0B L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1R f1R f0B L1 d1 r2:s0 ro:B": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:3R 0:ch f1R f1R f0B L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1R f1R f0B L1 d1 r2:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:3R 0:ch f1R f1R f0B L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1R f1R f0B L1 d1 r2:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:3R 0:ch f1R f1R f0B L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1R f1R f0B L1 d1 r2:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:3R 0:ch f1R f1R f0B L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:3R 0:ch f1R f1R f0B L1 d1 r2:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B": {
+   "challenge": "0.3333333333333333",
+   "bid 2B": "0.3333333333333333",
+   "bid 3B": "0.3333333333333333"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:ch f0B L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:ch f0B L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:ch f0B L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:ch f0B L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:2B 0:ch f0B f1R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:2B 0:ch f0B f1R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:2B 0:ch f0B f1R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:2B 0:ch f0B f1R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:2B 0:ch f1R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:2B 0:ch f1R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:2B 0:ch f1R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:2B 0:ch f1R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:3B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:3B 0:ch f0B f1R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:3B 0:ch f0B f1R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:3B 0:ch f0B f1R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:3B 0:ch f0B f1R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2B": {
+   "challenge": "0.5",
+   "bid 3B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2B 1:3B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2B 1:3B 0:ch f0B f1R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2B 1:3B 0:ch f0B f1R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2B 1:3B 0:ch f0B f1R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2B 1:3B 0:ch f0B f1R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R": {
+   "bid 1R": "0.0",
+   "bid 2R": "0.0",
+   "bid 3R": "1.0",
+   "bid 1B": "0.0",
+   "bid 2B": "0.0",
+   "bid 3B": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:ch f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:ch f0R L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:ch f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:ch f0R L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:ch f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:ch f0R L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:ch f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:ch f0R L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:ch f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R": {
+   "challenge": "0.5",
+   "bid 3R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:ch f0R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.250094371499219",
+   "bid 2R": "0.49981125700156204",
+   "bid 1B": "0.250094371499219",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:2R 0:ch f0R f1B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:2R 0:ch f0R f1B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:2R 0:ch f0R f1B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:2R 0:ch f0R f1B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:ch f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.250094371499219",
+   "bid 2R": "0.49981125700156204",
+   "bid 1B": "0.250094371499219",
+   "bid 2B": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:ch f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:ch f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:ch f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:ch f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:3R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.250094371499219",
+   "bid 2R": "0.49981125700156204",
+   "bid 1B": "0.250094371499219",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.250094371499219",
+   "bid 2R": "0.49981125700156204",
+   "bid 1B": "0.250094371499219",
+   "bid 2B": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.4285714285714285",
+   "bid 2R": "0.14285714285714302",
+   "bid 1B": "0.4285714285714285",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.4285714285714285",
+   "bid 2R": "0.14285714285714302",
+   "bid 1B": "0.4285714285714285",
+   "bid 2B": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:3R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:ch f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.24904320026843216",
+   "bid 2R": "0.5019135994631356",
+   "bid 1B": "0.24904320026843216",
+   "bid 2B": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:ch f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:ch f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:ch f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:ch f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B": {
+   "challenge": "0.5",
+   "bid 3B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f1B f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.24971369777217597",
+   "bid 2R": "0.5005726044556481",
+   "bid 1B": "0.24971369777217597",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:ch f1B f0R L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:ch f1B f0R L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:ch f1B f0R L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:2B 0:ch f1B f0R L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:3B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:3B 1:ch f1B": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.24971369777217597",
+   "bid 2R": "0.5005726044556481",
+   "bid 1B": "0.24971369777217597",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1B f1B f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:3B 0:ch f1B f1B f0R L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1B f1B f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:3B 0:ch f1B f1B f0R L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1B f1B f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:3B 0:ch f1B f1B f0R L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1B f1B f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:1B 1:3B 0:ch f1B f1B f0R L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1B f1B f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:ch f1B": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:ch f1B f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:ch f1B f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:ch f1B f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:ch f1B f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:ch f1B f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.42857142857142855",
+   "bid 2R": "0.14285714285714285",
+   "bid 1B": "0.42857142857142855",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1B f1B f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.5",
+   "bid 2R": "0.0",
+   "bid 1B": "0.5",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:3B 0:ch f1B f1B f0R L1 dis:B r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1B f1B f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:3B 0:ch f1B f1B f0R L1 dis:B r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1B f1B f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:3B 0:ch f1B f1B f0R L1 dis:B r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1B f1B f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:BB r1:s0 ro:BB 0:2B 1:3B 0:ch f1B f1B f0R L1 dis:B r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1B f1B f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:3B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:3B 1:ch f1B": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:ch f0R L1": {
+   "discard R": "0.4963910050223339",
+   "discard B": "0.5036089949776661"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:ch f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:ch f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:ch f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:ch f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:ch f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "1.018852762132991e-06",
+   "bid 2R": "0.999998981147238"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:ch f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:ch f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.999998981147238",
+   "bid 2B": "1.018852762132991e-06"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:ch f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0R f1B L1": {
+   "discard R": "0.5001078329552716",
+   "discard B": "0.4998921670447284"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "1.8156163442713676e-07",
+   "bid 2R": "0.9999998184383656"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9999998184383656",
+   "bid 2B": "1.8156163442713676e-07"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0R f1B L1": {
+   "discard R": "0.5001078329552716",
+   "discard B": "0.4998921670447284"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "1.8156163442713676e-07",
+   "bid 2R": "0.9999998184383656"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9999998184383656",
+   "bid 2B": "1.8156163442713676e-07"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0R f1B L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f0R L1": {
+   "discard R": "0.5000679879684508",
+   "discard B": "0.49993201203154913"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "1.064244420163405e-07",
+   "bid 2R": "0.999999893575558"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.999999893575558",
+   "bid 2B": "1.064244420163405e-07"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f0R L1": {
+   "discard R": "0.49820800543388377",
+   "discard B": "0.5017919945661163"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "8.19955718437448e-07",
+   "bid 2R": "0.9999991800442816"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9999991800442816",
+   "bid 2B": "8.19955718437448e-07"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f1B f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.24971369777217597",
+   "bid 2R": "0.5005726044556481",
+   "bid 1B": "0.24971369777217597",
+   "bid 2B": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0R L1": {
+   "discard R": "0.5000679879684508",
+   "discard B": "0.49993201203154913"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "1.064244420163405e-07",
+   "bid 2R": "0.999999893575558"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.999999893575558",
+   "bid 2B": "1.064244420163405e-07"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0R L1": {
+   "discard R": "0.49820800543388377",
+   "discard B": "0.5017919945661163"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "8.19955718437448e-07",
+   "bid 2R": "0.9999991800442816"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9999991800442816",
+   "bid 2B": "8.19955718437448e-07"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.24971369777217597",
+   "bid 2R": "0.5005726044556481",
+   "bid 1B": "0.24971369777217597",
+   "bid 2B": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.42857142857142855",
+   "bid 2R": "0.14285714285714285",
+   "bid 1B": "0.42857142857142855",
+   "bid 2B": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:ch f0R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:ch f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:ch f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:ch f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:ch f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:ch f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:ch f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:ch f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:ch f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:ch f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:ch f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:ch f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:ch f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:ch f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:ch f1R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.4285714285714283",
+   "bid 2R": "0.14285714285714335",
+   "bid 1B": "0.4285714285714283",
+   "bid 2B": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:3R 1:ch f1R": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0R f1R f1B L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.4285714285714283",
+   "bid 2R": "0.14285714285714335",
+   "bid 1B": "0.4285714285714283",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0R f1R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0R f1R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0R f1R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0R f1R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0R f1R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0R f1R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0R f1R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0R f1R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0R f1B L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.4285714285714283",
+   "bid 2R": "0.14285714285714335",
+   "bid 1B": "0.4285714285714283",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.4285714285714283",
+   "bid 2R": "0.14285714285714335",
+   "bid 1B": "0.4285714285714283",
+   "bid 2B": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:ch f0R f1R L1": {
+   "discard R": "0.4987908571610246",
+   "discard B": "0.5012091428389754"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:ch f0R f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:ch f0R f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:ch f0R f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:ch f0R f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:ch f0R f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:ch f0R f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:ch f0R f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:ch f0R f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:ch f0R f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:ch f0R f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "1.8592119483172487e-07",
+   "bid 2R": "0.9999998140788051"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:ch f0R f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:ch f0R f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9999998140788051",
+   "bid 2B": "1.8592119483172487e-07"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:ch f0R f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:ch f1R": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:ch f1R f0R L1": {
+   "discard R": "0.5001708515758704",
+   "discard B": "0.4998291484241296"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:ch f1R f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:ch f1R f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:ch f1R f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:ch f1R f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:ch f1R f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:ch f1R f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:ch f1R f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:ch f1R f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:ch f1R f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:ch f1R f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "1.2983731316472526e-06",
+   "bid 2R": "0.9999987016268683"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:ch f1R f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:ch f1R f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9999987016268683",
+   "bid 2B": "1.2983731316472526e-06"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:ch f1R f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0R f1R f1B L1": {
+   "discard R": "0.5017847154689876",
+   "discard B": "0.4982152845310124"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.2492122432136176",
+   "bid 2R": "0.5015755135727649",
+   "bid 1B": "0.2492122432136176",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0R f1R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0R f1R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0R f1R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0R f1R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0R f1R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "3.790776704481357e-07",
+   "bid 2R": "0.9999996209223295"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0R f1R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0R f1R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9999996209223295",
+   "bid 2B": "3.790776704481357e-07"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0R f1R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0R f1B L1": {
+   "discard R": "0.5017847154689876",
+   "discard B": "0.4982152845310124"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.2492122432136176",
+   "bid 2R": "0.5015755135727649",
+   "bid 1B": "0.2492122432136176",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "3.790776704481357e-07",
+   "bid 2R": "0.9999996209223295"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9999996209223295",
+   "bid 2B": "3.790776704481357e-07"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.2492122432136176",
+   "bid 2R": "0.5015755135727649",
+   "bid 1B": "0.2492122432136176",
+   "bid 2B": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:3R 1:ch f1R": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:ch f0R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:ch f0R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:ch f0R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:ch f0R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:3R 1:ch f0R f1R f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:3R 1:ch f0R f1R f1R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:3R 1:ch f0R f1R f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:3R 1:ch f0R f1R f1R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:3R 1:ch f0R f1R f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:3R 1:ch f0R f1R f1R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:3R 1:ch f0R f1R f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:3R 1:ch f0R f1R f1R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:3R 1:ch f0R f1R f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:3R 1:ch f1R f0R f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:3R 1:ch f1R f0R f1R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:3R 1:ch f1R f0R f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:3R 1:ch f1R f0R f1R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:3R 1:ch f1R f0R f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:3R 1:ch f1R f0R f1R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:3R 1:ch f1R f0R f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:3R 1:ch f1R f0R f1R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:3R 1:ch f1R f0R f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:3R 1:ch f1R f1R f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:3R 1:ch f1R f1R f0R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:3R 1:ch f1R f1R f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:3R 1:ch f1R f1R f0R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:3R 1:ch f1R f1R f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:3R 1:ch f1R f1R f0R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:3R 1:ch f1R f1R f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1R 1:2R 0:3R 1:ch f1R f1R f0R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:2R 0:3R 1:ch f1R f1R f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:ch f0R f1R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:ch f0R f1R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:ch f0R f1R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:ch f0R f1R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:ch f1R f0R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:ch f1R f0R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:ch f1R f0R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2R 1:ch f1R f0R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:ch f1R f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:ch f1R f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:ch f1R f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:ch f1R f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:ch f1R f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:3R 1:ch f0R f1R f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.0",
+   "bid 2R": "1.0",
+   "bid 1B": "0.0",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:3R 1:ch f0R f1R f1R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:3R 1:ch f0R f1R f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:3R 1:ch f0R f1R f1R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:3R 1:ch f0R f1R f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:3R 1:ch f0R f1R f1R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:3R 1:ch f0R f1R f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:3R 1:ch f0R f1R f1R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:3R 1:ch f0R f1R f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:3R 1:ch f1R f0R f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.0",
+   "bid 2R": "1.0",
+   "bid 1B": "0.0",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:3R 1:ch f1R f0R f1R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:3R 1:ch f1R f0R f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:3R 1:ch f1R f0R f1R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:3R 1:ch f1R f0R f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:3R 1:ch f1R f0R f1R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:3R 1:ch f1R f0R f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:3R 1:ch f1R f0R f1R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:3R 1:ch f1R f0R f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:3R 1:ch f1R f1R f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.0",
+   "bid 2R": "1.0",
+   "bid 1B": "0.0",
+   "bid 2B": "0.0"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:3R 1:ch f1R f1R f0R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:3R 1:ch f1R f1R f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:3R 1:ch f1R f1R f0R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:3R 1:ch f1R f1R f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:3R 1:ch f1R f1R f0R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:3R 1:ch f1R f1R f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:3R 1:ch f1R f1R f0R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:3R 1:ch f1R f1R f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|deal:RR r1:s0 ro:RR 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  }
+ }
+}

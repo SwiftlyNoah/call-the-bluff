@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# bin/audit [CORE_DIR]: the build gate for the verified core (default dafny/core).
+#   1. Fails if any .dfy file in the core uses assume, {:axiom}, {:verify false} or {:extern}
+#      (the adapter is Python, adapter.py, and is the only unverified part of the folder).
+#   2. Fails if `dafny audit` reports any finding.
+#   3. Runs `dafny verify` on the core and compiles it (CORE_DIR/build.sh), which records the
+#      verified sources' hash so bin/bluff only ever runs verified code.
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+CORE="$(cd "${1:-$ROOT/dafny/core}" && pwd)"
+cd "$CORE"
+shopt -s nullglob
+dfy=(*.dfy)
+if [ ${#dfy[@]} -eq 0 ]; then echo "audit: FAIL: no .dfy files in $CORE" >&2; exit 1; fi
+echo "audit: core $CORE (${dfy[*]})"
+if grep -nE '\bassume\b|\{:[[:space:]]*axiom|\{:[[:space:]]*verify[[:space:]]+false|\{:[[:space:]]*extern' "${dfy[@]}"; then
+  echo "audit: FAIL: forbidden construct (assume, {:axiom}, {:verify false} or {:extern}) in the core" >&2
+  exit 1
+fi
+echo "audit: grep clean: no assume, {:axiom}, {:verify false} or {:extern}"
+out=$(dafny audit "${dfy[@]}" 2>&1) || { echo "$out" >&2; echo "audit: FAIL: dafny audit did not run cleanly" >&2; exit 1; }
+if ! grep -q "completed with 0 findings" <<<"$out"; then
+  echo "$out" >&2
+  echo "audit: FAIL: dafny audit reported findings" >&2
+  exit 1
+fi
+echo "audit: dafny audit: 0 findings"
+./build.sh
+echo "audit: PASS"

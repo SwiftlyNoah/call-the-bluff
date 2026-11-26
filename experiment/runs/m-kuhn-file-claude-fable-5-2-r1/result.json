@@ -1,0 +1,200 @@
+{
+ "format": "bluff-experiment-trial-v1",
+ "run_id": "m-kuhn-file-claude-fable-5-2-r1",
+ "game": "kuhn",
+ "variant": "file",
+ "model_requested": "claude-fable-5-2",
+ "game_file": "games/out/kuhn.game.json",
+ "game_file_sha256": "31829086a5a36abb678ec0384bcfeea6229fe60983983df1be60a265fa79b068",
+ "prompt_file": "experiment/prompts/kuhn_file.md",
+ "prompt_sha256": "07eb808320f3ba1cb53f982620eb35a8e4e3792ffbd3cfeb07a5f4a5fffeea12",
+ "pot": 2,
+ "timeout_s": 1800,
+ "max_budget_usd": 5.0,
+ "started_at": "2026-11-20T19:18:39-05:00",
+ "isolated_workspace": "/var/folders/km/r10tsfhx0815z44_014w924r0000gn/T/cfr-sc68cxbo/workspace",
+ "agent": {
+  "exit_code": 0,
+  "timed_out": false,
+  "wall_seconds": 108.3,
+  "stderr_tail": "",
+  "is_error": false,
+  "subtype": "success",
+  "num_turns": 7,
+  "duration_ms": 106099,
+  "total_cost_usd": 0.7977116,
+  "usage": {
+   "input_tokens": 12,
+   "cache_creation_input_tokens": 24183,
+   "cache_read_input_tokens": 186838,
+   "output_tokens": 9333,
+   "output_tokens_details": {
+    "thinking_tokens": 1520
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 24183,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 905,
+     "cache_read_input_tokens": 40060,
+     "cache_creation_input_tokens": 2028,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 2028
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard",
+   "fallback_credit": null
+  },
+  "models_used": [
+   "claude-fable-5-2"
+  ],
+  "model_usage": {
+   "claude-fable-5-2": {
+    "inputTokens": 12,
+    "outputTokens": 9333,
+    "cacheReadInputTokens": 186838,
+    "cacheCreationInputTokens": 24183,
+    "webSearchRequests": 0,
+    "costUSD": 0.7977116,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 1520,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 24183,
+    "canonicalModel": "claude-fable-5-2",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "tool_calls": 6,
+  "snoop_hits": []
+ },
+ "ended_at": "2026-11-20T19:20:28-05:00",
+ "claim": {
+  "claim_converged": true,
+  "claimed_exploitability": 1.315118e-06,
+  "claimed_value_p0": -0.055555555551,
+  "confidence": "high",
+  "notes": "CFR+ (regret matching+, alternating updates, linear averaging), 200000 iterations, stopped at the iteration cap rather than the 1e-7 early-stop target. Exploitability and value computed in exact rational arithmetic from strategy.json as written; best-response values (p0 -0.055553880501, p1 0.055556510737) cross-checked by brute-force enumeration of all pure responses. Value matches the known Kuhn value of -1/18. Probabilities are 12-digit decimals summing to exactly 1 per infoset."
+ },
+ "claim_source": "final_reply",
+ "agent_files": [
+  "solve.py",
+  "strategy.json"
+ ],
+ "grading": {
+  "graded_at": "2026-11-20T19:20:28-05:00",
+  "strategy_found": true,
+  "strict": {
+   "checker": "bin/bluff",
+   "command": "bin/bluff check games/out/kuhn.game.json experiment/runs/m-kuhn-file-claude-fable-5-2-r1/agent_files/strategy.json",
+   "exit_code": 0,
+   "stderr_tail": "",
+   "verdict": {
+    "format": "bluff-verdict-v1",
+    "game": "kuhn",
+    "value_p0": "-41666666663206611930656329982113267/750000000000000000000000000000000000",
+    "br_value_p0": "-333323283007/6000000000000",
+    "br_value_p1": "55556510737480266984829/1000000000000000000000000",
+    "nash_conv": "7890708940800954487/3000000000000000000000000",
+    "exploitability": "7890708940800954487/6000000000000000000000000",
+    "exploitability_float": 1.3151181568001591e-06,
+    "best_response_p0": {
+     "J:cb": "fold",
+     "J:": "check",
+     "Q:cb": "call",
+     "Q:": "check",
+     "K:cb": "fold",
+     "K:": "bet"
+    },
+    "best_response_p1": {
+     "Q:c": "check",
+     "Q:b": "fold",
+     "K:c": "bet",
+     "K:b": "call",
+     "J:c": "check",
+     "J:b": "fold"
+    },
+    "verified": true
+   }
+  },
+  "coverage": {
+   "game_infosets": 12,
+   "agent_infosets": 12,
+   "matched": 12,
+   "missing": 0,
+   "bad_rows": 0,
+   "extra": 0,
+   "coverage": 1.0,
+   "missing_sample": [],
+   "bad_sample": [],
+   "extra_sample": []
+  },
+  "filled": {
+   "checker": "bin/bluff",
+   "command": "bin/bluff check games/out/kuhn.game.json experiment/runs/m-kuhn-file-claude-fable-5-2-r1/graded_strategy_filled.json",
+   "exit_code": 0,
+   "stderr_tail": "",
+   "verdict": {
+    "format": "bluff-verdict-v1",
+    "game": "kuhn",
+    "value_p0": "-41666666663206611930656329982113267/750000000000000000000000000000000000",
+    "br_value_p0": "-333323283007/6000000000000",
+    "br_value_p1": "55556510737480266984829/1000000000000000000000000",
+    "nash_conv": "7890708940800954487/3000000000000000000000000",
+    "exploitability": "7890708940800954487/6000000000000000000000000",
+    "exploitability_float": 1.3151181568001591e-06,
+    "best_response_p0": {
+     "J:cb": "fold",
+     "J:": "check",
+     "Q:cb": "call",
+     "Q:": "check",
+     "K:cb": "fold",
+     "K:": "bet"
+    },
+    "best_response_p1": {
+     "Q:c": "check",
+     "Q:b": "fold",
+     "K:c": "bet",
+     "K:b": "call",
+     "J:c": "check",
+     "J:b": "fold"
+    },
+    "verified": true
+   }
+  }
+ },
+ "summary": {
+  "agent_finished": true,
+  "strategy_found": true,
+  "strict_accepted": true,
+  "graded_on": "strict",
+  "checker": "bin/bluff",
+  "verified_checker": true,
+  "coverage": 1.0,
+  "exploitability": "7890708940800954487/6000000000000000000000000",
+  "exploitability_float": 1.3151181568001591e-06,
+  "value_p0": "-41666666663206611930656329982113267/750000000000000000000000000000000000",
+  "threshold_1pct_pot": 0.02,
+  "claim_converged": true,
+  "claimed_exploitability": 1.315118e-06,
+  "claimed_value_p0": -0.055555555551,
+  "confidence": "high",
+  "certified_converged": true,
+  "claimed_converged_but_exploitable": false,
+  "claim_minus_certified_exploitability": -1.5680015913335874e-13,
+  "claim_minus_certified_value_p0": -5.784955847687456e-14
+ }
+}

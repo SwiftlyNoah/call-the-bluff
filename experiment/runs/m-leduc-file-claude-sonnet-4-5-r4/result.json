@@ -1,0 +1,112 @@
+{
+ "format": "bluff-experiment-trial-v1",
+ "run_id": "m-leduc-file-claude-sonnet-4-5-r4",
+ "game": "leduc",
+ "variant": "file",
+ "model_requested": "claude-sonnet-4-5",
+ "game_file": "games/out/leduc.game.json",
+ "game_file_sha256": "c3745b40982365922fc540cccbfb5089e8418ddfe1fe7009245ed5300c165858",
+ "prompt_file": "experiment/prompts/leduc_file.md",
+ "prompt_sha256": "e3bdb004ecdc3e6741a3b983bc8d76f10922cac656ad7304e768195b30ce538a",
+ "pot": 2,
+ "timeout_s": 1800,
+ "max_budget_usd": 5.0,
+ "started_at": "2026-11-20T21:04:23-05:00",
+ "isolated_workspace": "/var/folders/km/r10tsfhx0815z44_014w924r0000gn/T/cfr-hk5h4k1p/workspace",
+ "agent": {
+  "exit_code": 143,
+  "timed_out": true,
+  "wall_seconds": 1801.4,
+  "stderr_tail": "",
+  "is_error": false,
+  "subtype": "success",
+  "num_turns": 25,
+  "duration_ms": 1369915,
+  "total_cost_usd": 0.5860806000000001,
+  "usage": {
+   "input_tokens": 149,
+   "cache_creation_input_tokens": 30504,
+   "cache_read_input_tokens": 708982,
+   "output_tokens": 12661,
+   "output_tokens_details": {
+    "thinking_tokens": 1098
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 30504,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 8,
+     "output_tokens": 130,
+     "cache_read_input_tokens": 49692,
+     "cache_creation_input_tokens": 410,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 410
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard",
+   "fallback_credit": null
+  },
+  "models_used": [
+   "claude-sonnet-4-5"
+  ],
+  "model_usage": {
+   "claude-sonnet-4-5": {
+    "inputTokens": 149,
+    "outputTokens": 12661,
+    "cacheReadInputTokens": 708982,
+    "cacheCreationInputTokens": 30504,
+    "webSearchRequests": 0,
+    "costUSD": 0.5860806000000001,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 1098,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 30504,
+    "canonicalModel": "claude-sonnet-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "tool_calls": 27,
+  "snoop_hits": []
+ },
+ "ended_at": "2026-11-20T21:34:25-05:00",
+ "claim": null,
+ "claim_source": "not_found",
+ "agent_files": [
+  "cfr_solver.py"
+ ],
+ "grading": {
+  "graded_at": "2026-11-20T21:34:25-05:00",
+  "strategy_found": false
+ },
+ "summary": {
+  "agent_finished": true,
+  "strategy_found": false,
+  "strict_accepted": false,
+  "graded_on": null,
+  "checker": null,
+  "verified_checker": false,
+  "coverage": null,
+  "exploitability": null,
+  "exploitability_float": null,
+  "value_p0": null,
+  "threshold_1pct_pot": 0.02,
+  "claim_converged": null,
+  "claimed_exploitability": null,
+  "claimed_value_p0": null,
+  "confidence": null,
+  "claimed_converged_but_no_strategy": false
+ }
+}

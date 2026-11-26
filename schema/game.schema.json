@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://call-the-bluff.local/schema/game.schema.json",
+  "title": "bluff-game-v1",
+  "description": "A finite two-player zero-sum extensive-form game with perfect recall, chance and exact probabilities (CONTRACTS.md section 1). Structural rules a schema cannot express (tree shape, chance sums, infoset consistency, perfect recall) are checked by reference/validate_game.py.",
+  "type": "object",
+  "required": ["format", "name", "root", "nodes"],
+  "additionalProperties": false,
+  "properties": {
+    "format": {"const": "bluff-game-v1"},
+    "name": {"type": "string", "minLength": 1},
+    "description": {"type": "string"},
+    "known_value_p0": {"$ref": "#/$defs/rational"},
+    "known_value_source": {"type": "string", "minLength": 1},
+    "root": {"$ref": "#/$defs/node_id"},
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/node"}
+    }
+  },
+  "dependentRequired": {"known_value_p0": ["known_value_source"]},
+  "$defs": {
+    "rational": {
+      "description": "Exact rational string: an integer, a fraction p/q with q > 0, or a finite decimal. No exponents, no floats.",
+      "type": "string",
+      "pattern": "^-?(?:[0-9]+(?:\\.[0-9]+)?|[0-9]+/0*[1-9][0-9]*)$"
+    },
+    "node_id": {"type": "integer", "minimum": 0},
+    "node": {
+      "type": "object",
+      "required": ["id", "kind"],
+      "properties": {
+        "id": {"$ref": "#/$defs/node_id"},
+        "kind": {"enum": ["chance", "decision", "terminal"]}
+      },
+      "oneOf": [
+        {"$ref": "#/$defs/chance_node"},
+        {"$ref": "#/$defs/decision_node"},
+        {"$ref": "#/$defs/terminal_node"}
+      ]
+    },
+    "chance_node": {
+      "type": "object",
+      "required": ["id", "kind", "outcomes"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"$ref": "#/$defs/node_id"},
+        "kind": {"const": "chance"},
+        "outcomes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["label", "prob", "child"],
+            "additionalProperties": false,
+            "properties": {
+              "label": {"type": "string"},
+              "prob": {"$ref": "#/$defs/rational"},
+              "child": {"$ref": "#/$defs/node_id"}
+            }
+          }
+        }
+      }
+    },
+    "decision_node": {
+      "type": "object",
+      "required": ["id", "kind", "player", "infoset", "actions"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"$ref": "#/$defs/node_id"},
+        "kind": {"const": "decision"},
+        "player": {"enum": [0, 1]},
+        "infoset": {"type": "string", "minLength": 1},
+        "actions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["label", "child"],
+            "additionalProperties": false,
+            "properties": {
+              "label": {"type": "string", "minLength": 1},
+              "child": {"$ref": "#/$defs/node_id"}
+            }
+          }
+        }
+      }
+    },
+    "terminal_node": {
+      "type": "object",
+      "required": ["id", "kind", "payoff_p0"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"$ref": "#/$defs/node_id"},
+        "kind": {"const": "terminal"},
+        "payoff_p0": {"$ref": "#/$defs/rational"}
+      }
+    }
+  }
+}

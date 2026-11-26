@@ -1,0 +1,6751 @@
+{
+ "format": "bluff-game-v1",
+ "name": "goofspiel3_random",
+ "description": "Goofspiel with 3 cards, prize order by chance, each round uniform over the prizes left; simultaneous bids via infosets, bids revealed after each round, ties discard the prize, last round forced, payoff = p0 prize sum - p1 prize sum.",
+ "known_value_p0": "0",
+ "known_value_source": "symmetric game (swapping the players maps the game to itself with negated payoff), so the value is 0; argument in games/other/README.md, certified exactly by solve.py",
+ "root": 0,
+ "nodes": [
+  {
+   "id": 0,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1/3",
+     "child": 1
+    },
+    {
+     "label": "prize:2",
+     "prob": "1/3",
+     "child": 212
+    },
+    {
+     "label": "prize:3",
+     "prob": "1/3",
+     "child": 423
+    }
+   ]
+  },
+  {
+   "id": 1,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1 p0= p1=",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 2
+    },
+    {
+     "label": "bid:2",
+     "child": 72
+    },
+    {
+     "label": "bid:3",
+     "child": 142
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1 p0= p1=",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 3
+    },
+    {
+     "label": "bid:2",
+     "child": 26
+    },
+    {
+     "label": "bid:3",
+     "child": 49
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1/2",
+     "child": 4
+    },
+    {
+     "label": "prize:3",
+     "prob": "1/2",
+     "child": 15
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 5
+    },
+    {
+     "label": "bid:3",
+     "child": 10
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 6
+    },
+    {
+     "label": "bid:3",
+     "child": 8
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 7
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 8,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 9
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 10,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 11
+    },
+    {
+     "label": "bid:3",
+     "child": 13
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 12
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 13,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 14
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 15,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,3 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 16
+    },
+    {
+     "label": "bid:3",
+     "child": 21
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,3 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 17
+    },
+    {
+     "label": "bid:3",
+     "child": 19
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 18
+    }
+   ]
+  },
+  {
+   "id": 18,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 19,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 20
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 21,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,3 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 22
+    },
+    {
+     "label": "bid:3",
+     "child": 24
+    }
+   ]
+  },
+  {
+   "id": 22,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 23
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 24,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 25
+    }
+   ]
+  },
+  {
+   "id": 25,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 26,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1/2",
+     "child": 27
+    },
+    {
+     "label": "prize:3",
+     "prob": "1/2",
+     "child": 38
+    }
+   ]
+  },
+  {
+   "id": 27,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 28
+    },
+    {
+     "label": "bid:3",
+     "child": 33
+    }
+   ]
+  },
+  {
+   "id": 28,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 29
+    },
+    {
+     "label": "bid:3",
+     "child": 31
+    }
+   ]
+  },
+  {
+   "id": 29,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 30
+    }
+   ]
+  },
+  {
+   "id": 30,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 31,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 32
+    }
+   ]
+  },
+  {
+   "id": 32,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 33,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 34
+    },
+    {
+     "label": "bid:3",
+     "child": 36
+    }
+   ]
+  },
+  {
+   "id": 34,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 35
+    }
+   ]
+  },
+  {
+   "id": 35,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 36,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 37
+    }
+   ]
+  },
+  {
+   "id": 37,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 38,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,3 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 39
+    },
+    {
+     "label": "bid:3",
+     "child": 44
+    }
+   ]
+  },
+  {
+   "id": 39,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,3 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 40
+    },
+    {
+     "label": "bid:3",
+     "child": 42
+    }
+   ]
+  },
+  {
+   "id": 40,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 41
+    }
+   ]
+  },
+  {
+   "id": 41,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 42,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 43
+    }
+   ]
+  },
+  {
+   "id": 43,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 44,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,3 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 45
+    },
+    {
+     "label": "bid:3",
+     "child": 47
+    }
+   ]
+  },
+  {
+   "id": 45,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 46
+    }
+   ]
+  },
+  {
+   "id": 46,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 47,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 48
+    }
+   ]
+  },
+  {
+   "id": 48,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 49,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1/2",
+     "child": 50
+    },
+    {
+     "label": "prize:3",
+     "prob": "1/2",
+     "child": 61
+    }
+   ]
+  },
+  {
+   "id": 50,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 51
+    },
+    {
+     "label": "bid:3",
+     "child": 56
+    }
+   ]
+  },
+  {
+   "id": 51,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 52
+    },
+    {
+     "label": "bid:2",
+     "child": 54
+    }
+   ]
+  },
+  {
+   "id": 52,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 53
+    }
+   ]
+  },
+  {
+   "id": 53,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 54,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 55
+    }
+   ]
+  },
+  {
+   "id": 55,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 56,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 57
+    },
+    {
+     "label": "bid:2",
+     "child": 59
+    }
+   ]
+  },
+  {
+   "id": 57,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 58
+    }
+   ]
+  },
+  {
+   "id": 58,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 59,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 60
+    }
+   ]
+  },
+  {
+   "id": 60,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 61,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,3 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 62
+    },
+    {
+     "label": "bid:3",
+     "child": 67
+    }
+   ]
+  },
+  {
+   "id": 62,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,3 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 63
+    },
+    {
+     "label": "bid:2",
+     "child": 65
+    }
+   ]
+  },
+  {
+   "id": 63,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 64
+    }
+   ]
+  },
+  {
+   "id": 64,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 65,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 66
+    }
+   ]
+  },
+  {
+   "id": 66,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 67,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,3 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 68
+    },
+    {
+     "label": "bid:2",
+     "child": 70
+    }
+   ]
+  },
+  {
+   "id": 68,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 69
+    }
+   ]
+  },
+  {
+   "id": 69,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 70,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 71
+    }
+   ]
+  },
+  {
+   "id": 71,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 72,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1 p0= p1=",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 73
+    },
+    {
+     "label": "bid:2",
+     "child": 96
+    },
+    {
+     "label": "bid:3",
+     "child": 119
+    }
+   ]
+  },
+  {
+   "id": 73,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1/2",
+     "child": 74
+    },
+    {
+     "label": "prize:3",
+     "prob": "1/2",
+     "child": 85
+    }
+   ]
+  },
+  {
+   "id": 74,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 75
+    },
+    {
+     "label": "bid:3",
+     "child": 80
+    }
+   ]
+  },
+  {
+   "id": 75,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 76
+    },
+    {
+     "label": "bid:3",
+     "child": 78
+    }
+   ]
+  },
+  {
+   "id": 76,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 77
+    }
+   ]
+  },
+  {
+   "id": 77,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 78,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 79
+    }
+   ]
+  },
+  {
+   "id": 79,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 80,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 81
+    },
+    {
+     "label": "bid:3",
+     "child": 83
+    }
+   ]
+  },
+  {
+   "id": 81,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 82
+    }
+   ]
+  },
+  {
+   "id": 82,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 83,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 84
+    }
+   ]
+  },
+  {
+   "id": 84,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 85,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,3 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 86
+    },
+    {
+     "label": "bid:3",
+     "child": 91
+    }
+   ]
+  },
+  {
+   "id": 86,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,3 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 87
+    },
+    {
+     "label": "bid:3",
+     "child": 89
+    }
+   ]
+  },
+  {
+   "id": 87,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 88
+    }
+   ]
+  },
+  {
+   "id": 88,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 89,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 90
+    }
+   ]
+  },
+  {
+   "id": 90,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 91,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,3 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 92
+    },
+    {
+     "label": "bid:3",
+     "child": 94
+    }
+   ]
+  },
+  {
+   "id": 92,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 93
+    }
+   ]
+  },
+  {
+   "id": 93,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 94,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 95
+    }
+   ]
+  },
+  {
+   "id": 95,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 96,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1/2",
+     "child": 97
+    },
+    {
+     "label": "prize:3",
+     "prob": "1/2",
+     "child": 108
+    }
+   ]
+  },
+  {
+   "id": 97,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 98
+    },
+    {
+     "label": "bid:3",
+     "child": 103
+    }
+   ]
+  },
+  {
+   "id": 98,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 99
+    },
+    {
+     "label": "bid:3",
+     "child": 101
+    }
+   ]
+  },
+  {
+   "id": 99,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 100
+    }
+   ]
+  },
+  {
+   "id": 100,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 101,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 102
+    }
+   ]
+  },
+  {
+   "id": 102,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 103,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 104
+    },
+    {
+     "label": "bid:3",
+     "child": 106
+    }
+   ]
+  },
+  {
+   "id": 104,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 105
+    }
+   ]
+  },
+  {
+   "id": 105,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 106,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 107
+    }
+   ]
+  },
+  {
+   "id": 107,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 108,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,3 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 109
+    },
+    {
+     "label": "bid:3",
+     "child": 114
+    }
+   ]
+  },
+  {
+   "id": 109,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,3 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 110
+    },
+    {
+     "label": "bid:3",
+     "child": 112
+    }
+   ]
+  },
+  {
+   "id": 110,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 111
+    }
+   ]
+  },
+  {
+   "id": 111,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 112,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 113
+    }
+   ]
+  },
+  {
+   "id": 113,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 114,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,3 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 115
+    },
+    {
+     "label": "bid:3",
+     "child": 117
+    }
+   ]
+  },
+  {
+   "id": 115,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 116
+    }
+   ]
+  },
+  {
+   "id": 116,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 117,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 118
+    }
+   ]
+  },
+  {
+   "id": 118,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 119,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1/2",
+     "child": 120
+    },
+    {
+     "label": "prize:3",
+     "prob": "1/2",
+     "child": 131
+    }
+   ]
+  },
+  {
+   "id": 120,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 121
+    },
+    {
+     "label": "bid:3",
+     "child": 126
+    }
+   ]
+  },
+  {
+   "id": 121,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 122
+    },
+    {
+     "label": "bid:2",
+     "child": 124
+    }
+   ]
+  },
+  {
+   "id": 122,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 123
+    }
+   ]
+  },
+  {
+   "id": 123,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 124,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 125
+    }
+   ]
+  },
+  {
+   "id": 125,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 126,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 127
+    },
+    {
+     "label": "bid:2",
+     "child": 129
+    }
+   ]
+  },
+  {
+   "id": 127,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 128
+    }
+   ]
+  },
+  {
+   "id": 128,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 129,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 130
+    }
+   ]
+  },
+  {
+   "id": 130,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 131,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,3 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 132
+    },
+    {
+     "label": "bid:3",
+     "child": 137
+    }
+   ]
+  },
+  {
+   "id": 132,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,3 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 133
+    },
+    {
+     "label": "bid:2",
+     "child": 135
+    }
+   ]
+  },
+  {
+   "id": 133,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 134
+    }
+   ]
+  },
+  {
+   "id": 134,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 135,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 136
+    }
+   ]
+  },
+  {
+   "id": 136,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 137,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,3 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 138
+    },
+    {
+     "label": "bid:2",
+     "child": 140
+    }
+   ]
+  },
+  {
+   "id": 138,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 139
+    }
+   ]
+  },
+  {
+   "id": 139,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 140,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 141
+    }
+   ]
+  },
+  {
+   "id": 141,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 142,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1 p0= p1=",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 143
+    },
+    {
+     "label": "bid:2",
+     "child": 166
+    },
+    {
+     "label": "bid:3",
+     "child": 189
+    }
+   ]
+  },
+  {
+   "id": 143,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1/2",
+     "child": 144
+    },
+    {
+     "label": "prize:3",
+     "prob": "1/2",
+     "child": 155
+    }
+   ]
+  },
+  {
+   "id": 144,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 145
+    },
+    {
+     "label": "bid:2",
+     "child": 150
+    }
+   ]
+  },
+  {
+   "id": 145,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 146
+    },
+    {
+     "label": "bid:3",
+     "child": 148
+    }
+   ]
+  },
+  {
+   "id": 146,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 147
+    }
+   ]
+  },
+  {
+   "id": 147,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 148,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 149
+    }
+   ]
+  },
+  {
+   "id": 149,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 150,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 151
+    },
+    {
+     "label": "bid:3",
+     "child": 153
+    }
+   ]
+  },
+  {
+   "id": 151,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 152
+    }
+   ]
+  },
+  {
+   "id": 152,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 153,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 154
+    }
+   ]
+  },
+  {
+   "id": 154,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 155,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,3 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 156
+    },
+    {
+     "label": "bid:2",
+     "child": 161
+    }
+   ]
+  },
+  {
+   "id": 156,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,3 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 157
+    },
+    {
+     "label": "bid:3",
+     "child": 159
+    }
+   ]
+  },
+  {
+   "id": 157,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 158
+    }
+   ]
+  },
+  {
+   "id": 158,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 159,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 160
+    }
+   ]
+  },
+  {
+   "id": 160,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 161,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,3 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 162
+    },
+    {
+     "label": "bid:3",
+     "child": 164
+    }
+   ]
+  },
+  {
+   "id": 162,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 163
+    }
+   ]
+  },
+  {
+   "id": 163,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 164,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 165
+    }
+   ]
+  },
+  {
+   "id": 165,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 166,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1/2",
+     "child": 167
+    },
+    {
+     "label": "prize:3",
+     "prob": "1/2",
+     "child": 178
+    }
+   ]
+  },
+  {
+   "id": 167,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 168
+    },
+    {
+     "label": "bid:2",
+     "child": 173
+    }
+   ]
+  },
+  {
+   "id": 168,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 169
+    },
+    {
+     "label": "bid:3",
+     "child": 171
+    }
+   ]
+  },
+  {
+   "id": 169,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 170
+    }
+   ]
+  },
+  {
+   "id": 170,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 171,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 172
+    }
+   ]
+  },
+  {
+   "id": 172,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 173,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 174
+    },
+    {
+     "label": "bid:3",
+     "child": 176
+    }
+   ]
+  },
+  {
+   "id": 174,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 175
+    }
+   ]
+  },
+  {
+   "id": 175,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 176,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 177
+    }
+   ]
+  },
+  {
+   "id": 177,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 178,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,3 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 179
+    },
+    {
+     "label": "bid:2",
+     "child": 184
+    }
+   ]
+  },
+  {
+   "id": 179,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,3 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 180
+    },
+    {
+     "label": "bid:3",
+     "child": 182
+    }
+   ]
+  },
+  {
+   "id": 180,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 181
+    }
+   ]
+  },
+  {
+   "id": 181,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 182,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 183
+    }
+   ]
+  },
+  {
+   "id": 183,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 184,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,3 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 185
+    },
+    {
+     "label": "bid:3",
+     "child": 187
+    }
+   ]
+  },
+  {
+   "id": 185,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 186
+    }
+   ]
+  },
+  {
+   "id": 186,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 187,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 188
+    }
+   ]
+  },
+  {
+   "id": 188,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 189,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1/2",
+     "child": 190
+    },
+    {
+     "label": "prize:3",
+     "prob": "1/2",
+     "child": 201
+    }
+   ]
+  },
+  {
+   "id": 190,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 191
+    },
+    {
+     "label": "bid:2",
+     "child": 196
+    }
+   ]
+  },
+  {
+   "id": 191,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 192
+    },
+    {
+     "label": "bid:2",
+     "child": 194
+    }
+   ]
+  },
+  {
+   "id": 192,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 193
+    }
+   ]
+  },
+  {
+   "id": 193,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 194,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 195
+    }
+   ]
+  },
+  {
+   "id": 195,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 196,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 197
+    },
+    {
+     "label": "bid:2",
+     "child": 199
+    }
+   ]
+  },
+  {
+   "id": 197,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 198
+    }
+   ]
+  },
+  {
+   "id": 198,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 199,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 200
+    }
+   ]
+  },
+  {
+   "id": 200,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 201,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,3 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 202
+    },
+    {
+     "label": "bid:2",
+     "child": 207
+    }
+   ]
+  },
+  {
+   "id": 202,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,3 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 203
+    },
+    {
+     "label": "bid:2",
+     "child": 205
+    }
+   ]
+  },
+  {
+   "id": 203,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 204
+    }
+   ]
+  },
+  {
+   "id": 204,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 205,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 206
+    }
+   ]
+  },
+  {
+   "id": 206,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 207,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,3 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 208
+    },
+    {
+     "label": "bid:2",
+     "child": 210
+    }
+   ]
+  },
+  {
+   "id": 208,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 209
+    }
+   ]
+  },
+  {
+   "id": 209,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 210,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 211
+    }
+   ]
+  },
+  {
+   "id": 211,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 212,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=2 p0= p1=",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 213
+    },
+    {
+     "label": "bid:2",
+     "child": 283
+    },
+    {
+     "label": "bid:3",
+     "child": 353
+    }
+   ]
+  },
+  {
+   "id": 213,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2 p0= p1=",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 214
+    },
+    {
+     "label": "bid:2",
+     "child": 237
+    },
+    {
+     "label": "bid:3",
+     "child": 260
+    }
+   ]
+  },
+  {
+   "id": 214,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1/2",
+     "child": 215
+    },
+    {
+     "label": "prize:3",
+     "prob": "1/2",
+     "child": 226
+    }
+   ]
+  },
+  {
+   "id": 215,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=2,1 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 216
+    },
+    {
+     "label": "bid:3",
+     "child": 221
+    }
+   ]
+  },
+  {
+   "id": 216,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,1 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 217
+    },
+    {
+     "label": "bid:3",
+     "child": 219
+    }
+   ]
+  },
+  {
+   "id": 217,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 218
+    }
+   ]
+  },
+  {
+   "id": 218,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 219,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 220
+    }
+   ]
+  },
+  {
+   "id": 220,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 221,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,1 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 222
+    },
+    {
+     "label": "bid:3",
+     "child": 224
+    }
+   ]
+  },
+  {
+   "id": 222,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 223
+    }
+   ]
+  },
+  {
+   "id": 223,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 224,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 225
+    }
+   ]
+  },
+  {
+   "id": 225,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 226,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=2,3 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 227
+    },
+    {
+     "label": "bid:3",
+     "child": 232
+    }
+   ]
+  },
+  {
+   "id": 227,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,3 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 228
+    },
+    {
+     "label": "bid:3",
+     "child": 230
+    }
+   ]
+  },
+  {
+   "id": 228,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 229
+    }
+   ]
+  },
+  {
+   "id": 229,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 230,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 231
+    }
+   ]
+  },
+  {
+   "id": 231,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 232,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,3 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 233
+    },
+    {
+     "label": "bid:3",
+     "child": 235
+    }
+   ]
+  },
+  {
+   "id": 233,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 234
+    }
+   ]
+  },
+  {
+   "id": 234,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 235,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 236
+    }
+   ]
+  },
+  {
+   "id": 236,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 237,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1/2",
+     "child": 238
+    },
+    {
+     "label": "prize:3",
+     "prob": "1/2",
+     "child": 249
+    }
+   ]
+  },
+  {
+   "id": 238,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=2,1 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 239
+    },
+    {
+     "label": "bid:3",
+     "child": 244
+    }
+   ]
+  },
+  {
+   "id": 239,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,1 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 240
+    },
+    {
+     "label": "bid:3",
+     "child": 242
+    }
+   ]
+  },
+  {
+   "id": 240,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 241
+    }
+   ]
+  },
+  {
+   "id": 241,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 242,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 243
+    }
+   ]
+  },
+  {
+   "id": 243,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 244,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,1 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 245
+    },
+    {
+     "label": "bid:3",
+     "child": 247
+    }
+   ]
+  },
+  {
+   "id": 245,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 246
+    }
+   ]
+  },
+  {
+   "id": 246,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 247,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 248
+    }
+   ]
+  },
+  {
+   "id": 248,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 249,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=2,3 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 250
+    },
+    {
+     "label": "bid:3",
+     "child": 255
+    }
+   ]
+  },
+  {
+   "id": 250,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,3 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 251
+    },
+    {
+     "label": "bid:3",
+     "child": 253
+    }
+   ]
+  },
+  {
+   "id": 251,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 252
+    }
+   ]
+  },
+  {
+   "id": 252,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 253,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 254
+    }
+   ]
+  },
+  {
+   "id": 254,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 255,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,3 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 256
+    },
+    {
+     "label": "bid:3",
+     "child": 258
+    }
+   ]
+  },
+  {
+   "id": 256,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 257
+    }
+   ]
+  },
+  {
+   "id": 257,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 258,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 259
+    }
+   ]
+  },
+  {
+   "id": 259,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 260,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1/2",
+     "child": 261
+    },
+    {
+     "label": "prize:3",
+     "prob": "1/2",
+     "child": 272
+    }
+   ]
+  },
+  {
+   "id": 261,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=2,1 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 262
+    },
+    {
+     "label": "bid:3",
+     "child": 267
+    }
+   ]
+  },
+  {
+   "id": 262,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,1 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 263
+    },
+    {
+     "label": "bid:2",
+     "child": 265
+    }
+   ]
+  },
+  {
+   "id": 263,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 264
+    }
+   ]
+  },
+  {
+   "id": 264,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 265,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 266
+    }
+   ]
+  },
+  {
+   "id": 266,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 267,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,1 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 268
+    },
+    {
+     "label": "bid:2",
+     "child": 270
+    }
+   ]
+  },
+  {
+   "id": 268,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 269
+    }
+   ]
+  },
+  {
+   "id": 269,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 270,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 271
+    }
+   ]
+  },
+  {
+   "id": 271,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 272,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=2,3 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 273
+    },
+    {
+     "label": "bid:3",
+     "child": 278
+    }
+   ]
+  },
+  {
+   "id": 273,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,3 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 274
+    },
+    {
+     "label": "bid:2",
+     "child": 276
+    }
+   ]
+  },
+  {
+   "id": 274,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 275
+    }
+   ]
+  },
+  {
+   "id": 275,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 276,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 277
+    }
+   ]
+  },
+  {
+   "id": 277,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 278,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,3 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 279
+    },
+    {
+     "label": "bid:2",
+     "child": 281
+    }
+   ]
+  },
+  {
+   "id": 279,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 280
+    }
+   ]
+  },
+  {
+   "id": 280,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 281,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 282
+    }
+   ]
+  },
+  {
+   "id": 282,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 283,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2 p0= p1=",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 284
+    },
+    {
+     "label": "bid:2",
+     "child": 307
+    },
+    {
+     "label": "bid:3",
+     "child": 330
+    }
+   ]
+  },
+  {
+   "id": 284,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1/2",
+     "child": 285
+    },
+    {
+     "label": "prize:3",
+     "prob": "1/2",
+     "child": 296
+    }
+   ]
+  },
+  {
+   "id": 285,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=2,1 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 286
+    },
+    {
+     "label": "bid:3",
+     "child": 291
+    }
+   ]
+  },
+  {
+   "id": 286,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,1 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 287
+    },
+    {
+     "label": "bid:3",
+     "child": 289
+    }
+   ]
+  },
+  {
+   "id": 287,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 288
+    }
+   ]
+  },
+  {
+   "id": 288,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 289,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 290
+    }
+   ]
+  },
+  {
+   "id": 290,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 291,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,1 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 292
+    },
+    {
+     "label": "bid:3",
+     "child": 294
+    }
+   ]
+  },
+  {
+   "id": 292,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 293
+    }
+   ]
+  },
+  {
+   "id": 293,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 294,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 295
+    }
+   ]
+  },
+  {
+   "id": 295,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 296,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=2,3 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 297
+    },
+    {
+     "label": "bid:3",
+     "child": 302
+    }
+   ]
+  },
+  {
+   "id": 297,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,3 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 298
+    },
+    {
+     "label": "bid:3",
+     "child": 300
+    }
+   ]
+  },
+  {
+   "id": 298,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 299
+    }
+   ]
+  },
+  {
+   "id": 299,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 300,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 301
+    }
+   ]
+  },
+  {
+   "id": 301,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 302,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,3 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 303
+    },
+    {
+     "label": "bid:3",
+     "child": 305
+    }
+   ]
+  },
+  {
+   "id": 303,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 304
+    }
+   ]
+  },
+  {
+   "id": 304,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 305,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 306
+    }
+   ]
+  },
+  {
+   "id": 306,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 307,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1/2",
+     "child": 308
+    },
+    {
+     "label": "prize:3",
+     "prob": "1/2",
+     "child": 319
+    }
+   ]
+  },
+  {
+   "id": 308,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=2,1 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 309
+    },
+    {
+     "label": "bid:3",
+     "child": 314
+    }
+   ]
+  },
+  {
+   "id": 309,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,1 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 310
+    },
+    {
+     "label": "bid:3",
+     "child": 312
+    }
+   ]
+  },
+  {
+   "id": 310,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 311
+    }
+   ]
+  },
+  {
+   "id": 311,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 312,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 313
+    }
+   ]
+  },
+  {
+   "id": 313,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 314,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,1 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 315
+    },
+    {
+     "label": "bid:3",
+     "child": 317
+    }
+   ]
+  },
+  {
+   "id": 315,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 316
+    }
+   ]
+  },
+  {
+   "id": 316,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 317,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 318
+    }
+   ]
+  },
+  {
+   "id": 318,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 319,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=2,3 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 320
+    },
+    {
+     "label": "bid:3",
+     "child": 325
+    }
+   ]
+  },
+  {
+   "id": 320,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,3 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 321
+    },
+    {
+     "label": "bid:3",
+     "child": 323
+    }
+   ]
+  },
+  {
+   "id": 321,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 322
+    }
+   ]
+  },
+  {
+   "id": 322,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 323,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 324
+    }
+   ]
+  },
+  {
+   "id": 324,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 325,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,3 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 326
+    },
+    {
+     "label": "bid:3",
+     "child": 328
+    }
+   ]
+  },
+  {
+   "id": 326,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 327
+    }
+   ]
+  },
+  {
+   "id": 327,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 328,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 329
+    }
+   ]
+  },
+  {
+   "id": 329,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 330,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1/2",
+     "child": 331
+    },
+    {
+     "label": "prize:3",
+     "prob": "1/2",
+     "child": 342
+    }
+   ]
+  },
+  {
+   "id": 331,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=2,1 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 332
+    },
+    {
+     "label": "bid:3",
+     "child": 337
+    }
+   ]
+  },
+  {
+   "id": 332,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,1 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 333
+    },
+    {
+     "label": "bid:2",
+     "child": 335
+    }
+   ]
+  },
+  {
+   "id": 333,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 334
+    }
+   ]
+  },
+  {
+   "id": 334,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 335,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 336
+    }
+   ]
+  },
+  {
+   "id": 336,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 337,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,1 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 338
+    },
+    {
+     "label": "bid:2",
+     "child": 340
+    }
+   ]
+  },
+  {
+   "id": 338,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 339
+    }
+   ]
+  },
+  {
+   "id": 339,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 340,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 341
+    }
+   ]
+  },
+  {
+   "id": 341,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 342,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=2,3 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 343
+    },
+    {
+     "label": "bid:3",
+     "child": 348
+    }
+   ]
+  },
+  {
+   "id": 343,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,3 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 344
+    },
+    {
+     "label": "bid:2",
+     "child": 346
+    }
+   ]
+  },
+  {
+   "id": 344,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 345
+    }
+   ]
+  },
+  {
+   "id": 345,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 346,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 347
+    }
+   ]
+  },
+  {
+   "id": 347,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 348,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,3 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 349
+    },
+    {
+     "label": "bid:2",
+     "child": 351
+    }
+   ]
+  },
+  {
+   "id": 349,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 350
+    }
+   ]
+  },
+  {
+   "id": 350,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 351,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 352
+    }
+   ]
+  },
+  {
+   "id": 352,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 353,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2 p0= p1=",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 354
+    },
+    {
+     "label": "bid:2",
+     "child": 377
+    },
+    {
+     "label": "bid:3",
+     "child": 400
+    }
+   ]
+  },
+  {
+   "id": 354,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1/2",
+     "child": 355
+    },
+    {
+     "label": "prize:3",
+     "prob": "1/2",
+     "child": 366
+    }
+   ]
+  },
+  {
+   "id": 355,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=2,1 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 356
+    },
+    {
+     "label": "bid:2",
+     "child": 361
+    }
+   ]
+  },
+  {
+   "id": 356,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,1 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 357
+    },
+    {
+     "label": "bid:3",
+     "child": 359
+    }
+   ]
+  },
+  {
+   "id": 357,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 358
+    }
+   ]
+  },
+  {
+   "id": 358,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 359,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 360
+    }
+   ]
+  },
+  {
+   "id": 360,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 361,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,1 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 362
+    },
+    {
+     "label": "bid:3",
+     "child": 364
+    }
+   ]
+  },
+  {
+   "id": 362,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 363
+    }
+   ]
+  },
+  {
+   "id": 363,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 364,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 365
+    }
+   ]
+  },
+  {
+   "id": 365,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 366,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=2,3 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 367
+    },
+    {
+     "label": "bid:2",
+     "child": 372
+    }
+   ]
+  },
+  {
+   "id": 367,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,3 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 368
+    },
+    {
+     "label": "bid:3",
+     "child": 370
+    }
+   ]
+  },
+  {
+   "id": 368,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 369
+    }
+   ]
+  },
+  {
+   "id": 369,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 370,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 371
+    }
+   ]
+  },
+  {
+   "id": 371,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 372,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,3 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 373
+    },
+    {
+     "label": "bid:3",
+     "child": 375
+    }
+   ]
+  },
+  {
+   "id": 373,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 374
+    }
+   ]
+  },
+  {
+   "id": 374,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 375,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 376
+    }
+   ]
+  },
+  {
+   "id": 376,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 377,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1/2",
+     "child": 378
+    },
+    {
+     "label": "prize:3",
+     "prob": "1/2",
+     "child": 389
+    }
+   ]
+  },
+  {
+   "id": 378,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=2,1 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 379
+    },
+    {
+     "label": "bid:2",
+     "child": 384
+    }
+   ]
+  },
+  {
+   "id": 379,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,1 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 380
+    },
+    {
+     "label": "bid:3",
+     "child": 382
+    }
+   ]
+  },
+  {
+   "id": 380,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 381
+    }
+   ]
+  },
+  {
+   "id": 381,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 382,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 383
+    }
+   ]
+  },
+  {
+   "id": 383,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 384,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,1 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 385
+    },
+    {
+     "label": "bid:3",
+     "child": 387
+    }
+   ]
+  },
+  {
+   "id": 385,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 386
+    }
+   ]
+  },
+  {
+   "id": 386,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 387,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 388
+    }
+   ]
+  },
+  {
+   "id": 388,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 389,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=2,3 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 390
+    },
+    {
+     "label": "bid:2",
+     "child": 395
+    }
+   ]
+  },
+  {
+   "id": 390,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,3 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 391
+    },
+    {
+     "label": "bid:3",
+     "child": 393
+    }
+   ]
+  },
+  {
+   "id": 391,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 392
+    }
+   ]
+  },
+  {
+   "id": 392,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 393,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 394
+    }
+   ]
+  },
+  {
+   "id": 394,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 395,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,3 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 396
+    },
+    {
+     "label": "bid:3",
+     "child": 398
+    }
+   ]
+  },
+  {
+   "id": 396,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 397
+    }
+   ]
+  },
+  {
+   "id": 397,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 398,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 399
+    }
+   ]
+  },
+  {
+   "id": 399,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 400,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1/2",
+     "child": 401
+    },
+    {
+     "label": "prize:3",
+     "prob": "1/2",
+     "child": 412
+    }
+   ]
+  },
+  {
+   "id": 401,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=2,1 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 402
+    },
+    {
+     "label": "bid:2",
+     "child": 407
+    }
+   ]
+  },
+  {
+   "id": 402,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,1 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 403
+    },
+    {
+     "label": "bid:2",
+     "child": 405
+    }
+   ]
+  },
+  {
+   "id": 403,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 404
+    }
+   ]
+  },
+  {
+   "id": 404,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 405,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 406
+    }
+   ]
+  },
+  {
+   "id": 406,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 407,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,1 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 408
+    },
+    {
+     "label": "bid:2",
+     "child": 410
+    }
+   ]
+  },
+  {
+   "id": 408,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 409
+    }
+   ]
+  },
+  {
+   "id": 409,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 410,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:3",
+     "prob": "1",
+     "child": 411
+    }
+   ]
+  },
+  {
+   "id": 411,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 412,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=2,3 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 413
+    },
+    {
+     "label": "bid:2",
+     "child": 418
+    }
+   ]
+  },
+  {
+   "id": 413,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,3 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 414
+    },
+    {
+     "label": "bid:2",
+     "child": 416
+    }
+   ]
+  },
+  {
+   "id": 414,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 415
+    }
+   ]
+  },
+  {
+   "id": 415,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 416,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 417
+    }
+   ]
+  },
+  {
+   "id": 417,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 418,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=2,3 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 419
+    },
+    {
+     "label": "bid:2",
+     "child": 421
+    }
+   ]
+  },
+  {
+   "id": 419,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 420
+    }
+   ]
+  },
+  {
+   "id": 420,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 421,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 422
+    }
+   ]
+  },
+  {
+   "id": 422,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 423,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=3 p0= p1=",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 424
+    },
+    {
+     "label": "bid:2",
+     "child": 494
+    },
+    {
+     "label": "bid:3",
+     "child": 564
+    }
+   ]
+  },
+  {
+   "id": 424,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3 p0= p1=",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 425
+    },
+    {
+     "label": "bid:2",
+     "child": 448
+    },
+    {
+     "label": "bid:3",
+     "child": 471
+    }
+   ]
+  },
+  {
+   "id": 425,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1/2",
+     "child": 426
+    },
+    {
+     "label": "prize:2",
+     "prob": "1/2",
+     "child": 437
+    }
+   ]
+  },
+  {
+   "id": 426,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=3,1 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 427
+    },
+    {
+     "label": "bid:3",
+     "child": 432
+    }
+   ]
+  },
+  {
+   "id": 427,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,1 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 428
+    },
+    {
+     "label": "bid:3",
+     "child": 430
+    }
+   ]
+  },
+  {
+   "id": 428,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 429
+    }
+   ]
+  },
+  {
+   "id": 429,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 430,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 431
+    }
+   ]
+  },
+  {
+   "id": 431,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 432,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,1 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 433
+    },
+    {
+     "label": "bid:3",
+     "child": 435
+    }
+   ]
+  },
+  {
+   "id": 433,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 434
+    }
+   ]
+  },
+  {
+   "id": 434,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 435,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 436
+    }
+   ]
+  },
+  {
+   "id": 436,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 437,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=3,2 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 438
+    },
+    {
+     "label": "bid:3",
+     "child": 443
+    }
+   ]
+  },
+  {
+   "id": 438,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,2 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 439
+    },
+    {
+     "label": "bid:3",
+     "child": 441
+    }
+   ]
+  },
+  {
+   "id": 439,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 440
+    }
+   ]
+  },
+  {
+   "id": 440,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 441,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 442
+    }
+   ]
+  },
+  {
+   "id": 442,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 443,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,2 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 444
+    },
+    {
+     "label": "bid:3",
+     "child": 446
+    }
+   ]
+  },
+  {
+   "id": 444,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 445
+    }
+   ]
+  },
+  {
+   "id": 445,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 446,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 447
+    }
+   ]
+  },
+  {
+   "id": 447,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 448,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1/2",
+     "child": 449
+    },
+    {
+     "label": "prize:2",
+     "prob": "1/2",
+     "child": 460
+    }
+   ]
+  },
+  {
+   "id": 449,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=3,1 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 450
+    },
+    {
+     "label": "bid:3",
+     "child": 455
+    }
+   ]
+  },
+  {
+   "id": 450,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,1 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 451
+    },
+    {
+     "label": "bid:3",
+     "child": 453
+    }
+   ]
+  },
+  {
+   "id": 451,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 452
+    }
+   ]
+  },
+  {
+   "id": 452,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 453,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 454
+    }
+   ]
+  },
+  {
+   "id": 454,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 455,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,1 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 456
+    },
+    {
+     "label": "bid:3",
+     "child": 458
+    }
+   ]
+  },
+  {
+   "id": 456,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 457
+    }
+   ]
+  },
+  {
+   "id": 457,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 458,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 459
+    }
+   ]
+  },
+  {
+   "id": 459,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 460,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=3,2 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 461
+    },
+    {
+     "label": "bid:3",
+     "child": 466
+    }
+   ]
+  },
+  {
+   "id": 461,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,2 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 462
+    },
+    {
+     "label": "bid:3",
+     "child": 464
+    }
+   ]
+  },
+  {
+   "id": 462,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 463
+    }
+   ]
+  },
+  {
+   "id": 463,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 464,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 465
+    }
+   ]
+  },
+  {
+   "id": 465,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 466,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,2 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 467
+    },
+    {
+     "label": "bid:3",
+     "child": 469
+    }
+   ]
+  },
+  {
+   "id": 467,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 468
+    }
+   ]
+  },
+  {
+   "id": 468,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 469,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 470
+    }
+   ]
+  },
+  {
+   "id": 470,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 471,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1/2",
+     "child": 472
+    },
+    {
+     "label": "prize:2",
+     "prob": "1/2",
+     "child": 483
+    }
+   ]
+  },
+  {
+   "id": 472,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=3,1 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 473
+    },
+    {
+     "label": "bid:3",
+     "child": 478
+    }
+   ]
+  },
+  {
+   "id": 473,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,1 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 474
+    },
+    {
+     "label": "bid:2",
+     "child": 476
+    }
+   ]
+  },
+  {
+   "id": 474,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 475
+    }
+   ]
+  },
+  {
+   "id": 475,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 476,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 477
+    }
+   ]
+  },
+  {
+   "id": 477,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 478,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,1 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 479
+    },
+    {
+     "label": "bid:2",
+     "child": 481
+    }
+   ]
+  },
+  {
+   "id": 479,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 480
+    }
+   ]
+  },
+  {
+   "id": 480,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 481,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 482
+    }
+   ]
+  },
+  {
+   "id": 482,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 483,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=3,2 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 484
+    },
+    {
+     "label": "bid:3",
+     "child": 489
+    }
+   ]
+  },
+  {
+   "id": 484,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,2 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 485
+    },
+    {
+     "label": "bid:2",
+     "child": 487
+    }
+   ]
+  },
+  {
+   "id": 485,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 486
+    }
+   ]
+  },
+  {
+   "id": 486,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 487,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 488
+    }
+   ]
+  },
+  {
+   "id": 488,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 489,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,2 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 490
+    },
+    {
+     "label": "bid:2",
+     "child": 492
+    }
+   ]
+  },
+  {
+   "id": 490,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 491
+    }
+   ]
+  },
+  {
+   "id": 491,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 492,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 493
+    }
+   ]
+  },
+  {
+   "id": 493,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 494,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3 p0= p1=",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 495
+    },
+    {
+     "label": "bid:2",
+     "child": 518
+    },
+    {
+     "label": "bid:3",
+     "child": 541
+    }
+   ]
+  },
+  {
+   "id": 495,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1/2",
+     "child": 496
+    },
+    {
+     "label": "prize:2",
+     "prob": "1/2",
+     "child": 507
+    }
+   ]
+  },
+  {
+   "id": 496,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=3,1 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 497
+    },
+    {
+     "label": "bid:3",
+     "child": 502
+    }
+   ]
+  },
+  {
+   "id": 497,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,1 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 498
+    },
+    {
+     "label": "bid:3",
+     "child": 500
+    }
+   ]
+  },
+  {
+   "id": 498,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 499
+    }
+   ]
+  },
+  {
+   "id": 499,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 500,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 501
+    }
+   ]
+  },
+  {
+   "id": 501,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 502,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,1 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 503
+    },
+    {
+     "label": "bid:3",
+     "child": 505
+    }
+   ]
+  },
+  {
+   "id": 503,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 504
+    }
+   ]
+  },
+  {
+   "id": 504,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 505,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 506
+    }
+   ]
+  },
+  {
+   "id": 506,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 507,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=3,2 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 508
+    },
+    {
+     "label": "bid:3",
+     "child": 513
+    }
+   ]
+  },
+  {
+   "id": 508,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,2 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 509
+    },
+    {
+     "label": "bid:3",
+     "child": 511
+    }
+   ]
+  },
+  {
+   "id": 509,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 510
+    }
+   ]
+  },
+  {
+   "id": 510,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 511,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 512
+    }
+   ]
+  },
+  {
+   "id": 512,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 513,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,2 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 514
+    },
+    {
+     "label": "bid:3",
+     "child": 516
+    }
+   ]
+  },
+  {
+   "id": 514,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 515
+    }
+   ]
+  },
+  {
+   "id": 515,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 516,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 517
+    }
+   ]
+  },
+  {
+   "id": 517,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 518,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1/2",
+     "child": 519
+    },
+    {
+     "label": "prize:2",
+     "prob": "1/2",
+     "child": 530
+    }
+   ]
+  },
+  {
+   "id": 519,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=3,1 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 520
+    },
+    {
+     "label": "bid:3",
+     "child": 525
+    }
+   ]
+  },
+  {
+   "id": 520,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,1 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 521
+    },
+    {
+     "label": "bid:3",
+     "child": 523
+    }
+   ]
+  },
+  {
+   "id": 521,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 522
+    }
+   ]
+  },
+  {
+   "id": 522,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 523,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 524
+    }
+   ]
+  },
+  {
+   "id": 524,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 525,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,1 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 526
+    },
+    {
+     "label": "bid:3",
+     "child": 528
+    }
+   ]
+  },
+  {
+   "id": 526,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 527
+    }
+   ]
+  },
+  {
+   "id": 527,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 528,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 529
+    }
+   ]
+  },
+  {
+   "id": 529,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 530,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=3,2 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 531
+    },
+    {
+     "label": "bid:3",
+     "child": 536
+    }
+   ]
+  },
+  {
+   "id": 531,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,2 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 532
+    },
+    {
+     "label": "bid:3",
+     "child": 534
+    }
+   ]
+  },
+  {
+   "id": 532,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 533
+    }
+   ]
+  },
+  {
+   "id": 533,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 534,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 535
+    }
+   ]
+  },
+  {
+   "id": 535,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 536,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,2 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 537
+    },
+    {
+     "label": "bid:3",
+     "child": 539
+    }
+   ]
+  },
+  {
+   "id": 537,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 538
+    }
+   ]
+  },
+  {
+   "id": 538,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 539,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 540
+    }
+   ]
+  },
+  {
+   "id": 540,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 541,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1/2",
+     "child": 542
+    },
+    {
+     "label": "prize:2",
+     "prob": "1/2",
+     "child": 553
+    }
+   ]
+  },
+  {
+   "id": 542,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=3,1 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 543
+    },
+    {
+     "label": "bid:3",
+     "child": 548
+    }
+   ]
+  },
+  {
+   "id": 543,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,1 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 544
+    },
+    {
+     "label": "bid:2",
+     "child": 546
+    }
+   ]
+  },
+  {
+   "id": 544,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 545
+    }
+   ]
+  },
+  {
+   "id": 545,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 546,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 547
+    }
+   ]
+  },
+  {
+   "id": 547,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 548,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,1 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 549
+    },
+    {
+     "label": "bid:2",
+     "child": 551
+    }
+   ]
+  },
+  {
+   "id": 549,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 550
+    }
+   ]
+  },
+  {
+   "id": 550,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 551,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 552
+    }
+   ]
+  },
+  {
+   "id": 552,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 553,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=3,2 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 554
+    },
+    {
+     "label": "bid:3",
+     "child": 559
+    }
+   ]
+  },
+  {
+   "id": 554,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,2 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 555
+    },
+    {
+     "label": "bid:2",
+     "child": 557
+    }
+   ]
+  },
+  {
+   "id": 555,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 556
+    }
+   ]
+  },
+  {
+   "id": 556,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 557,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 558
+    }
+   ]
+  },
+  {
+   "id": 558,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 559,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,2 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 560
+    },
+    {
+     "label": "bid:2",
+     "child": 562
+    }
+   ]
+  },
+  {
+   "id": 560,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 561
+    }
+   ]
+  },
+  {
+   "id": 561,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 562,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 563
+    }
+   ]
+  },
+  {
+   "id": 563,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 564,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3 p0= p1=",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 565
+    },
+    {
+     "label": "bid:2",
+     "child": 588
+    },
+    {
+     "label": "bid:3",
+     "child": 611
+    }
+   ]
+  },
+  {
+   "id": 565,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1/2",
+     "child": 566
+    },
+    {
+     "label": "prize:2",
+     "prob": "1/2",
+     "child": 577
+    }
+   ]
+  },
+  {
+   "id": 566,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=3,1 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 567
+    },
+    {
+     "label": "bid:2",
+     "child": 572
+    }
+   ]
+  },
+  {
+   "id": 567,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,1 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 568
+    },
+    {
+     "label": "bid:3",
+     "child": 570
+    }
+   ]
+  },
+  {
+   "id": 568,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 569
+    }
+   ]
+  },
+  {
+   "id": 569,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 570,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 571
+    }
+   ]
+  },
+  {
+   "id": 571,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 572,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,1 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 573
+    },
+    {
+     "label": "bid:3",
+     "child": 575
+    }
+   ]
+  },
+  {
+   "id": 573,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 574
+    }
+   ]
+  },
+  {
+   "id": 574,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 575,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 576
+    }
+   ]
+  },
+  {
+   "id": 576,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 577,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=3,2 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 578
+    },
+    {
+     "label": "bid:2",
+     "child": 583
+    }
+   ]
+  },
+  {
+   "id": 578,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,2 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 579
+    },
+    {
+     "label": "bid:3",
+     "child": 581
+    }
+   ]
+  },
+  {
+   "id": 579,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 580
+    }
+   ]
+  },
+  {
+   "id": 580,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 581,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 582
+    }
+   ]
+  },
+  {
+   "id": 582,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 583,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,2 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 584
+    },
+    {
+     "label": "bid:3",
+     "child": 586
+    }
+   ]
+  },
+  {
+   "id": 584,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 585
+    }
+   ]
+  },
+  {
+   "id": 585,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 586,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 587
+    }
+   ]
+  },
+  {
+   "id": 587,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 588,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1/2",
+     "child": 589
+    },
+    {
+     "label": "prize:2",
+     "prob": "1/2",
+     "child": 600
+    }
+   ]
+  },
+  {
+   "id": 589,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=3,1 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 590
+    },
+    {
+     "label": "bid:2",
+     "child": 595
+    }
+   ]
+  },
+  {
+   "id": 590,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,1 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 591
+    },
+    {
+     "label": "bid:3",
+     "child": 593
+    }
+   ]
+  },
+  {
+   "id": 591,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 592
+    }
+   ]
+  },
+  {
+   "id": 592,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 593,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 594
+    }
+   ]
+  },
+  {
+   "id": 594,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 595,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,1 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 596
+    },
+    {
+     "label": "bid:3",
+     "child": 598
+    }
+   ]
+  },
+  {
+   "id": 596,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 597
+    }
+   ]
+  },
+  {
+   "id": 597,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 598,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 599
+    }
+   ]
+  },
+  {
+   "id": 599,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 600,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=3,2 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 601
+    },
+    {
+     "label": "bid:2",
+     "child": 606
+    }
+   ]
+  },
+  {
+   "id": 601,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,2 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 602
+    },
+    {
+     "label": "bid:3",
+     "child": 604
+    }
+   ]
+  },
+  {
+   "id": 602,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 603
+    }
+   ]
+  },
+  {
+   "id": 603,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 604,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 605
+    }
+   ]
+  },
+  {
+   "id": 605,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 606,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,2 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 607
+    },
+    {
+     "label": "bid:3",
+     "child": 609
+    }
+   ]
+  },
+  {
+   "id": 607,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 608
+    }
+   ]
+  },
+  {
+   "id": 608,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 609,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 610
+    }
+   ]
+  },
+  {
+   "id": 610,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 611,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1/2",
+     "child": 612
+    },
+    {
+     "label": "prize:2",
+     "prob": "1/2",
+     "child": 623
+    }
+   ]
+  },
+  {
+   "id": 612,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=3,1 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 613
+    },
+    {
+     "label": "bid:2",
+     "child": 618
+    }
+   ]
+  },
+  {
+   "id": 613,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,1 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 614
+    },
+    {
+     "label": "bid:2",
+     "child": 616
+    }
+   ]
+  },
+  {
+   "id": 614,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 615
+    }
+   ]
+  },
+  {
+   "id": 615,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 616,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 617
+    }
+   ]
+  },
+  {
+   "id": 617,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 618,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,1 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 619
+    },
+    {
+     "label": "bid:2",
+     "child": 621
+    }
+   ]
+  },
+  {
+   "id": 619,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 620
+    }
+   ]
+  },
+  {
+   "id": 620,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 621,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:2",
+     "prob": "1",
+     "child": 622
+    }
+   ]
+  },
+  {
+   "id": 622,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 623,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=3,2 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 624
+    },
+    {
+     "label": "bid:2",
+     "child": 629
+    }
+   ]
+  },
+  {
+   "id": 624,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,2 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 625
+    },
+    {
+     "label": "bid:2",
+     "child": 627
+    }
+   ]
+  },
+  {
+   "id": 625,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 626
+    }
+   ]
+  },
+  {
+   "id": 626,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 627,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 628
+    }
+   ]
+  },
+  {
+   "id": 628,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 629,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=3,2 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 630
+    },
+    {
+     "label": "bid:2",
+     "child": 632
+    }
+   ]
+  },
+  {
+   "id": 630,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 631
+    }
+   ]
+  },
+  {
+   "id": 631,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 632,
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "prize:1",
+     "prob": "1",
+     "child": 633
+    }
+   ]
+  },
+  {
+   "id": 633,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  }
+ ]
+}

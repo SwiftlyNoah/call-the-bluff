@@ -1,0 +1,200 @@
+{
+ "format": "bluff-experiment-trial-v1",
+ "run_id": "m-kuhn-rules-claude-opus-5-5-r3",
+ "game": "kuhn",
+ "variant": "rules",
+ "model_requested": "claude-opus-5-5",
+ "game_file": "games/out/kuhn.game.json",
+ "game_file_sha256": "31829086a5a36abb678ec0384bcfeea6229fe60983983df1be60a265fa79b068",
+ "prompt_file": "experiment/prompts/kuhn_rules.md",
+ "prompt_sha256": "390ab11a640771b3905f8bb8007a0ccf83921a49e1b17cd3227d20a1732734e0",
+ "pot": 2,
+ "timeout_s": 1800,
+ "max_budget_usd": 5.0,
+ "started_at": "2026-11-20T19:52:01-05:00",
+ "isolated_workspace": "/var/folders/km/r10tsfhx0815z44_014w924r0000gn/T/cfr-ysd3hkk3/workspace",
+ "agent": {
+  "exit_code": 0,
+  "timed_out": false,
+  "wall_seconds": 77.9,
+  "stderr_tail": "",
+  "is_error": false,
+  "subtype": "success",
+  "num_turns": 6,
+  "duration_ms": 76853,
+  "total_cost_usd": 0.2523302,
+  "usage": {
+   "input_tokens": 12,
+   "cache_creation_input_tokens": 14794,
+   "cache_read_input_tokens": 163951,
+   "output_tokens": 5057,
+   "output_tokens_details": {
+    "thinking_tokens": 988
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 14794,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 876,
+     "cache_read_input_tokens": 31819,
+     "cache_creation_input_tokens": 764,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 764
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard",
+   "fallback_credit": null
+  },
+  "models_used": [
+   "claude-opus-5-5"
+  ],
+  "model_usage": {
+   "claude-opus-5-5": {
+    "inputTokens": 12,
+    "outputTokens": 5057,
+    "cacheReadInputTokens": 163951,
+    "cacheCreationInputTokens": 14794,
+    "webSearchRequests": 0,
+    "costUSD": 0.2523302,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 988,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 14794,
+    "canonicalModel": "claude-opus-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "tool_calls": 5,
+  "snoop_hits": []
+ },
+ "ended_at": "2026-11-20T19:53:19-05:00",
+ "claim": {
+  "claim_converged": true,
+  "claimed_exploitability": 1.3e-06,
+  "claimed_value_p0": -0.0555556,
+  "confidence": "high",
+  "notes": "CFR+ (alternating updates, regret flooring, linear averaging), 200000 iterations. Exploitability from exact best responses: BR0=-0.0555539, BR1=+0.0555565. Value matches theoretical -1/18. Strategy is in the known equilibrium family with alpha ~0.2366. Dominated actions have probabilities around 1e-10 instead of exactly 0."
+ },
+ "claim_source": "final_reply",
+ "agent_files": [
+  "kuhn_cfr.py",
+  "strategy.json"
+ ],
+ "grading": {
+  "graded_at": "2026-11-20T19:53:19-05:00",
+  "strategy_found": true,
+  "strict": {
+   "checker": "bin/bluff",
+   "command": "bin/bluff check games/out/kuhn.game.json experiment/runs/m-kuhn-rules-claude-opus-5-5-r3/agent_files/strategy.json",
+   "exit_code": 0,
+   "stderr_tail": "",
+   "verdict": {
+    "format": "bluff-verdict-v1",
+    "game": "kuhn",
+    "value_p0": "-219205948335090882564257011201161175916572713352869558833771129147096095132016033908953487076048095375717479537745502667599028806764829092723627040442811821821196257855084681700828892444992645676104324722657025817913698133358793716799211/3945707070707070957522092613636346358352096806166969305339997666644575042605660848173428680985048719122241993326687237639375853045832102417179600833393991661324637645286448329703675536723561969727616750442302500000000000000000000000000000",
+    "br_value_p0": "-26665862626253819677482971951267892566137821059740446358580165210839958545856639/479999999999999974103079269759999113420874446930809669854890623924000000000000000",
+    "br_value_p1": "23148546140307809711395112576381018216145282288132642247866636265802520797/416666666666666710374030993333334770318957632765212590100088655303960000000",
+    "nash_conv": "1461258542561196891977084981407647474145564478050168259585015081528803416926292687721681161939790189319991220205937680661986769014243052419471/555555555555555583858753442222219967941614966320752417818330663360600569602325232681731807424889598903027725759608217027101489633164000000000000000",
+    "exploitability": "1461258542561196891977084981407647474145564478050168259585015081528803416926292687721681161939790189319991220205937680661986769014243052419471/1111111111111111167717506884444439935883229932641504835636661326721201139204650465363463614849779197806055451519216434054202979266328000000000000000",
+    "exploitability_float": 1.3151326883050772e-06,
+    "best_response_p0": {
+     "J:cb": "fold",
+     "J:": "check",
+     "Q:cb": "call",
+     "Q:": "check",
+     "K:cb": "fold",
+     "K:": "bet"
+    },
+    "best_response_p1": {
+     "Q:c": "check",
+     "Q:b": "fold",
+     "K:c": "bet",
+     "K:b": "call",
+     "J:c": "check",
+     "J:b": "fold"
+    },
+    "verified": true
+   }
+  },
+  "coverage": {
+   "game_infosets": 12,
+   "agent_infosets": 12,
+   "matched": 12,
+   "missing": 0,
+   "bad_rows": 0,
+   "extra": 0,
+   "coverage": 1.0,
+   "missing_sample": [],
+   "bad_sample": [],
+   "extra_sample": []
+  },
+  "filled": {
+   "checker": "bin/bluff",
+   "command": "bin/bluff check games/out/kuhn.game.json experiment/runs/m-kuhn-rules-claude-opus-5-5-r3/graded_strategy_filled.json",
+   "exit_code": 0,
+   "stderr_tail": "",
+   "verdict": {
+    "format": "bluff-verdict-v1",
+    "game": "kuhn",
+    "value_p0": "-219205948335090882564257011201161175916572713352869558833771129147096095132016033908953487076048095375717479537745502667599028806764829092723627040442811821821196257855084681700828892444992645676104324722657025817913698133358793716799211/3945707070707070957522092613636346358352096806166969305339997666644575042605660848173428680985048719122241993326687237639375853045832102417179600833393991661324637645286448329703675536723561969727616750442302500000000000000000000000000000",
+    "br_value_p0": "-26665862626253819677482971951267892566137821059740446358580165210839958545856639/479999999999999974103079269759999113420874446930809669854890623924000000000000000",
+    "br_value_p1": "23148546140307809711395112576381018216145282288132642247866636265802520797/416666666666666710374030993333334770318957632765212590100088655303960000000",
+    "nash_conv": "1461258542561196891977084981407647474145564478050168259585015081528803416926292687721681161939790189319991220205937680661986769014243052419471/555555555555555583858753442222219967941614966320752417818330663360600569602325232681731807424889598903027725759608217027101489633164000000000000000",
+    "exploitability": "1461258542561196891977084981407647474145564478050168259585015081528803416926292687721681161939790189319991220205937680661986769014243052419471/1111111111111111167717506884444439935883229932641504835636661326721201139204650465363463614849779197806055451519216434054202979266328000000000000000",
+    "exploitability_float": 1.3151326883050772e-06,
+    "best_response_p0": {
+     "J:cb": "fold",
+     "J:": "check",
+     "Q:cb": "call",
+     "Q:": "check",
+     "K:cb": "fold",
+     "K:": "bet"
+    },
+    "best_response_p1": {
+     "Q:c": "check",
+     "Q:b": "fold",
+     "K:c": "bet",
+     "K:b": "call",
+     "J:c": "check",
+     "J:b": "fold"
+    },
+    "verified": true
+   }
+  }
+ },
+ "summary": {
+  "agent_finished": true,
+  "strategy_found": true,
+  "strict_accepted": true,
+  "graded_on": "strict",
+  "checker": "bin/bluff",
+  "verified_checker": true,
+  "coverage": 1.0,
+  "exploitability": "1461258542561196891977084981407647474145564478050168259585015081528803416926292687721681161939790189319991220205937680661986769014243052419471/1111111111111111167717506884444439935883229932641504835636661326721201139204650465363463614849779197806055451519216434054202979266328000000000000000",
+  "exploitability_float": 1.3151326883050772e-06,
+  "value_p0": "-219205948335090882564257011201161175916572713352869558833771129147096095132016033908953487076048095375717479537745502667599028806764829092723627040442811821821196257855084681700828892444992645676104324722657025817913698133358793716799211/3945707070707070957522092613636346358352096806166969305339997666644575042605660848173428680985048719122241993326687237639375853045832102417179600833393991661324637645286448329703675536723561969727616750442302500000000000000000000000000000",
+  "threshold_1pct_pot": 0.02,
+  "claim_converged": true,
+  "claimed_exploitability": 1.3e-06,
+  "claimed_value_p0": -0.0555556,
+  "confidence": "high",
+  "certified_converged": true,
+  "claimed_converged_but_exploitable": false,
+  "claim_minus_certified_exploitability": -1.5132688305077194e-08,
+  "claim_minus_certified_value_p0": -4.445395456603718e-08
+ }
+}

@@ -1,0 +1,200 @@
+{
+ "format": "bluff-experiment-trial-v1",
+ "run_id": "m-kuhn-file-claude-haiku-5-5-r3",
+ "game": "kuhn",
+ "variant": "file",
+ "model_requested": "claude-haiku-5-5",
+ "game_file": "games/out/kuhn.game.json",
+ "game_file_sha256": "31829086a5a36abb678ec0384bcfeea6229fe60983983df1be60a265fa79b068",
+ "prompt_file": "experiment/prompts/kuhn_file.md",
+ "prompt_sha256": "07eb808320f3ba1cb53f982620eb35a8e4e3792ffbd3cfeb07a5f4a5fffeea12",
+ "pot": 2,
+ "timeout_s": 1800,
+ "max_budget_usd": 5.0,
+ "started_at": "2026-11-20T19:29:09-05:00",
+ "isolated_workspace": "/var/folders/km/r10tsfhx0815z44_014w924r0000gn/T/cfr-2ruyxlgt/workspace",
+ "agent": {
+  "exit_code": 0,
+  "timed_out": false,
+  "wall_seconds": 187.2,
+  "stderr_tail": "",
+  "is_error": false,
+  "subtype": "success",
+  "num_turns": 8,
+  "duration_ms": 185666,
+  "total_cost_usd": 0.016123949999999998,
+  "usage": {
+   "input_tokens": 14,
+   "cache_creation_input_tokens": 28042,
+   "cache_read_input_tokens": 243915,
+   "output_tokens": 16150,
+   "output_tokens_details": {
+    "thinking_tokens": 9903
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 28042,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 1413,
+     "cache_read_input_tokens": 44704,
+     "cache_creation_input_tokens": 1243,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 1243
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard",
+   "fallback_credit": null
+  },
+  "models_used": [
+   "claude-haiku-5-5"
+  ],
+  "model_usage": {
+   "claude-haiku-5-5": {
+    "inputTokens": 14,
+    "outputTokens": 16150,
+    "cacheReadInputTokens": 243915,
+    "cacheCreationInputTokens": 28042,
+    "webSearchRequests": 0,
+    "costUSD": 0.016123949999999998,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 9903,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 28042,
+    "canonicalModel": "claude-haiku-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "tool_calls": 7,
+  "snoop_hits": []
+ },
+ "ended_at": "2026-11-20T19:32:16-05:00",
+ "claim": {
+  "claim_converged": true,
+  "claimed_exploitability": 0.000153,
+  "claimed_value_p0": -0.055568,
+  "confidence": "high",
+  "notes": "CFR+ (alternating, linear averaging), 1,000,000 iterations, solver.py in the workspace. Exploitability computed with exact best responses over the tree in float arithmetic: BR0 = -0.055433, BR1 = +0.055739. Game is standard Kuhn poker (12 infosets); the value -1/18 = -0.055556 is matched to about 1e-5. The strategy is in the equilibrium family with alpha ~ 0.234 (P0 bets J with alpha, K with 3*alpha, P1 calls Q facing a bet with 1/3)."
+ },
+ "claim_source": "final_reply",
+ "agent_files": [
+  "solver.py",
+  "strategy.json"
+ ],
+ "grading": {
+  "graded_at": "2026-11-20T19:32:16-05:00",
+  "strategy_found": true,
+  "strict": {
+   "checker": "bin/bluff",
+   "command": "bin/bluff check games/out/kuhn.game.json experiment/runs/m-kuhn-file-claude-haiku-5-5-r3/agent_files/strategy.json",
+   "exit_code": 0,
+   "stderr_tail": "",
+   "verdict": {
+    "format": "bluff-verdict-v1",
+    "game": "kuhn",
+    "value_p0": "-12665108445168022215622752151116355356375252165021631807776200477979591420459559664104489794798338876825541382805960009634419455153627193113685345464825407952073989197871427835024254963/227920227920227931060842454871792420396789729380542190507688096949479812929843896036267508080979036236935141710811941938868677221223418039649403108416454568552935388810920198187929633582",
+    "br_value_p0": "-332600006157122982322685046943727336725369063229215673235842068847119342424919341/6000000000000000339000020999999974749001242000009084539914920000539964000071999964",
+    "br_value_p1": "25408176742133738979353316020038602599441062917335005455453429990241687907149/455840455840455864570840953276352015061721253874613742047382959829572887808868",
+    "nash_conv": "54373932184069877533160341534967625443348011639686790243622718142150018008148847131829460187245880857985845517143873780505079462111386906697/177777777777777804338184149555555909264431838098105417546443510545731261333202502514140751786509698402783681903861764379293967720934376380818778",
+    "exploitability": "54373932184069877533160341534967625443348011639686790243622718142150018008148847131829460187245880857985845517143873780505079462111386906697/355555555555555608676368299111111818528863676196210835092887021091462522666405005028281503573019396805567363807723528758587935441868752761637556",
+    "exploitability_float": 0.00015292668426769652,
+    "best_response_p0": {
+     "J:cb": "fold",
+     "J:": "check",
+     "Q:cb": "call",
+     "Q:": "check",
+     "K:cb": "fold",
+     "K:": "bet"
+    },
+    "best_response_p1": {
+     "Q:c": "check",
+     "Q:b": "call",
+     "K:c": "bet",
+     "K:b": "call",
+     "J:c": "check",
+     "J:b": "fold"
+    },
+    "verified": true
+   }
+  },
+  "coverage": {
+   "game_infosets": 12,
+   "agent_infosets": 12,
+   "matched": 12,
+   "missing": 0,
+   "bad_rows": 0,
+   "extra": 0,
+   "coverage": 1.0,
+   "missing_sample": [],
+   "bad_sample": [],
+   "extra_sample": []
+  },
+  "filled": {
+   "checker": "bin/bluff",
+   "command": "bin/bluff check games/out/kuhn.game.json experiment/runs/m-kuhn-file-claude-haiku-5-5-r3/graded_strategy_filled.json",
+   "exit_code": 0,
+   "stderr_tail": "",
+   "verdict": {
+    "format": "bluff-verdict-v1",
+    "game": "kuhn",
+    "value_p0": "-12665108445168022215622752151116355356375252165021631807776200477979591420459559664104489794798338876825541382805960009634419455153627193113685345464825407952073989197871427835024254963/227920227920227931060842454871792420396789729380542190507688096949479812929843896036267508080979036236935141710811941938868677221223418039649403108416454568552935388810920198187929633582",
+    "br_value_p0": "-332600006157122982322685046943727336725369063229215673235842068847119342424919341/6000000000000000339000020999999974749001242000009084539914920000539964000071999964",
+    "br_value_p1": "25408176742133738979353316020038602599441062917335005455453429990241687907149/455840455840455864570840953276352015061721253874613742047382959829572887808868",
+    "nash_conv": "54373932184069877533160341534967625443348011639686790243622718142150018008148847131829460187245880857985845517143873780505079462111386906697/177777777777777804338184149555555909264431838098105417546443510545731261333202502514140751786509698402783681903861764379293967720934376380818778",
+    "exploitability": "54373932184069877533160341534967625443348011639686790243622718142150018008148847131829460187245880857985845517143873780505079462111386906697/355555555555555608676368299111111818528863676196210835092887021091462522666405005028281503573019396805567363807723528758587935441868752761637556",
+    "exploitability_float": 0.00015292668426769652,
+    "best_response_p0": {
+     "J:cb": "fold",
+     "J:": "check",
+     "Q:cb": "call",
+     "Q:": "check",
+     "K:cb": "fold",
+     "K:": "bet"
+    },
+    "best_response_p1": {
+     "Q:c": "check",
+     "Q:b": "call",
+     "K:c": "bet",
+     "K:b": "call",
+     "J:c": "check",
+     "J:b": "fold"
+    },
+    "verified": true
+   }
+  }
+ },
+ "summary": {
+  "agent_finished": true,
+  "strategy_found": true,
+  "strict_accepted": true,
+  "graded_on": "strict",
+  "checker": "bin/bluff",
+  "verified_checker": true,
+  "coverage": 1.0,
+  "exploitability": "54373932184069877533160341534967625443348011639686790243622718142150018008148847131829460187245880857985845517143873780505079462111386906697/355555555555555608676368299111111818528863676196210835092887021091462522666405005028281503573019396805567363807723528758587935441868752761637556",
+  "exploitability_float": 0.00015292668426769652,
+  "value_p0": "-12665108445168022215622752151116355356375252165021631807776200477979591420459559664104489794798338876825541382805960009634419455153627193113685345464825407952073989197871427835024254963/227920227920227931060842454871792420396789729380542190507688096949479812929843896036267508080979036236935141710811941938868677221223418039649403108416454568552935388810920198187929633582",
+  "threshold_1pct_pot": 0.02,
+  "claim_converged": true,
+  "claimed_exploitability": 0.000153,
+  "claimed_value_p0": -0.055568,
+  "confidence": "high",
+  "certified_converged": true,
+  "claimed_converged_but_exploitable": false,
+  "claim_minus_certified_exploitability": 7.331573230348566e-08,
+  "claim_minus_certified_value_p0": 1.6330317469809286e-07
+ }
+}

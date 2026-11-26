@@ -1,0 +1,2075 @@
+{
+ "format": "bluff-strategy-v1",
+ "game": "rb-pennies",
+ "producer": "zoo/cfr.py --algo cfr",
+ "probs": {
+  "p1|start:R|RB r1:s0": {
+   "BR": "0.4998101542489768",
+   "RB": "0.5001898457510232"
+  },
+  "p0|start:R|RB r1:s0 ro:R": {
+   "bid 1R": "0.3737387198389294",
+   "bid 2R": "0.5005088688217812",
+   "bid 3R": "0.0",
+   "bid 1B": "0.12572486896640794",
+   "bid 2B": "2.7542372881355802e-05",
+   "bid 3B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R": {
+   "challenge": "0.8712317004289479",
+   "bid 2R": "0.06438414978552603",
+   "bid 3R": "0.06438414978552603"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:ch f0R L1": {
+   "discard R": "0.49958438717175274",
+   "discard B": "0.5004156128282473"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:ch f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.2501044520580873",
+   "bid 2R": "0.49979109588382553",
+   "bid 1B": "0.2501044520580873",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:ch f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:ch f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:ch f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:ch f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:ch f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:ch f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:ch f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:ch f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:ch f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "4.78034423596835e-05",
+   "bid 2R": "0.9999521965576403"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:ch f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:ch f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9999521965576403",
+   "bid 2B": "4.78034423596835e-05"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:ch f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:2R": {
+   "challenge": "1.0",
+   "bid 3R": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0R f1B L1": {
+   "discard R": "0.4986843525927243",
+   "discard B": "0.5013156474072756"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:2R 0:ch f0R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.24993778880220552",
+   "bid 2R": "0.500124422395589",
+   "bid 1B": "0.24993778880220552",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:2R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:2R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:2R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:2R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.0006457039846871347",
+   "bid 2R": "0.9993542960153128"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9993542960153128",
+   "bid 2B": "0.0006457039846871347"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:2R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:2R 0:ch f1B L1": {
+   "discard R": "0.4986843525927243",
+   "discard B": "0.5013156474072756"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:2R 0:ch f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.24993778880220552",
+   "bid 2R": "0.500124422395589",
+   "bid 1B": "0.24993778880220552",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:2R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:2R 0:ch f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:2R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:2R 0:ch f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:2R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:2R 0:ch f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:2R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:2R 0:ch f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:2R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.0006457039846871347",
+   "bid 2R": "0.9993542960153128"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:2R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:2R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9993542960153128",
+   "bid 2B": "0.0006457039846871347"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:2R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:2R 0:3R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:3R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0R f1B L1": {
+   "discard R": "0.4986843525927243",
+   "discard B": "0.5013156474072756"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.24993778880220552",
+   "bid 2R": "0.500124422395589",
+   "bid 1B": "0.24993778880220552",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.0006457039846871347",
+   "bid 2R": "0.9993542960153128"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9993542960153128",
+   "bid 2B": "0.0006457039846871347"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:3R 0:ch f1B L1": {
+   "discard R": "0.4986843525927243",
+   "discard B": "0.5013156474072756"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.24993778880220552",
+   "bid 2R": "0.500124422395589",
+   "bid 1B": "0.24993778880220552",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:3R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:3R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:3R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:3R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.0006457039846871347",
+   "bid 2R": "0.9993542960153128"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9993542960153128",
+   "bid 2B": "0.0006457039846871347"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R": {
+   "challenge": "0.9998749525205347",
+   "bid 3R": "0.0001250474794653053"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.4470887112750509",
+   "flip1": "0.552911288724949"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R 1:3R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0R f1B L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.42857142857142905",
+   "bid 2R": "0.14285714285714193",
+   "bid 1B": "0.42857142857142905",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R 1:3R 0:ch f0R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R 1:3R 0:ch f1B L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.42857142857142905",
+   "bid 2R": "0.14285714285714193",
+   "bid 1B": "0.42857142857142905",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R 1:3R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R 1:3R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R 1:3R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R 1:3R 0:ch f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2R 1:3R 0:ch f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:3R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B": {
+   "challenge": "0.8026656365505361",
+   "bid 2B": "0.09866718172473195",
+   "bid 3B": "0.09866718172473195"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:ch f1B L1": {
+   "discard R": "0.4998779871322953",
+   "discard B": "0.5001220128677047"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:ch f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.25033920935236614",
+   "bid 2R": "0.49932158129526766",
+   "bid 1B": "0.25033920935236614",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:ch f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:ch f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:ch f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:ch f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:ch f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:ch f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:ch f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:ch f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:ch f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "5.19174138495203e-05",
+   "bid 2R": "0.9999480825861505"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:ch f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:ch f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9999480825861505",
+   "bid 2B": "5.19174138495203e-05"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:ch f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B": {
+   "challenge": "1.0",
+   "bid 3B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch": {
+   "flip0": "0.468841665538776",
+   "flip1": "0.531158334461224"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f0R L1": {
+   "discard R": "0.4959389274787435",
+   "discard B": "0.5040610725212565"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.24797136056327126",
+   "bid 2R": "0.5040572788734574",
+   "bid 1B": "0.24797136056327126",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.00044690129539310417",
+   "bid 2R": "0.9995530987046068"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9995530987046068",
+   "bid 2B": "0.00044690129539310417"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f0R L1": {
+   "discard R": "0.4929035134531663",
+   "discard B": "0.5070964865468337"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f1B f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.24843160070148973",
+   "bid 2R": "0.5031367985970207",
+   "bid 1B": "0.24843160070148973",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.0003921086028586765",
+   "bid 2R": "0.9996078913971412"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9996078913971412",
+   "bid 2B": "0.0003921086028586765"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f1R L1": {
+   "discard R": "0.4929035134531663",
+   "discard B": "0.5070964865468337"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f1B f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.24843160070148973",
+   "bid 2R": "0.5031367985970207",
+   "bid 1B": "0.24843160070148973",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.0003921086028586765",
+   "bid 2R": "0.9996078913971412"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9996078913971412",
+   "bid 2B": "0.0003921086028586765"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:2B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:3B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:3B 1:ch f1B": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch": {
+   "flip0": "0.468841665538776",
+   "flip1": "0.531158334461224"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0R L1": {
+   "discard R": "0.4959389274787435",
+   "discard B": "0.5040610725212565"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.24797136056327126",
+   "bid 2R": "0.5040572788734574",
+   "bid 1B": "0.24797136056327126",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.00044690129539310417",
+   "bid 2R": "0.9995530987046068"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9995530987046068",
+   "bid 2B": "0.00044690129539310417"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0R L1": {
+   "discard R": "0.4929035134531663",
+   "discard B": "0.5070964865468337"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.24843160070148973",
+   "bid 2R": "0.5031367985970207",
+   "bid 1B": "0.24843160070148973",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.0003921086028586765",
+   "bid 2R": "0.9996078913971412"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9996078913971412",
+   "bid 2B": "0.0003921086028586765"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f1R L1": {
+   "discard R": "0.4929035134531663",
+   "discard B": "0.5070964865468337"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.24843160070148973",
+   "bid 2R": "0.5031367985970207",
+   "bid 1B": "0.24843160070148973",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.0003921086028586765",
+   "bid 2R": "0.9996078913971412"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9996078913971412",
+   "bid 2B": "0.0003921086028586765"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:1B 1:3B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B": {
+   "challenge": "0.9998749525205347",
+   "bid 3B": "0.0001250474794653053"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:ch f1B": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.42857142857142855",
+   "bid 2R": "0.14285714285714285",
+   "bid 1B": "0.42857142857142855",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.42857142857142855",
+   "bid 2R": "0.14285714285714285",
+   "bid 1B": "0.42857142857142855",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f1B f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f1R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.42857142857142855",
+   "bid 2R": "0.14285714285714285",
+   "bid 1B": "0.42857142857142855",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f1B f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:BR 0:2B 1:3B 0:ch f1B f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:3B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:3B 1:ch f1B": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R": {
+   "challenge": "8.330170438407271e-05",
+   "bid 2R": "0.9998333965912319",
+   "bid 3R": "8.330170438407271e-05"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:ch f0R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:ch f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:ch f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:ch f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:ch f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:ch f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:ch f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:ch f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:ch f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:ch f1R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:ch f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.25",
+   "bid 2R": "0.25",
+   "bid 1B": "0.25",
+   "bid 2B": "0.25"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:ch f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:ch f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:ch f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:ch f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:ch f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:ch f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:ch f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:ch f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:ch f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:ch f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:ch f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:ch f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:2R 0:ch": {
+   "flip0": "0.9999583422074778",
+   "flip1": "4.165779252227232e-05"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f1B L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:2R 0:ch f1R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.42857142857142905",
+   "bid 2R": "0.14285714285714185",
+   "bid 1B": "0.42857142857142905",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:2R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:2R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:2R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:2R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:2R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:2R 0:3R 1:ch f1R": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0R f1R f1B L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.42857142857142905",
+   "bid 2R": "0.14285714285714185",
+   "bid 1B": "0.42857142857142905",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0R f1R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0R f1R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0R f1R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0R f1R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0R f1R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0R f1R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0R f1R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f0R f1R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0R f1B L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.42857142857142905",
+   "bid 2R": "0.14285714285714185",
+   "bid 1B": "0.42857142857142905",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f0R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f1B L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.42857142857142905",
+   "bid 2R": "0.14285714285714185",
+   "bid 1B": "0.42857142857142905",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1R 1:3R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R": {
+   "challenge": "0.5411233176818154",
+   "bid 3R": "0.45887668231818457"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:ch f0R f1R L1": {
+   "discard R": "0.4995759406352925",
+   "discard B": "0.5004240593647075"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:ch f0R f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.24997257618604857",
+   "bid 2R": "0.5000548476279029",
+   "bid 1B": "0.24997257618604857",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:ch f0R f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:ch f0R f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:ch f0R f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:ch f0R f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:ch f0R f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:ch f0R f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:ch f0R f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:ch f0R f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:ch f0R f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.0001153587987210726",
+   "bid 2R": "0.999884641201279"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:ch f0R f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:ch f0R f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.999884641201279",
+   "bid 2B": "0.0001153587987210726"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:ch f0R f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:ch f1R": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:ch f1R f0R L1": {
+   "discard R": "0.49937101114219096",
+   "discard B": "0.5006289888578089"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:ch f1R f0R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.2498952605315099",
+   "bid 2R": "0.5002094789369803",
+   "bid 1B": "0.2498952605315099",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:ch f1R f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:ch f1R f0R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:ch f1R f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:ch f1R f0R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:ch f1R f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:ch f1R f0R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:ch f1R f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:ch f1R f0R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:ch f1R f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.00034455165430148275",
+   "bid 2R": "0.9996554483456984"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:ch f1R f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:ch f1R f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9996554483456984",
+   "bid 2B": "0.00034455165430148275"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:ch f1R f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0R f1R f1B L1": {
+   "discard R": "0.4986653398627472",
+   "discard B": "0.5013346601372527"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.25048164759779484",
+   "bid 2R": "0.49903670480441037",
+   "bid 1B": "0.25048164759779484",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0R f1R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0R f1R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0R f1R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0R f1R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f0R f1R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0R f1R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.00013578801335523794",
+   "bid 2R": "0.9998642119866448"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0R f1R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0R f1R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9998642119866448",
+   "bid 2B": "0.00013578801335523794"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f0R f1R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0R f1B L1": {
+   "discard R": "0.4986653398627472",
+   "discard B": "0.5013346601372527"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.25048164759779484",
+   "bid 2R": "0.49903670480441037",
+   "bid 1B": "0.25048164759779484",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f1R f0R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.00013578801335523794",
+   "bid 2R": "0.9998642119866448"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9998642119866448",
+   "bid 2B": "0.00013578801335523794"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f0R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f1B L1": {
+   "discard R": "0.4986653398627472",
+   "discard B": "0.5013346601372527"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.25048164759779484",
+   "bid 2R": "0.49903670480441037",
+   "bid 1B": "0.25048164759779484",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f1B L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2R 1:3R 0:ch f1R f1B L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.00013578801335523794",
+   "bid 2R": "0.9998642119866448"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9998642119866448",
+   "bid 2B": "0.00013578801335523794"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2R 1:3R 0:ch f1R f1B L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:3R 1:ch f1R": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B": {
+   "challenge": "0.9998333965912319",
+   "bid 2B": "8.330170438407271e-05",
+   "bid 3B": "8.330170438407271e-05"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:2B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:2B 0:ch f1R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.42857142857142894",
+   "bid 2R": "0.1428571428571421",
+   "bid 1B": "0.42857142857142894",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:2B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:2B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:2B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:2B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:2B 0:ch f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:2B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:2B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:2B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:2B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:3B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:3B 0:ch f1R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.42857142857142894",
+   "bid 2R": "0.1428571428571421",
+   "bid 1B": "0.42857142857142894",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:1B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:3B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:3B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:3B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:1B 1:3B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B": {
+   "challenge": "0.9998750474434239",
+   "bid 3B": "0.00012495255657610907"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B 1:3B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B 1:3B 0:ch f0R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B 1:3B 0:ch f1R L1": {
+   "discard R": "0.5",
+   "discard B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.42857142857142855",
+   "bid 2R": "0.14285714285714285",
+   "bid 1B": "0.42857142857142855",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B 1:3B 0:ch f1R L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB r1:s0 ro:R 0:2B 1:3B 0:ch f1R L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B 1:3B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B 1:3B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B 1:3B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p1|start:R|RB r1:s0 ro:RB 0:2B 1:3B 0:ch f1R L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  }
+ }
+}

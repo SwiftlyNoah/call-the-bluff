@@ -1,0 +1,77 @@
+{
+ "format": "bluff-game-v1",
+ "name": "mp",
+ "root": 0,
+ "nodes": [
+  {
+   "id": 0,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0",
+   "actions": [
+    {
+     "label": "H",
+     "child": 1
+    },
+    {
+     "label": "T",
+     "child": 2
+    }
+   ]
+  },
+  {
+   "id": 1,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1",
+   "actions": [
+    {
+     "label": "H",
+     "child": 3
+    },
+    {
+     "label": "T",
+     "child": 4
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1",
+   "actions": [
+    {
+     "label": "H",
+     "child": 5
+    },
+    {
+     "label": "T",
+     "child": 6
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 4,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 5,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 6,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  }
+ ],
+ "known_value_p0": "0",
+ "known_value_source": "symmetry"
+}

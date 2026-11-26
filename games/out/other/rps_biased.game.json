@@ -1,0 +1,135 @@
+{
+ "format": "bluff-game-v1",
+ "name": "rps_biased",
+ "description": "Biased rock-paper-scissors as a tree (simultaneous move via one p1 infoset). As RPS, except that p0 winning with rock (R vs S) pays 2 to p0. p1 winning with rock still pays 1.",
+ "known_value_p0": "1/12",
+ "known_value_source": "closed form by indifference, derived in games/other/README.md: p0 (1/4, 5/12, 1/3), p1 (1/3, 5/12, 1/4) over (R, P, S)",
+ "root": 0,
+ "nodes": [
+  {
+   "id": 0,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0",
+   "actions": [
+    {
+     "label": "R",
+     "child": 1
+    },
+    {
+     "label": "P",
+     "child": 5
+    },
+    {
+     "label": "S",
+     "child": 9
+    }
+   ]
+  },
+  {
+   "id": 1,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1",
+   "actions": [
+    {
+     "label": "R",
+     "child": 2
+    },
+    {
+     "label": "P",
+     "child": 3
+    },
+    {
+     "label": "S",
+     "child": 4
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 3,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 4,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 5,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1",
+   "actions": [
+    {
+     "label": "R",
+     "child": 6
+    },
+    {
+     "label": "P",
+     "child": 7
+    },
+    {
+     "label": "S",
+     "child": 8
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 7,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 8,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 9,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1",
+   "actions": [
+    {
+     "label": "R",
+     "child": 10
+    },
+    {
+     "label": "P",
+     "child": 11
+    },
+    {
+     "label": "S",
+     "child": 12
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 11,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 12,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  }
+ ]
+}

@@ -1,0 +1,578 @@
+{
+ "format": "bluff-game-v1",
+ "name": "minikuhn_b",
+ "description": "3-card Kuhn-like poker, written for attempt-b",
+ "root": 0,
+ "nodes": [
+  {
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "LM",
+     "prob": "1/6",
+     "child": 1
+    },
+    {
+     "label": "LH",
+     "prob": "1/6",
+     "child": 10
+    },
+    {
+     "label": "ML",
+     "prob": "1/6",
+     "child": 19
+    },
+    {
+     "label": "MH",
+     "prob": "1/6",
+     "child": 28
+    },
+    {
+     "label": "HL",
+     "prob": "1/6",
+     "child": 37
+    },
+    {
+     "label": "HM",
+     "prob": "1/6",
+     "child": 46
+    }
+   ],
+   "id": 0
+  },
+  {
+   "kind": "decision",
+   "player": 0,
+   "infoset": "L:",
+   "actions": [
+    {
+     "label": "check",
+     "child": 2
+    },
+    {
+     "label": "bet",
+     "child": 7
+    }
+   ],
+   "id": 1
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "M:c",
+   "actions": [
+    {
+     "label": "check",
+     "child": 3
+    },
+    {
+     "label": "bet",
+     "child": 4
+    }
+   ],
+   "id": 2
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-1",
+   "id": 3
+  },
+  {
+   "kind": "decision",
+   "player": 0,
+   "infoset": "L:cb",
+   "actions": [
+    {
+     "label": "fold",
+     "child": 5
+    },
+    {
+     "label": "call",
+     "child": 6
+    }
+   ],
+   "id": 4
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-1",
+   "id": 5
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-2",
+   "id": 6
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "M:b",
+   "actions": [
+    {
+     "label": "fold",
+     "child": 8
+    },
+    {
+     "label": "call",
+     "child": 9
+    }
+   ],
+   "id": 7
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "1",
+   "id": 8
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-2",
+   "id": 9
+  },
+  {
+   "kind": "decision",
+   "player": 0,
+   "infoset": "L:",
+   "actions": [
+    {
+     "label": "check",
+     "child": 11
+    },
+    {
+     "label": "bet",
+     "child": 16
+    }
+   ],
+   "id": 10
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "H:c",
+   "actions": [
+    {
+     "label": "check",
+     "child": 12
+    },
+    {
+     "label": "bet",
+     "child": 13
+    }
+   ],
+   "id": 11
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-1",
+   "id": 12
+  },
+  {
+   "kind": "decision",
+   "player": 0,
+   "infoset": "L:cb",
+   "actions": [
+    {
+     "label": "fold",
+     "child": 14
+    },
+    {
+     "label": "call",
+     "child": 15
+    }
+   ],
+   "id": 13
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-1",
+   "id": 14
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-2",
+   "id": 15
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "H:b",
+   "actions": [
+    {
+     "label": "fold",
+     "child": 17
+    },
+    {
+     "label": "call",
+     "child": 18
+    }
+   ],
+   "id": 16
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "1",
+   "id": 17
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-2",
+   "id": 18
+  },
+  {
+   "kind": "decision",
+   "player": 0,
+   "infoset": "M:",
+   "actions": [
+    {
+     "label": "check",
+     "child": 20
+    },
+    {
+     "label": "bet",
+     "child": 25
+    }
+   ],
+   "id": 19
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "L:c",
+   "actions": [
+    {
+     "label": "check",
+     "child": 21
+    },
+    {
+     "label": "bet",
+     "child": 22
+    }
+   ],
+   "id": 20
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "1",
+   "id": 21
+  },
+  {
+   "kind": "decision",
+   "player": 0,
+   "infoset": "M:cb",
+   "actions": [
+    {
+     "label": "fold",
+     "child": 23
+    },
+    {
+     "label": "call",
+     "child": 24
+    }
+   ],
+   "id": 22
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-1",
+   "id": 23
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "2",
+   "id": 24
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "L:b",
+   "actions": [
+    {
+     "label": "fold",
+     "child": 26
+    },
+    {
+     "label": "call",
+     "child": 27
+    }
+   ],
+   "id": 25
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "1",
+   "id": 26
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "2",
+   "id": 27
+  },
+  {
+   "kind": "decision",
+   "player": 0,
+   "infoset": "M:",
+   "actions": [
+    {
+     "label": "check",
+     "child": 29
+    },
+    {
+     "label": "bet",
+     "child": 34
+    }
+   ],
+   "id": 28
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "H:c",
+   "actions": [
+    {
+     "label": "check",
+     "child": 30
+    },
+    {
+     "label": "bet",
+     "child": 31
+    }
+   ],
+   "id": 29
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-1",
+   "id": 30
+  },
+  {
+   "kind": "decision",
+   "player": 0,
+   "infoset": "M:cb",
+   "actions": [
+    {
+     "label": "fold",
+     "child": 32
+    },
+    {
+     "label": "call",
+     "child": 33
+    }
+   ],
+   "id": 31
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-1",
+   "id": 32
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-2",
+   "id": 33
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "H:b",
+   "actions": [
+    {
+     "label": "fold",
+     "child": 35
+    },
+    {
+     "label": "call",
+     "child": 36
+    }
+   ],
+   "id": 34
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "1",
+   "id": 35
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-2",
+   "id": 36
+  },
+  {
+   "kind": "decision",
+   "player": 0,
+   "infoset": "H:",
+   "actions": [
+    {
+     "label": "check",
+     "child": 38
+    },
+    {
+     "label": "bet",
+     "child": 43
+    }
+   ],
+   "id": 37
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "L:c",
+   "actions": [
+    {
+     "label": "check",
+     "child": 39
+    },
+    {
+     "label": "bet",
+     "child": 40
+    }
+   ],
+   "id": 38
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "1",
+   "id": 39
+  },
+  {
+   "kind": "decision",
+   "player": 0,
+   "infoset": "H:cb",
+   "actions": [
+    {
+     "label": "fold",
+     "child": 41
+    },
+    {
+     "label": "call",
+     "child": 42
+    }
+   ],
+   "id": 40
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-1",
+   "id": 41
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "2",
+   "id": 42
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "L:b",
+   "actions": [
+    {
+     "label": "fold",
+     "child": 44
+    },
+    {
+     "label": "call",
+     "child": 45
+    }
+   ],
+   "id": 43
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "1",
+   "id": 44
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "2",
+   "id": 45
+  },
+  {
+   "kind": "decision",
+   "player": 0,
+   "infoset": "H:",
+   "actions": [
+    {
+     "label": "check",
+     "child": 47
+    },
+    {
+     "label": "bet",
+     "child": 52
+    }
+   ],
+   "id": 46
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "M:c",
+   "actions": [
+    {
+     "label": "check",
+     "child": 48
+    },
+    {
+     "label": "bet",
+     "child": 49
+    }
+   ],
+   "id": 47
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "1",
+   "id": 48
+  },
+  {
+   "kind": "decision",
+   "player": 0,
+   "infoset": "H:cb",
+   "actions": [
+    {
+     "label": "fold",
+     "child": 50
+    },
+    {
+     "label": "call",
+     "child": 51
+    }
+   ],
+   "id": 49
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-1",
+   "id": 50
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "2",
+   "id": 51
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "M:b",
+   "actions": [
+    {
+     "label": "fold",
+     "child": 53
+    },
+    {
+     "label": "call",
+     "child": 54
+    }
+   ],
+   "id": 52
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "1",
+   "id": 53
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "2",
+   "id": 54
+  }
+ ]
+}

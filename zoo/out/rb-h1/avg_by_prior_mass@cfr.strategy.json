@@ -1,0 +1,83 @@
+{
+ "format": "bluff-strategy-v1",
+ "game": "rb-h1",
+ "producer": "zoo/mutants/avg_by_prior_mass.py --algo cfr",
+ "probs": {
+  "p0|deal:B r1:s0 ro:B": {
+   "bid 1R": "0.4998973792802594",
+   "bid 2R": "0.0",
+   "bid 1B": "0.4998973792802594",
+   "bid 2B": "0.00020524143948121896"
+  },
+  "p1|deal:B r1:s0 ro:B 0:1R": {
+   "challenge": "0.9996",
+   "bid 2R": "0.0004"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1R 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|deal:B r1:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:B r1:s0 ro:B 0:1B": {
+   "challenge": "0.0004",
+   "bid 2B": "0.9996"
+  },
+  "p0|deal:B r1:s0 ro:B 0:1B 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|deal:B r1:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:B r1:s0 ro:B 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:R r1:s0 ro:R 0:1R": {
+   "challenge": "0.0004",
+   "bid 2R": "0.9996"
+  },
+  "p1|deal:R r1:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|deal:R r1:s0 ro:R 0:1B": {
+   "challenge": "0.9996",
+   "bid 2B": "0.0004"
+  },
+  "p1|deal:R r1:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R": {
+   "bid 1R": "0.4998973792802594",
+   "bid 2R": "0.00020524143948121894",
+   "bid 1B": "0.4998973792802594",
+   "bid 2B": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|deal:R r1:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p0|deal:R r1:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  }
+ }
+}

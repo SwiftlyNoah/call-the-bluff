@@ -1,0 +1,11202 @@
+{
+ "format": "bluff-game-v1",
+ "name": "goofspiel4_fixed",
+ "description": "Goofspiel with 4 cards, prize order fixed 1..4; simultaneous bids via infosets, bids revealed after each round, ties discard the prize, last round forced, payoff = p0 prize sum - p1 prize sum.",
+ "known_value_p0": "0",
+ "known_value_source": "symmetric game (swapping the players maps the game to itself with negated payoff), so the value is 0; argument in games/other/README.md, certified exactly by solve.py",
+ "root": 0,
+ "nodes": [
+  {
+   "id": 0,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1 p0= p1=",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1
+    },
+    {
+     "label": "bid:2",
+     "child": 270
+    },
+    {
+     "label": "bid:3",
+     "child": 539
+    },
+    {
+     "label": "bid:4",
+     "child": 808
+    }
+   ]
+  },
+  {
+   "id": 1,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1 p0= p1=",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 2
+    },
+    {
+     "label": "bid:2",
+     "child": 69
+    },
+    {
+     "label": "bid:3",
+     "child": 136
+    },
+    {
+     "label": "bid:4",
+     "child": 203
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 3
+    },
+    {
+     "label": "bid:3",
+     "child": 25
+    },
+    {
+     "label": "bid:4",
+     "child": 47
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 4
+    },
+    {
+     "label": "bid:3",
+     "child": 11
+    },
+    {
+     "label": "bid:4",
+     "child": 18
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,2 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 5
+    },
+    {
+     "label": "bid:4",
+     "child": 8
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 6
+    },
+    {
+     "label": "bid:4",
+     "child": 7
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 7,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 8,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 9
+    },
+    {
+     "label": "bid:4",
+     "child": 10
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 10,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 11,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,2 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 12
+    },
+    {
+     "label": "bid:4",
+     "child": 15
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 13
+    },
+    {
+     "label": "bid:4",
+     "child": 14
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 14,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 15,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 16
+    },
+    {
+     "label": "bid:4",
+     "child": 17
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 17,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 18,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,2 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 19
+    },
+    {
+     "label": "bid:4",
+     "child": 22
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 20
+    },
+    {
+     "label": "bid:3",
+     "child": 21
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "kind": "terminal",
+   "payoff_p0": "5"
+  },
+  {
+   "id": 21,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 22,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 23
+    },
+    {
+     "label": "bid:3",
+     "child": 24
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 24,
+   "kind": "terminal",
+   "payoff_p0": "5"
+  },
+  {
+   "id": 25,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 26
+    },
+    {
+     "label": "bid:3",
+     "child": 33
+    },
+    {
+     "label": "bid:4",
+     "child": 40
+    }
+   ]
+  },
+  {
+   "id": 26,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,3 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 27
+    },
+    {
+     "label": "bid:4",
+     "child": 30
+    }
+   ]
+  },
+  {
+   "id": 27,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 28
+    },
+    {
+     "label": "bid:4",
+     "child": 29
+    }
+   ]
+  },
+  {
+   "id": 28,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 29,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 30,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 31
+    },
+    {
+     "label": "bid:4",
+     "child": 32
+    }
+   ]
+  },
+  {
+   "id": 31,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 32,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 33,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,3 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 34
+    },
+    {
+     "label": "bid:4",
+     "child": 37
+    }
+   ]
+  },
+  {
+   "id": 34,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 35
+    },
+    {
+     "label": "bid:4",
+     "child": 36
+    }
+   ]
+  },
+  {
+   "id": 35,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 36,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 37,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 38
+    },
+    {
+     "label": "bid:4",
+     "child": 39
+    }
+   ]
+  },
+  {
+   "id": 38,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 39,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 40,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,3 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 41
+    },
+    {
+     "label": "bid:4",
+     "child": 44
+    }
+   ]
+  },
+  {
+   "id": 41,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 42
+    },
+    {
+     "label": "bid:3",
+     "child": 43
+    }
+   ]
+  },
+  {
+   "id": 42,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 43,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 44,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 45
+    },
+    {
+     "label": "bid:3",
+     "child": 46
+    }
+   ]
+  },
+  {
+   "id": 45,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 46,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 47,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=1 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 48
+    },
+    {
+     "label": "bid:3",
+     "child": 55
+    },
+    {
+     "label": "bid:4",
+     "child": 62
+    }
+   ]
+  },
+  {
+   "id": 48,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,4 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 49
+    },
+    {
+     "label": "bid:3",
+     "child": 52
+    }
+   ]
+  },
+  {
+   "id": 49,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 50
+    },
+    {
+     "label": "bid:4",
+     "child": 51
+    }
+   ]
+  },
+  {
+   "id": 50,
+   "kind": "terminal",
+   "payoff_p0": "-5"
+  },
+  {
+   "id": 51,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 52,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 53
+    },
+    {
+     "label": "bid:4",
+     "child": 54
+    }
+   ]
+  },
+  {
+   "id": 53,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 54,
+   "kind": "terminal",
+   "payoff_p0": "-5"
+  },
+  {
+   "id": 55,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,4 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 56
+    },
+    {
+     "label": "bid:3",
+     "child": 59
+    }
+   ]
+  },
+  {
+   "id": 56,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 57
+    },
+    {
+     "label": "bid:4",
+     "child": 58
+    }
+   ]
+  },
+  {
+   "id": 57,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 58,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 59,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 60
+    },
+    {
+     "label": "bid:4",
+     "child": 61
+    }
+   ]
+  },
+  {
+   "id": 60,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 61,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 62,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,4 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 63
+    },
+    {
+     "label": "bid:3",
+     "child": 66
+    }
+   ]
+  },
+  {
+   "id": 63,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 64
+    },
+    {
+     "label": "bid:3",
+     "child": 65
+    }
+   ]
+  },
+  {
+   "id": 64,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 65,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 66,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 67
+    },
+    {
+     "label": "bid:3",
+     "child": 68
+    }
+   ]
+  },
+  {
+   "id": 67,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 68,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 69,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 70
+    },
+    {
+     "label": "bid:3",
+     "child": 92
+    },
+    {
+     "label": "bid:4",
+     "child": 114
+    }
+   ]
+  },
+  {
+   "id": 70,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 71
+    },
+    {
+     "label": "bid:3",
+     "child": 78
+    },
+    {
+     "label": "bid:4",
+     "child": 85
+    }
+   ]
+  },
+  {
+   "id": 71,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,2 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 72
+    },
+    {
+     "label": "bid:4",
+     "child": 75
+    }
+   ]
+  },
+  {
+   "id": 72,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 73
+    },
+    {
+     "label": "bid:4",
+     "child": 74
+    }
+   ]
+  },
+  {
+   "id": 73,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 74,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 75,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 76
+    },
+    {
+     "label": "bid:4",
+     "child": 77
+    }
+   ]
+  },
+  {
+   "id": 76,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 77,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 78,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,2 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 79
+    },
+    {
+     "label": "bid:4",
+     "child": 82
+    }
+   ]
+  },
+  {
+   "id": 79,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 80
+    },
+    {
+     "label": "bid:4",
+     "child": 81
+    }
+   ]
+  },
+  {
+   "id": 80,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 81,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 82,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 83
+    },
+    {
+     "label": "bid:4",
+     "child": 84
+    }
+   ]
+  },
+  {
+   "id": 83,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 84,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 85,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,2 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 86
+    },
+    {
+     "label": "bid:4",
+     "child": 89
+    }
+   ]
+  },
+  {
+   "id": 86,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 87
+    },
+    {
+     "label": "bid:3",
+     "child": 88
+    }
+   ]
+  },
+  {
+   "id": 87,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 88,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 89,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 90
+    },
+    {
+     "label": "bid:3",
+     "child": 91
+    }
+   ]
+  },
+  {
+   "id": 90,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 91,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 92,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 93
+    },
+    {
+     "label": "bid:3",
+     "child": 100
+    },
+    {
+     "label": "bid:4",
+     "child": 107
+    }
+   ]
+  },
+  {
+   "id": 93,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,3 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 94
+    },
+    {
+     "label": "bid:4",
+     "child": 97
+    }
+   ]
+  },
+  {
+   "id": 94,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 95
+    },
+    {
+     "label": "bid:4",
+     "child": 96
+    }
+   ]
+  },
+  {
+   "id": 95,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 96,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 97,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 98
+    },
+    {
+     "label": "bid:4",
+     "child": 99
+    }
+   ]
+  },
+  {
+   "id": 98,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 99,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 100,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,3 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 101
+    },
+    {
+     "label": "bid:4",
+     "child": 104
+    }
+   ]
+  },
+  {
+   "id": 101,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 102
+    },
+    {
+     "label": "bid:4",
+     "child": 103
+    }
+   ]
+  },
+  {
+   "id": 102,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 103,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 104,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 105
+    },
+    {
+     "label": "bid:4",
+     "child": 106
+    }
+   ]
+  },
+  {
+   "id": 105,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 106,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 107,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,3 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 108
+    },
+    {
+     "label": "bid:4",
+     "child": 111
+    }
+   ]
+  },
+  {
+   "id": 108,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 109
+    },
+    {
+     "label": "bid:3",
+     "child": 110
+    }
+   ]
+  },
+  {
+   "id": 109,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 110,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 111,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 112
+    },
+    {
+     "label": "bid:3",
+     "child": 113
+    }
+   ]
+  },
+  {
+   "id": 112,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 113,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 114,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=1 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 115
+    },
+    {
+     "label": "bid:3",
+     "child": 122
+    },
+    {
+     "label": "bid:4",
+     "child": 129
+    }
+   ]
+  },
+  {
+   "id": 115,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,4 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 116
+    },
+    {
+     "label": "bid:3",
+     "child": 119
+    }
+   ]
+  },
+  {
+   "id": 116,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 117
+    },
+    {
+     "label": "bid:4",
+     "child": 118
+    }
+   ]
+  },
+  {
+   "id": 117,
+   "kind": "terminal",
+   "payoff_p0": "-6"
+  },
+  {
+   "id": 118,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 119,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 120
+    },
+    {
+     "label": "bid:4",
+     "child": 121
+    }
+   ]
+  },
+  {
+   "id": 120,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 121,
+   "kind": "terminal",
+   "payoff_p0": "-6"
+  },
+  {
+   "id": 122,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,4 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 123
+    },
+    {
+     "label": "bid:3",
+     "child": 126
+    }
+   ]
+  },
+  {
+   "id": 123,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 124
+    },
+    {
+     "label": "bid:4",
+     "child": 125
+    }
+   ]
+  },
+  {
+   "id": 124,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 125,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 126,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 127
+    },
+    {
+     "label": "bid:4",
+     "child": 128
+    }
+   ]
+  },
+  {
+   "id": 127,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 128,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 129,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,4 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 130
+    },
+    {
+     "label": "bid:3",
+     "child": 133
+    }
+   ]
+  },
+  {
+   "id": 130,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 131
+    },
+    {
+     "label": "bid:3",
+     "child": 132
+    }
+   ]
+  },
+  {
+   "id": 131,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 132,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 133,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 134
+    },
+    {
+     "label": "bid:3",
+     "child": 135
+    }
+   ]
+  },
+  {
+   "id": 134,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 135,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 136,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 137
+    },
+    {
+     "label": "bid:3",
+     "child": 159
+    },
+    {
+     "label": "bid:4",
+     "child": 181
+    }
+   ]
+  },
+  {
+   "id": 137,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 138
+    },
+    {
+     "label": "bid:2",
+     "child": 145
+    },
+    {
+     "label": "bid:4",
+     "child": 152
+    }
+   ]
+  },
+  {
+   "id": 138,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,2 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 139
+    },
+    {
+     "label": "bid:4",
+     "child": 142
+    }
+   ]
+  },
+  {
+   "id": 139,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 140
+    },
+    {
+     "label": "bid:4",
+     "child": 141
+    }
+   ]
+  },
+  {
+   "id": 140,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 141,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 142,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 143
+    },
+    {
+     "label": "bid:4",
+     "child": 144
+    }
+   ]
+  },
+  {
+   "id": 143,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 144,
+   "kind": "terminal",
+   "payoff_p0": "5"
+  },
+  {
+   "id": 145,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,2 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 146
+    },
+    {
+     "label": "bid:4",
+     "child": 149
+    }
+   ]
+  },
+  {
+   "id": 146,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 147
+    },
+    {
+     "label": "bid:4",
+     "child": 148
+    }
+   ]
+  },
+  {
+   "id": 147,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 148,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 149,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 150
+    },
+    {
+     "label": "bid:4",
+     "child": 151
+    }
+   ]
+  },
+  {
+   "id": 150,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 151,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 152,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,2 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 153
+    },
+    {
+     "label": "bid:4",
+     "child": 156
+    }
+   ]
+  },
+  {
+   "id": 153,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 154
+    },
+    {
+     "label": "bid:2",
+     "child": 155
+    }
+   ]
+  },
+  {
+   "id": 154,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 155,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 156,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 157
+    },
+    {
+     "label": "bid:2",
+     "child": 158
+    }
+   ]
+  },
+  {
+   "id": 157,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 158,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 159,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 160
+    },
+    {
+     "label": "bid:2",
+     "child": 167
+    },
+    {
+     "label": "bid:4",
+     "child": 174
+    }
+   ]
+  },
+  {
+   "id": 160,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,3 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 161
+    },
+    {
+     "label": "bid:4",
+     "child": 164
+    }
+   ]
+  },
+  {
+   "id": 161,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 162
+    },
+    {
+     "label": "bid:4",
+     "child": 163
+    }
+   ]
+  },
+  {
+   "id": 162,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 163,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 164,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 165
+    },
+    {
+     "label": "bid:4",
+     "child": 166
+    }
+   ]
+  },
+  {
+   "id": 165,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 166,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 167,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,3 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 168
+    },
+    {
+     "label": "bid:4",
+     "child": 171
+    }
+   ]
+  },
+  {
+   "id": 168,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 169
+    },
+    {
+     "label": "bid:4",
+     "child": 170
+    }
+   ]
+  },
+  {
+   "id": 169,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 170,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 171,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 172
+    },
+    {
+     "label": "bid:4",
+     "child": 173
+    }
+   ]
+  },
+  {
+   "id": 172,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 173,
+   "kind": "terminal",
+   "payoff_p0": "5"
+  },
+  {
+   "id": 174,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,3 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 175
+    },
+    {
+     "label": "bid:4",
+     "child": 178
+    }
+   ]
+  },
+  {
+   "id": 175,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 176
+    },
+    {
+     "label": "bid:2",
+     "child": 177
+    }
+   ]
+  },
+  {
+   "id": 176,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 177,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 178,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 179
+    },
+    {
+     "label": "bid:2",
+     "child": 180
+    }
+   ]
+  },
+  {
+   "id": 179,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 180,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 181,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=1 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 182
+    },
+    {
+     "label": "bid:2",
+     "child": 189
+    },
+    {
+     "label": "bid:4",
+     "child": 196
+    }
+   ]
+  },
+  {
+   "id": 182,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,4 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 183
+    },
+    {
+     "label": "bid:3",
+     "child": 186
+    }
+   ]
+  },
+  {
+   "id": 183,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 184
+    },
+    {
+     "label": "bid:4",
+     "child": 185
+    }
+   ]
+  },
+  {
+   "id": 184,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 185,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 186,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 187
+    },
+    {
+     "label": "bid:4",
+     "child": 188
+    }
+   ]
+  },
+  {
+   "id": 187,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 188,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 189,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,4 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 190
+    },
+    {
+     "label": "bid:3",
+     "child": 193
+    }
+   ]
+  },
+  {
+   "id": 190,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 191
+    },
+    {
+     "label": "bid:4",
+     "child": 192
+    }
+   ]
+  },
+  {
+   "id": 191,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 192,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 193,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 194
+    },
+    {
+     "label": "bid:4",
+     "child": 195
+    }
+   ]
+  },
+  {
+   "id": 194,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 195,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 196,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,4 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 197
+    },
+    {
+     "label": "bid:3",
+     "child": 200
+    }
+   ]
+  },
+  {
+   "id": 197,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 198
+    },
+    {
+     "label": "bid:2",
+     "child": 199
+    }
+   ]
+  },
+  {
+   "id": 198,
+   "kind": "terminal",
+   "payoff_p0": "6"
+  },
+  {
+   "id": 199,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 200,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 201
+    },
+    {
+     "label": "bid:2",
+     "child": 202
+    }
+   ]
+  },
+  {
+   "id": 201,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 202,
+   "kind": "terminal",
+   "payoff_p0": "6"
+  },
+  {
+   "id": 203,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=1 p1=4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 204
+    },
+    {
+     "label": "bid:3",
+     "child": 226
+    },
+    {
+     "label": "bid:4",
+     "child": 248
+    }
+   ]
+  },
+  {
+   "id": 204,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=1 p1=4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 205
+    },
+    {
+     "label": "bid:2",
+     "child": 212
+    },
+    {
+     "label": "bid:3",
+     "child": 219
+    }
+   ]
+  },
+  {
+   "id": 205,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,2 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 206
+    },
+    {
+     "label": "bid:4",
+     "child": 209
+    }
+   ]
+  },
+  {
+   "id": 206,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 207
+    },
+    {
+     "label": "bid:3",
+     "child": 208
+    }
+   ]
+  },
+  {
+   "id": 207,
+   "kind": "terminal",
+   "payoff_p0": "8"
+  },
+  {
+   "id": 208,
+   "kind": "terminal",
+   "payoff_p0": "5"
+  },
+  {
+   "id": 209,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 210
+    },
+    {
+     "label": "bid:3",
+     "child": 211
+    }
+   ]
+  },
+  {
+   "id": 210,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 211,
+   "kind": "terminal",
+   "payoff_p0": "8"
+  },
+  {
+   "id": 212,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,2 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 213
+    },
+    {
+     "label": "bid:4",
+     "child": 216
+    }
+   ]
+  },
+  {
+   "id": 213,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 214
+    },
+    {
+     "label": "bid:3",
+     "child": 215
+    }
+   ]
+  },
+  {
+   "id": 214,
+   "kind": "terminal",
+   "payoff_p0": "6"
+  },
+  {
+   "id": 215,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 216,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 217
+    },
+    {
+     "label": "bid:3",
+     "child": 218
+    }
+   ]
+  },
+  {
+   "id": 217,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 218,
+   "kind": "terminal",
+   "payoff_p0": "6"
+  },
+  {
+   "id": 219,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,2 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 220
+    },
+    {
+     "label": "bid:4",
+     "child": 223
+    }
+   ]
+  },
+  {
+   "id": 220,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 221
+    },
+    {
+     "label": "bid:2",
+     "child": 222
+    }
+   ]
+  },
+  {
+   "id": 221,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 222,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 223,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,2 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 224
+    },
+    {
+     "label": "bid:2",
+     "child": 225
+    }
+   ]
+  },
+  {
+   "id": 224,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 225,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 226,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=1 p1=4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 227
+    },
+    {
+     "label": "bid:2",
+     "child": 234
+    },
+    {
+     "label": "bid:3",
+     "child": 241
+    }
+   ]
+  },
+  {
+   "id": 227,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,3 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 228
+    },
+    {
+     "label": "bid:4",
+     "child": 231
+    }
+   ]
+  },
+  {
+   "id": 228,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 229
+    },
+    {
+     "label": "bid:3",
+     "child": 230
+    }
+   ]
+  },
+  {
+   "id": 229,
+   "kind": "terminal",
+   "payoff_p0": "5"
+  },
+  {
+   "id": 230,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 231,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 232
+    },
+    {
+     "label": "bid:3",
+     "child": 233
+    }
+   ]
+  },
+  {
+   "id": 232,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 233,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 234,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,3 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 235
+    },
+    {
+     "label": "bid:4",
+     "child": 238
+    }
+   ]
+  },
+  {
+   "id": 235,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 236
+    },
+    {
+     "label": "bid:3",
+     "child": 237
+    }
+   ]
+  },
+  {
+   "id": 236,
+   "kind": "terminal",
+   "payoff_p0": "8"
+  },
+  {
+   "id": 237,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 238,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 239
+    },
+    {
+     "label": "bid:3",
+     "child": 240
+    }
+   ]
+  },
+  {
+   "id": 239,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 240,
+   "kind": "terminal",
+   "payoff_p0": "8"
+  },
+  {
+   "id": 241,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,3 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 242
+    },
+    {
+     "label": "bid:4",
+     "child": 245
+    }
+   ]
+  },
+  {
+   "id": 242,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 243
+    },
+    {
+     "label": "bid:2",
+     "child": 244
+    }
+   ]
+  },
+  {
+   "id": 243,
+   "kind": "terminal",
+   "payoff_p0": "6"
+  },
+  {
+   "id": 244,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 245,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,3 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 246
+    },
+    {
+     "label": "bid:2",
+     "child": 247
+    }
+   ]
+  },
+  {
+   "id": 246,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 247,
+   "kind": "terminal",
+   "payoff_p0": "6"
+  },
+  {
+   "id": 248,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=1 p1=4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 249
+    },
+    {
+     "label": "bid:2",
+     "child": 256
+    },
+    {
+     "label": "bid:3",
+     "child": 263
+    }
+   ]
+  },
+  {
+   "id": 249,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,4 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 250
+    },
+    {
+     "label": "bid:3",
+     "child": 253
+    }
+   ]
+  },
+  {
+   "id": 250,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 251
+    },
+    {
+     "label": "bid:3",
+     "child": 252
+    }
+   ]
+  },
+  {
+   "id": 251,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 252,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 253,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 254
+    },
+    {
+     "label": "bid:3",
+     "child": 255
+    }
+   ]
+  },
+  {
+   "id": 254,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 255,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 256,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,4 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 257
+    },
+    {
+     "label": "bid:3",
+     "child": 260
+    }
+   ]
+  },
+  {
+   "id": 257,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 258
+    },
+    {
+     "label": "bid:3",
+     "child": 259
+    }
+   ]
+  },
+  {
+   "id": 258,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 259,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 260,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 261
+    },
+    {
+     "label": "bid:3",
+     "child": 262
+    }
+   ]
+  },
+  {
+   "id": 261,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 262,
+   "kind": "terminal",
+   "payoff_p0": "5"
+  },
+  {
+   "id": 263,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=1,4 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 264
+    },
+    {
+     "label": "bid:3",
+     "child": 267
+    }
+   ]
+  },
+  {
+   "id": 264,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 265
+    },
+    {
+     "label": "bid:2",
+     "child": 266
+    }
+   ]
+  },
+  {
+   "id": 265,
+   "kind": "terminal",
+   "payoff_p0": "8"
+  },
+  {
+   "id": 266,
+   "kind": "terminal",
+   "payoff_p0": "5"
+  },
+  {
+   "id": 267,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=1,4 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 268
+    },
+    {
+     "label": "bid:2",
+     "child": 269
+    }
+   ]
+  },
+  {
+   "id": 268,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 269,
+   "kind": "terminal",
+   "payoff_p0": "8"
+  },
+  {
+   "id": 270,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1 p0= p1=",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 271
+    },
+    {
+     "label": "bid:2",
+     "child": 338
+    },
+    {
+     "label": "bid:3",
+     "child": 405
+    },
+    {
+     "label": "bid:4",
+     "child": 472
+    }
+   ]
+  },
+  {
+   "id": 271,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 272
+    },
+    {
+     "label": "bid:3",
+     "child": 294
+    },
+    {
+     "label": "bid:4",
+     "child": 316
+    }
+   ]
+  },
+  {
+   "id": 272,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 273
+    },
+    {
+     "label": "bid:3",
+     "child": 280
+    },
+    {
+     "label": "bid:4",
+     "child": 287
+    }
+   ]
+  },
+  {
+   "id": 273,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,1 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 274
+    },
+    {
+     "label": "bid:4",
+     "child": 277
+    }
+   ]
+  },
+  {
+   "id": 274,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 275
+    },
+    {
+     "label": "bid:4",
+     "child": 276
+    }
+   ]
+  },
+  {
+   "id": 275,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 276,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 277,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 278
+    },
+    {
+     "label": "bid:4",
+     "child": 279
+    }
+   ]
+  },
+  {
+   "id": 278,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 279,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 280,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,1 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 281
+    },
+    {
+     "label": "bid:4",
+     "child": 284
+    }
+   ]
+  },
+  {
+   "id": 281,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 282
+    },
+    {
+     "label": "bid:4",
+     "child": 283
+    }
+   ]
+  },
+  {
+   "id": 282,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 283,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 284,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 285
+    },
+    {
+     "label": "bid:4",
+     "child": 286
+    }
+   ]
+  },
+  {
+   "id": 285,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 286,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 287,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,1 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 288
+    },
+    {
+     "label": "bid:4",
+     "child": 291
+    }
+   ]
+  },
+  {
+   "id": 288,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 289
+    },
+    {
+     "label": "bid:3",
+     "child": 290
+    }
+   ]
+  },
+  {
+   "id": 289,
+   "kind": "terminal",
+   "payoff_p0": "6"
+  },
+  {
+   "id": 290,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 291,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 292
+    },
+    {
+     "label": "bid:3",
+     "child": 293
+    }
+   ]
+  },
+  {
+   "id": 292,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 293,
+   "kind": "terminal",
+   "payoff_p0": "6"
+  },
+  {
+   "id": 294,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 295
+    },
+    {
+     "label": "bid:3",
+     "child": 302
+    },
+    {
+     "label": "bid:4",
+     "child": 309
+    }
+   ]
+  },
+  {
+   "id": 295,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,3 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 296
+    },
+    {
+     "label": "bid:4",
+     "child": 299
+    }
+   ]
+  },
+  {
+   "id": 296,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 297
+    },
+    {
+     "label": "bid:4",
+     "child": 298
+    }
+   ]
+  },
+  {
+   "id": 297,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 298,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 299,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 300
+    },
+    {
+     "label": "bid:4",
+     "child": 301
+    }
+   ]
+  },
+  {
+   "id": 300,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 301,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 302,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,3 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 303
+    },
+    {
+     "label": "bid:4",
+     "child": 306
+    }
+   ]
+  },
+  {
+   "id": 303,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 304
+    },
+    {
+     "label": "bid:4",
+     "child": 305
+    }
+   ]
+  },
+  {
+   "id": 304,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 305,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 306,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 307
+    },
+    {
+     "label": "bid:4",
+     "child": 308
+    }
+   ]
+  },
+  {
+   "id": 307,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 308,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 309,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,3 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 310
+    },
+    {
+     "label": "bid:4",
+     "child": 313
+    }
+   ]
+  },
+  {
+   "id": 310,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 311
+    },
+    {
+     "label": "bid:3",
+     "child": 312
+    }
+   ]
+  },
+  {
+   "id": 311,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 312,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 313,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 314
+    },
+    {
+     "label": "bid:3",
+     "child": 315
+    }
+   ]
+  },
+  {
+   "id": 314,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 315,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 316,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=2 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 317
+    },
+    {
+     "label": "bid:3",
+     "child": 324
+    },
+    {
+     "label": "bid:4",
+     "child": 331
+    }
+   ]
+  },
+  {
+   "id": 317,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,4 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 318
+    },
+    {
+     "label": "bid:3",
+     "child": 321
+    }
+   ]
+  },
+  {
+   "id": 318,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 319
+    },
+    {
+     "label": "bid:4",
+     "child": 320
+    }
+   ]
+  },
+  {
+   "id": 319,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 320,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 321,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 322
+    },
+    {
+     "label": "bid:4",
+     "child": 323
+    }
+   ]
+  },
+  {
+   "id": 322,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 323,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 324,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,4 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 325
+    },
+    {
+     "label": "bid:3",
+     "child": 328
+    }
+   ]
+  },
+  {
+   "id": 325,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 326
+    },
+    {
+     "label": "bid:4",
+     "child": 327
+    }
+   ]
+  },
+  {
+   "id": 326,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 327,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 328,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 329
+    },
+    {
+     "label": "bid:4",
+     "child": 330
+    }
+   ]
+  },
+  {
+   "id": 329,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 330,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 331,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,4 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 332
+    },
+    {
+     "label": "bid:3",
+     "child": 335
+    }
+   ]
+  },
+  {
+   "id": 332,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 333
+    },
+    {
+     "label": "bid:3",
+     "child": 334
+    }
+   ]
+  },
+  {
+   "id": 333,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 334,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 335,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 336
+    },
+    {
+     "label": "bid:3",
+     "child": 337
+    }
+   ]
+  },
+  {
+   "id": 336,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 337,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 338,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 339
+    },
+    {
+     "label": "bid:3",
+     "child": 361
+    },
+    {
+     "label": "bid:4",
+     "child": 383
+    }
+   ]
+  },
+  {
+   "id": 339,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 340
+    },
+    {
+     "label": "bid:3",
+     "child": 347
+    },
+    {
+     "label": "bid:4",
+     "child": 354
+    }
+   ]
+  },
+  {
+   "id": 340,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,1 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 341
+    },
+    {
+     "label": "bid:4",
+     "child": 344
+    }
+   ]
+  },
+  {
+   "id": 341,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 342
+    },
+    {
+     "label": "bid:4",
+     "child": 343
+    }
+   ]
+  },
+  {
+   "id": 342,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 343,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 344,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 345
+    },
+    {
+     "label": "bid:4",
+     "child": 346
+    }
+   ]
+  },
+  {
+   "id": 345,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 346,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 347,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,1 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 348
+    },
+    {
+     "label": "bid:4",
+     "child": 351
+    }
+   ]
+  },
+  {
+   "id": 348,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 349
+    },
+    {
+     "label": "bid:4",
+     "child": 350
+    }
+   ]
+  },
+  {
+   "id": 349,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 350,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 351,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 352
+    },
+    {
+     "label": "bid:4",
+     "child": 353
+    }
+   ]
+  },
+  {
+   "id": 352,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 353,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 354,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,1 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 355
+    },
+    {
+     "label": "bid:4",
+     "child": 358
+    }
+   ]
+  },
+  {
+   "id": 355,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 356
+    },
+    {
+     "label": "bid:3",
+     "child": 357
+    }
+   ]
+  },
+  {
+   "id": 356,
+   "kind": "terminal",
+   "payoff_p0": "5"
+  },
+  {
+   "id": 357,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 358,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 359
+    },
+    {
+     "label": "bid:3",
+     "child": 360
+    }
+   ]
+  },
+  {
+   "id": 359,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 360,
+   "kind": "terminal",
+   "payoff_p0": "5"
+  },
+  {
+   "id": 361,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 362
+    },
+    {
+     "label": "bid:3",
+     "child": 369
+    },
+    {
+     "label": "bid:4",
+     "child": 376
+    }
+   ]
+  },
+  {
+   "id": 362,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,3 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 363
+    },
+    {
+     "label": "bid:4",
+     "child": 366
+    }
+   ]
+  },
+  {
+   "id": 363,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 364
+    },
+    {
+     "label": "bid:4",
+     "child": 365
+    }
+   ]
+  },
+  {
+   "id": 364,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 365,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 366,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 367
+    },
+    {
+     "label": "bid:4",
+     "child": 368
+    }
+   ]
+  },
+  {
+   "id": 367,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 368,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 369,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,3 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 370
+    },
+    {
+     "label": "bid:4",
+     "child": 373
+    }
+   ]
+  },
+  {
+   "id": 370,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 371
+    },
+    {
+     "label": "bid:4",
+     "child": 372
+    }
+   ]
+  },
+  {
+   "id": 371,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 372,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 373,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 374
+    },
+    {
+     "label": "bid:4",
+     "child": 375
+    }
+   ]
+  },
+  {
+   "id": 374,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 375,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 376,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,3 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 377
+    },
+    {
+     "label": "bid:4",
+     "child": 380
+    }
+   ]
+  },
+  {
+   "id": 377,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 378
+    },
+    {
+     "label": "bid:3",
+     "child": 379
+    }
+   ]
+  },
+  {
+   "id": 378,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 379,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 380,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 381
+    },
+    {
+     "label": "bid:3",
+     "child": 382
+    }
+   ]
+  },
+  {
+   "id": 381,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 382,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 383,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=2 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 384
+    },
+    {
+     "label": "bid:3",
+     "child": 391
+    },
+    {
+     "label": "bid:4",
+     "child": 398
+    }
+   ]
+  },
+  {
+   "id": 384,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,4 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 385
+    },
+    {
+     "label": "bid:3",
+     "child": 388
+    }
+   ]
+  },
+  {
+   "id": 385,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 386
+    },
+    {
+     "label": "bid:4",
+     "child": 387
+    }
+   ]
+  },
+  {
+   "id": 386,
+   "kind": "terminal",
+   "payoff_p0": "-5"
+  },
+  {
+   "id": 387,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 388,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 389
+    },
+    {
+     "label": "bid:4",
+     "child": 390
+    }
+   ]
+  },
+  {
+   "id": 389,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 390,
+   "kind": "terminal",
+   "payoff_p0": "-5"
+  },
+  {
+   "id": 391,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,4 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 392
+    },
+    {
+     "label": "bid:3",
+     "child": 395
+    }
+   ]
+  },
+  {
+   "id": 392,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 393
+    },
+    {
+     "label": "bid:4",
+     "child": 394
+    }
+   ]
+  },
+  {
+   "id": 393,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 394,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 395,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 396
+    },
+    {
+     "label": "bid:4",
+     "child": 397
+    }
+   ]
+  },
+  {
+   "id": 396,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 397,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 398,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,4 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 399
+    },
+    {
+     "label": "bid:3",
+     "child": 402
+    }
+   ]
+  },
+  {
+   "id": 399,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 400
+    },
+    {
+     "label": "bid:3",
+     "child": 401
+    }
+   ]
+  },
+  {
+   "id": 400,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 401,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 402,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 403
+    },
+    {
+     "label": "bid:3",
+     "child": 404
+    }
+   ]
+  },
+  {
+   "id": 403,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 404,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 405,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 406
+    },
+    {
+     "label": "bid:3",
+     "child": 428
+    },
+    {
+     "label": "bid:4",
+     "child": 450
+    }
+   ]
+  },
+  {
+   "id": 406,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 407
+    },
+    {
+     "label": "bid:2",
+     "child": 414
+    },
+    {
+     "label": "bid:4",
+     "child": 421
+    }
+   ]
+  },
+  {
+   "id": 407,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,1 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 408
+    },
+    {
+     "label": "bid:4",
+     "child": 411
+    }
+   ]
+  },
+  {
+   "id": 408,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 409
+    },
+    {
+     "label": "bid:4",
+     "child": 410
+    }
+   ]
+  },
+  {
+   "id": 409,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 410,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 411,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 412
+    },
+    {
+     "label": "bid:4",
+     "child": 413
+    }
+   ]
+  },
+  {
+   "id": 412,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 413,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 414,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,1 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 415
+    },
+    {
+     "label": "bid:4",
+     "child": 418
+    }
+   ]
+  },
+  {
+   "id": 415,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 416
+    },
+    {
+     "label": "bid:4",
+     "child": 417
+    }
+   ]
+  },
+  {
+   "id": 416,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 417,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 418,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 419
+    },
+    {
+     "label": "bid:4",
+     "child": 420
+    }
+   ]
+  },
+  {
+   "id": 419,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 420,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 421,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,1 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 422
+    },
+    {
+     "label": "bid:4",
+     "child": 425
+    }
+   ]
+  },
+  {
+   "id": 422,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 423
+    },
+    {
+     "label": "bid:2",
+     "child": 424
+    }
+   ]
+  },
+  {
+   "id": 423,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 424,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 425,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 426
+    },
+    {
+     "label": "bid:2",
+     "child": 427
+    }
+   ]
+  },
+  {
+   "id": 426,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 427,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 428,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 429
+    },
+    {
+     "label": "bid:2",
+     "child": 436
+    },
+    {
+     "label": "bid:4",
+     "child": 443
+    }
+   ]
+  },
+  {
+   "id": 429,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,3 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 430
+    },
+    {
+     "label": "bid:4",
+     "child": 433
+    }
+   ]
+  },
+  {
+   "id": 430,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 431
+    },
+    {
+     "label": "bid:4",
+     "child": 432
+    }
+   ]
+  },
+  {
+   "id": 431,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 432,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 433,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 434
+    },
+    {
+     "label": "bid:4",
+     "child": 435
+    }
+   ]
+  },
+  {
+   "id": 434,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 435,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 436,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,3 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 437
+    },
+    {
+     "label": "bid:4",
+     "child": 440
+    }
+   ]
+  },
+  {
+   "id": 437,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 438
+    },
+    {
+     "label": "bid:4",
+     "child": 439
+    }
+   ]
+  },
+  {
+   "id": 438,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 439,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 440,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 441
+    },
+    {
+     "label": "bid:4",
+     "child": 442
+    }
+   ]
+  },
+  {
+   "id": 441,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 442,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 443,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,3 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 444
+    },
+    {
+     "label": "bid:4",
+     "child": 447
+    }
+   ]
+  },
+  {
+   "id": 444,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 445
+    },
+    {
+     "label": "bid:2",
+     "child": 446
+    }
+   ]
+  },
+  {
+   "id": 445,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 446,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 447,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 448
+    },
+    {
+     "label": "bid:2",
+     "child": 449
+    }
+   ]
+  },
+  {
+   "id": 448,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 449,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 450,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=2 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 451
+    },
+    {
+     "label": "bid:2",
+     "child": 458
+    },
+    {
+     "label": "bid:4",
+     "child": 465
+    }
+   ]
+  },
+  {
+   "id": 451,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,4 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 452
+    },
+    {
+     "label": "bid:3",
+     "child": 455
+    }
+   ]
+  },
+  {
+   "id": 452,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 453
+    },
+    {
+     "label": "bid:4",
+     "child": 454
+    }
+   ]
+  },
+  {
+   "id": 453,
+   "kind": "terminal",
+   "payoff_p0": "-6"
+  },
+  {
+   "id": 454,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 455,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 456
+    },
+    {
+     "label": "bid:4",
+     "child": 457
+    }
+   ]
+  },
+  {
+   "id": 456,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 457,
+   "kind": "terminal",
+   "payoff_p0": "-6"
+  },
+  {
+   "id": 458,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,4 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 459
+    },
+    {
+     "label": "bid:3",
+     "child": 462
+    }
+   ]
+  },
+  {
+   "id": 459,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 460
+    },
+    {
+     "label": "bid:4",
+     "child": 461
+    }
+   ]
+  },
+  {
+   "id": 460,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 461,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 462,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 463
+    },
+    {
+     "label": "bid:4",
+     "child": 464
+    }
+   ]
+  },
+  {
+   "id": 463,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 464,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 465,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,4 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 466
+    },
+    {
+     "label": "bid:3",
+     "child": 469
+    }
+   ]
+  },
+  {
+   "id": 466,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 467
+    },
+    {
+     "label": "bid:2",
+     "child": 468
+    }
+   ]
+  },
+  {
+   "id": 467,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 468,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 469,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 470
+    },
+    {
+     "label": "bid:2",
+     "child": 471
+    }
+   ]
+  },
+  {
+   "id": 470,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 471,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 472,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=2 p1=4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 473
+    },
+    {
+     "label": "bid:3",
+     "child": 495
+    },
+    {
+     "label": "bid:4",
+     "child": 517
+    }
+   ]
+  },
+  {
+   "id": 473,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=2 p1=4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 474
+    },
+    {
+     "label": "bid:2",
+     "child": 481
+    },
+    {
+     "label": "bid:3",
+     "child": 488
+    }
+   ]
+  },
+  {
+   "id": 474,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,1 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 475
+    },
+    {
+     "label": "bid:4",
+     "child": 478
+    }
+   ]
+  },
+  {
+   "id": 475,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 476
+    },
+    {
+     "label": "bid:3",
+     "child": 477
+    }
+   ]
+  },
+  {
+   "id": 476,
+   "kind": "terminal",
+   "payoff_p0": "6"
+  },
+  {
+   "id": 477,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 478,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 479
+    },
+    {
+     "label": "bid:3",
+     "child": 480
+    }
+   ]
+  },
+  {
+   "id": 479,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 480,
+   "kind": "terminal",
+   "payoff_p0": "6"
+  },
+  {
+   "id": 481,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,1 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 482
+    },
+    {
+     "label": "bid:4",
+     "child": 485
+    }
+   ]
+  },
+  {
+   "id": 482,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 483
+    },
+    {
+     "label": "bid:3",
+     "child": 484
+    }
+   ]
+  },
+  {
+   "id": 483,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 484,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 485,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 486
+    },
+    {
+     "label": "bid:3",
+     "child": 487
+    }
+   ]
+  },
+  {
+   "id": 486,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 487,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 488,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,1 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 489
+    },
+    {
+     "label": "bid:4",
+     "child": 492
+    }
+   ]
+  },
+  {
+   "id": 489,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 490
+    },
+    {
+     "label": "bid:2",
+     "child": 491
+    }
+   ]
+  },
+  {
+   "id": 490,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 491,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 492,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,1 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 493
+    },
+    {
+     "label": "bid:2",
+     "child": 494
+    }
+   ]
+  },
+  {
+   "id": 493,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 494,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 495,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=2 p1=4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 496
+    },
+    {
+     "label": "bid:2",
+     "child": 503
+    },
+    {
+     "label": "bid:3",
+     "child": 510
+    }
+   ]
+  },
+  {
+   "id": 496,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,3 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 497
+    },
+    {
+     "label": "bid:4",
+     "child": 500
+    }
+   ]
+  },
+  {
+   "id": 497,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 498
+    },
+    {
+     "label": "bid:3",
+     "child": 499
+    }
+   ]
+  },
+  {
+   "id": 498,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 499,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 500,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 501
+    },
+    {
+     "label": "bid:3",
+     "child": 502
+    }
+   ]
+  },
+  {
+   "id": 501,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 502,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 503,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,3 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 504
+    },
+    {
+     "label": "bid:4",
+     "child": 507
+    }
+   ]
+  },
+  {
+   "id": 504,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 505
+    },
+    {
+     "label": "bid:3",
+     "child": 506
+    }
+   ]
+  },
+  {
+   "id": 505,
+   "kind": "terminal",
+   "payoff_p0": "5"
+  },
+  {
+   "id": 506,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 507,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 508
+    },
+    {
+     "label": "bid:3",
+     "child": 509
+    }
+   ]
+  },
+  {
+   "id": 508,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 509,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 510,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,3 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 511
+    },
+    {
+     "label": "bid:4",
+     "child": 514
+    }
+   ]
+  },
+  {
+   "id": 511,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 512
+    },
+    {
+     "label": "bid:2",
+     "child": 513
+    }
+   ]
+  },
+  {
+   "id": 512,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 513,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 514,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,3 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 515
+    },
+    {
+     "label": "bid:2",
+     "child": 516
+    }
+   ]
+  },
+  {
+   "id": 515,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 516,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 517,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=2 p1=4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 518
+    },
+    {
+     "label": "bid:2",
+     "child": 525
+    },
+    {
+     "label": "bid:3",
+     "child": 532
+    }
+   ]
+  },
+  {
+   "id": 518,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,4 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 519
+    },
+    {
+     "label": "bid:3",
+     "child": 522
+    }
+   ]
+  },
+  {
+   "id": 519,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 520
+    },
+    {
+     "label": "bid:3",
+     "child": 521
+    }
+   ]
+  },
+  {
+   "id": 520,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 521,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 522,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 523
+    },
+    {
+     "label": "bid:3",
+     "child": 524
+    }
+   ]
+  },
+  {
+   "id": 523,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 524,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 525,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,4 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 526
+    },
+    {
+     "label": "bid:3",
+     "child": 529
+    }
+   ]
+  },
+  {
+   "id": 526,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 527
+    },
+    {
+     "label": "bid:3",
+     "child": 528
+    }
+   ]
+  },
+  {
+   "id": 527,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 528,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 529,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 530
+    },
+    {
+     "label": "bid:3",
+     "child": 531
+    }
+   ]
+  },
+  {
+   "id": 530,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 531,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 532,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=2,4 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 533
+    },
+    {
+     "label": "bid:3",
+     "child": 536
+    }
+   ]
+  },
+  {
+   "id": 533,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 534
+    },
+    {
+     "label": "bid:2",
+     "child": 535
+    }
+   ]
+  },
+  {
+   "id": 534,
+   "kind": "terminal",
+   "payoff_p0": "5"
+  },
+  {
+   "id": 535,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 536,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=2,4 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 537
+    },
+    {
+     "label": "bid:2",
+     "child": 538
+    }
+   ]
+  },
+  {
+   "id": 537,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 538,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 539,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1 p0= p1=",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 540
+    },
+    {
+     "label": "bid:2",
+     "child": 607
+    },
+    {
+     "label": "bid:3",
+     "child": 674
+    },
+    {
+     "label": "bid:4",
+     "child": 741
+    }
+   ]
+  },
+  {
+   "id": 540,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 541
+    },
+    {
+     "label": "bid:2",
+     "child": 563
+    },
+    {
+     "label": "bid:4",
+     "child": 585
+    }
+   ]
+  },
+  {
+   "id": 541,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 542
+    },
+    {
+     "label": "bid:3",
+     "child": 549
+    },
+    {
+     "label": "bid:4",
+     "child": 556
+    }
+   ]
+  },
+  {
+   "id": 542,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,1 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 543
+    },
+    {
+     "label": "bid:4",
+     "child": 546
+    }
+   ]
+  },
+  {
+   "id": 543,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 544
+    },
+    {
+     "label": "bid:4",
+     "child": 545
+    }
+   ]
+  },
+  {
+   "id": 544,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 545,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 546,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 547
+    },
+    {
+     "label": "bid:4",
+     "child": 548
+    }
+   ]
+  },
+  {
+   "id": 547,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 548,
+   "kind": "terminal",
+   "payoff_p0": "-5"
+  },
+  {
+   "id": 549,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,1 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 550
+    },
+    {
+     "label": "bid:4",
+     "child": 553
+    }
+   ]
+  },
+  {
+   "id": 550,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 551
+    },
+    {
+     "label": "bid:4",
+     "child": 552
+    }
+   ]
+  },
+  {
+   "id": 551,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 552,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 553,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 554
+    },
+    {
+     "label": "bid:4",
+     "child": 555
+    }
+   ]
+  },
+  {
+   "id": 554,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 555,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 556,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,1 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 557
+    },
+    {
+     "label": "bid:4",
+     "child": 560
+    }
+   ]
+  },
+  {
+   "id": 557,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 558
+    },
+    {
+     "label": "bid:3",
+     "child": 559
+    }
+   ]
+  },
+  {
+   "id": 558,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 559,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 560,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 561
+    },
+    {
+     "label": "bid:3",
+     "child": 562
+    }
+   ]
+  },
+  {
+   "id": 561,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 562,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 563,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 564
+    },
+    {
+     "label": "bid:3",
+     "child": 571
+    },
+    {
+     "label": "bid:4",
+     "child": 578
+    }
+   ]
+  },
+  {
+   "id": 564,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,2 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 565
+    },
+    {
+     "label": "bid:4",
+     "child": 568
+    }
+   ]
+  },
+  {
+   "id": 565,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 566
+    },
+    {
+     "label": "bid:4",
+     "child": 567
+    }
+   ]
+  },
+  {
+   "id": 566,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 567,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 568,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 569
+    },
+    {
+     "label": "bid:4",
+     "child": 570
+    }
+   ]
+  },
+  {
+   "id": 569,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 570,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 571,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,2 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 572
+    },
+    {
+     "label": "bid:4",
+     "child": 575
+    }
+   ]
+  },
+  {
+   "id": 572,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 573
+    },
+    {
+     "label": "bid:4",
+     "child": 574
+    }
+   ]
+  },
+  {
+   "id": 573,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 574,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 575,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 576
+    },
+    {
+     "label": "bid:4",
+     "child": 577
+    }
+   ]
+  },
+  {
+   "id": 576,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 577,
+   "kind": "terminal",
+   "payoff_p0": "-5"
+  },
+  {
+   "id": 578,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,2 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 579
+    },
+    {
+     "label": "bid:4",
+     "child": 582
+    }
+   ]
+  },
+  {
+   "id": 579,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 580
+    },
+    {
+     "label": "bid:3",
+     "child": 581
+    }
+   ]
+  },
+  {
+   "id": 580,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 581,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 582,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 583
+    },
+    {
+     "label": "bid:3",
+     "child": 584
+    }
+   ]
+  },
+  {
+   "id": 583,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 584,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 585,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=3 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 586
+    },
+    {
+     "label": "bid:3",
+     "child": 593
+    },
+    {
+     "label": "bid:4",
+     "child": 600
+    }
+   ]
+  },
+  {
+   "id": 586,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,4 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 587
+    },
+    {
+     "label": "bid:2",
+     "child": 590
+    }
+   ]
+  },
+  {
+   "id": 587,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 588
+    },
+    {
+     "label": "bid:4",
+     "child": 589
+    }
+   ]
+  },
+  {
+   "id": 588,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 589,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 590,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 591
+    },
+    {
+     "label": "bid:4",
+     "child": 592
+    }
+   ]
+  },
+  {
+   "id": 591,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 592,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 593,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,4 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 594
+    },
+    {
+     "label": "bid:2",
+     "child": 597
+    }
+   ]
+  },
+  {
+   "id": 594,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 595
+    },
+    {
+     "label": "bid:4",
+     "child": 596
+    }
+   ]
+  },
+  {
+   "id": 595,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 596,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 597,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 598
+    },
+    {
+     "label": "bid:4",
+     "child": 599
+    }
+   ]
+  },
+  {
+   "id": 598,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 599,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 600,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,4 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 601
+    },
+    {
+     "label": "bid:2",
+     "child": 604
+    }
+   ]
+  },
+  {
+   "id": 601,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 602
+    },
+    {
+     "label": "bid:3",
+     "child": 603
+    }
+   ]
+  },
+  {
+   "id": 602,
+   "kind": "terminal",
+   "payoff_p0": "-6"
+  },
+  {
+   "id": 603,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 604,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 605
+    },
+    {
+     "label": "bid:3",
+     "child": 606
+    }
+   ]
+  },
+  {
+   "id": 605,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 606,
+   "kind": "terminal",
+   "payoff_p0": "-6"
+  },
+  {
+   "id": 607,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 608
+    },
+    {
+     "label": "bid:2",
+     "child": 630
+    },
+    {
+     "label": "bid:4",
+     "child": 652
+    }
+   ]
+  },
+  {
+   "id": 608,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 609
+    },
+    {
+     "label": "bid:3",
+     "child": 616
+    },
+    {
+     "label": "bid:4",
+     "child": 623
+    }
+   ]
+  },
+  {
+   "id": 609,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,1 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 610
+    },
+    {
+     "label": "bid:4",
+     "child": 613
+    }
+   ]
+  },
+  {
+   "id": 610,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 611
+    },
+    {
+     "label": "bid:4",
+     "child": 612
+    }
+   ]
+  },
+  {
+   "id": 611,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 612,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 613,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 614
+    },
+    {
+     "label": "bid:4",
+     "child": 615
+    }
+   ]
+  },
+  {
+   "id": 614,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 615,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 616,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,1 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 617
+    },
+    {
+     "label": "bid:4",
+     "child": 620
+    }
+   ]
+  },
+  {
+   "id": 617,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 618
+    },
+    {
+     "label": "bid:4",
+     "child": 619
+    }
+   ]
+  },
+  {
+   "id": 618,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 619,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 620,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 621
+    },
+    {
+     "label": "bid:4",
+     "child": 622
+    }
+   ]
+  },
+  {
+   "id": 621,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 622,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 623,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,1 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 624
+    },
+    {
+     "label": "bid:4",
+     "child": 627
+    }
+   ]
+  },
+  {
+   "id": 624,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 625
+    },
+    {
+     "label": "bid:3",
+     "child": 626
+    }
+   ]
+  },
+  {
+   "id": 625,
+   "kind": "terminal",
+   "payoff_p0": "6"
+  },
+  {
+   "id": 626,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 627,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 628
+    },
+    {
+     "label": "bid:3",
+     "child": 629
+    }
+   ]
+  },
+  {
+   "id": 628,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 629,
+   "kind": "terminal",
+   "payoff_p0": "6"
+  },
+  {
+   "id": 630,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 631
+    },
+    {
+     "label": "bid:3",
+     "child": 638
+    },
+    {
+     "label": "bid:4",
+     "child": 645
+    }
+   ]
+  },
+  {
+   "id": 631,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,2 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 632
+    },
+    {
+     "label": "bid:4",
+     "child": 635
+    }
+   ]
+  },
+  {
+   "id": 632,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 633
+    },
+    {
+     "label": "bid:4",
+     "child": 634
+    }
+   ]
+  },
+  {
+   "id": 633,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 634,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 635,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 636
+    },
+    {
+     "label": "bid:4",
+     "child": 637
+    }
+   ]
+  },
+  {
+   "id": 636,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 637,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 638,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,2 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 639
+    },
+    {
+     "label": "bid:4",
+     "child": 642
+    }
+   ]
+  },
+  {
+   "id": 639,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 640
+    },
+    {
+     "label": "bid:4",
+     "child": 641
+    }
+   ]
+  },
+  {
+   "id": 640,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 641,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 642,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 643
+    },
+    {
+     "label": "bid:4",
+     "child": 644
+    }
+   ]
+  },
+  {
+   "id": 643,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 644,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 645,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,2 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 646
+    },
+    {
+     "label": "bid:4",
+     "child": 649
+    }
+   ]
+  },
+  {
+   "id": 646,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 647
+    },
+    {
+     "label": "bid:3",
+     "child": 648
+    }
+   ]
+  },
+  {
+   "id": 647,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 648,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 649,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 650
+    },
+    {
+     "label": "bid:3",
+     "child": 651
+    }
+   ]
+  },
+  {
+   "id": 650,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 651,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 652,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=3 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 653
+    },
+    {
+     "label": "bid:3",
+     "child": 660
+    },
+    {
+     "label": "bid:4",
+     "child": 667
+    }
+   ]
+  },
+  {
+   "id": 653,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,4 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 654
+    },
+    {
+     "label": "bid:2",
+     "child": 657
+    }
+   ]
+  },
+  {
+   "id": 654,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 655
+    },
+    {
+     "label": "bid:4",
+     "child": 656
+    }
+   ]
+  },
+  {
+   "id": 655,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 656,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 657,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 658
+    },
+    {
+     "label": "bid:4",
+     "child": 659
+    }
+   ]
+  },
+  {
+   "id": 658,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 659,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 660,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,4 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 661
+    },
+    {
+     "label": "bid:2",
+     "child": 664
+    }
+   ]
+  },
+  {
+   "id": 661,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 662
+    },
+    {
+     "label": "bid:4",
+     "child": 663
+    }
+   ]
+  },
+  {
+   "id": 662,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 663,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 664,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 665
+    },
+    {
+     "label": "bid:4",
+     "child": 666
+    }
+   ]
+  },
+  {
+   "id": 665,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 666,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 667,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,4 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 668
+    },
+    {
+     "label": "bid:2",
+     "child": 671
+    }
+   ]
+  },
+  {
+   "id": 668,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 669
+    },
+    {
+     "label": "bid:3",
+     "child": 670
+    }
+   ]
+  },
+  {
+   "id": 669,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 670,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 671,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 672
+    },
+    {
+     "label": "bid:3",
+     "child": 673
+    }
+   ]
+  },
+  {
+   "id": 672,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 673,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 674,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 675
+    },
+    {
+     "label": "bid:2",
+     "child": 697
+    },
+    {
+     "label": "bid:4",
+     "child": 719
+    }
+   ]
+  },
+  {
+   "id": 675,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 676
+    },
+    {
+     "label": "bid:2",
+     "child": 683
+    },
+    {
+     "label": "bid:4",
+     "child": 690
+    }
+   ]
+  },
+  {
+   "id": 676,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,1 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 677
+    },
+    {
+     "label": "bid:4",
+     "child": 680
+    }
+   ]
+  },
+  {
+   "id": 677,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 678
+    },
+    {
+     "label": "bid:4",
+     "child": 679
+    }
+   ]
+  },
+  {
+   "id": 678,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 679,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 680,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 681
+    },
+    {
+     "label": "bid:4",
+     "child": 682
+    }
+   ]
+  },
+  {
+   "id": 681,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 682,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 683,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,1 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 684
+    },
+    {
+     "label": "bid:4",
+     "child": 687
+    }
+   ]
+  },
+  {
+   "id": 684,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 685
+    },
+    {
+     "label": "bid:4",
+     "child": 686
+    }
+   ]
+  },
+  {
+   "id": 685,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 686,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 687,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 688
+    },
+    {
+     "label": "bid:4",
+     "child": 689
+    }
+   ]
+  },
+  {
+   "id": 688,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 689,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 690,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,1 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 691
+    },
+    {
+     "label": "bid:4",
+     "child": 694
+    }
+   ]
+  },
+  {
+   "id": 691,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 692
+    },
+    {
+     "label": "bid:2",
+     "child": 693
+    }
+   ]
+  },
+  {
+   "id": 692,
+   "kind": "terminal",
+   "payoff_p0": "5"
+  },
+  {
+   "id": 693,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 694,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 695
+    },
+    {
+     "label": "bid:2",
+     "child": 696
+    }
+   ]
+  },
+  {
+   "id": 695,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 696,
+   "kind": "terminal",
+   "payoff_p0": "5"
+  },
+  {
+   "id": 697,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 698
+    },
+    {
+     "label": "bid:2",
+     "child": 705
+    },
+    {
+     "label": "bid:4",
+     "child": 712
+    }
+   ]
+  },
+  {
+   "id": 698,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,2 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 699
+    },
+    {
+     "label": "bid:4",
+     "child": 702
+    }
+   ]
+  },
+  {
+   "id": 699,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 700
+    },
+    {
+     "label": "bid:4",
+     "child": 701
+    }
+   ]
+  },
+  {
+   "id": 700,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 701,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 702,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 703
+    },
+    {
+     "label": "bid:4",
+     "child": 704
+    }
+   ]
+  },
+  {
+   "id": 703,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 704,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 705,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,2 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 706
+    },
+    {
+     "label": "bid:4",
+     "child": 709
+    }
+   ]
+  },
+  {
+   "id": 706,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 707
+    },
+    {
+     "label": "bid:4",
+     "child": 708
+    }
+   ]
+  },
+  {
+   "id": 707,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 708,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 709,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 710
+    },
+    {
+     "label": "bid:4",
+     "child": 711
+    }
+   ]
+  },
+  {
+   "id": 710,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 711,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 712,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,2 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 713
+    },
+    {
+     "label": "bid:4",
+     "child": 716
+    }
+   ]
+  },
+  {
+   "id": 713,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 714
+    },
+    {
+     "label": "bid:2",
+     "child": 715
+    }
+   ]
+  },
+  {
+   "id": 714,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 715,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 716,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 717
+    },
+    {
+     "label": "bid:2",
+     "child": 718
+    }
+   ]
+  },
+  {
+   "id": 717,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 718,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 719,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=3 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 720
+    },
+    {
+     "label": "bid:2",
+     "child": 727
+    },
+    {
+     "label": "bid:4",
+     "child": 734
+    }
+   ]
+  },
+  {
+   "id": 720,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,4 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 721
+    },
+    {
+     "label": "bid:2",
+     "child": 724
+    }
+   ]
+  },
+  {
+   "id": 721,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 722
+    },
+    {
+     "label": "bid:4",
+     "child": 723
+    }
+   ]
+  },
+  {
+   "id": 722,
+   "kind": "terminal",
+   "payoff_p0": "-5"
+  },
+  {
+   "id": 723,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 724,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 725
+    },
+    {
+     "label": "bid:4",
+     "child": 726
+    }
+   ]
+  },
+  {
+   "id": 725,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 726,
+   "kind": "terminal",
+   "payoff_p0": "-5"
+  },
+  {
+   "id": 727,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,4 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 728
+    },
+    {
+     "label": "bid:2",
+     "child": 731
+    }
+   ]
+  },
+  {
+   "id": 728,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 729
+    },
+    {
+     "label": "bid:4",
+     "child": 730
+    }
+   ]
+  },
+  {
+   "id": 729,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 730,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 731,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 732
+    },
+    {
+     "label": "bid:4",
+     "child": 733
+    }
+   ]
+  },
+  {
+   "id": 732,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 733,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 734,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,4 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 735
+    },
+    {
+     "label": "bid:2",
+     "child": 738
+    }
+   ]
+  },
+  {
+   "id": 735,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 736
+    },
+    {
+     "label": "bid:2",
+     "child": 737
+    }
+   ]
+  },
+  {
+   "id": 736,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 737,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 738,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 739
+    },
+    {
+     "label": "bid:2",
+     "child": 740
+    }
+   ]
+  },
+  {
+   "id": 739,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 740,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 741,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=3 p1=4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 742
+    },
+    {
+     "label": "bid:2",
+     "child": 764
+    },
+    {
+     "label": "bid:4",
+     "child": 786
+    }
+   ]
+  },
+  {
+   "id": 742,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=3 p1=4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 743
+    },
+    {
+     "label": "bid:2",
+     "child": 750
+    },
+    {
+     "label": "bid:3",
+     "child": 757
+    }
+   ]
+  },
+  {
+   "id": 743,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,1 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 744
+    },
+    {
+     "label": "bid:4",
+     "child": 747
+    }
+   ]
+  },
+  {
+   "id": 744,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 745
+    },
+    {
+     "label": "bid:3",
+     "child": 746
+    }
+   ]
+  },
+  {
+   "id": 745,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 746,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 747,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 748
+    },
+    {
+     "label": "bid:3",
+     "child": 749
+    }
+   ]
+  },
+  {
+   "id": 748,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 749,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 750,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,1 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 751
+    },
+    {
+     "label": "bid:4",
+     "child": 754
+    }
+   ]
+  },
+  {
+   "id": 751,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 752
+    },
+    {
+     "label": "bid:3",
+     "child": 753
+    }
+   ]
+  },
+  {
+   "id": 752,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 753,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 754,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 755
+    },
+    {
+     "label": "bid:3",
+     "child": 756
+    }
+   ]
+  },
+  {
+   "id": 755,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 756,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 757,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,1 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 758
+    },
+    {
+     "label": "bid:4",
+     "child": 761
+    }
+   ]
+  },
+  {
+   "id": 758,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 759
+    },
+    {
+     "label": "bid:2",
+     "child": 760
+    }
+   ]
+  },
+  {
+   "id": 759,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 760,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 761,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,1 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 762
+    },
+    {
+     "label": "bid:2",
+     "child": 763
+    }
+   ]
+  },
+  {
+   "id": 762,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 763,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 764,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=3 p1=4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 765
+    },
+    {
+     "label": "bid:2",
+     "child": 772
+    },
+    {
+     "label": "bid:3",
+     "child": 779
+    }
+   ]
+  },
+  {
+   "id": 765,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,2 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 766
+    },
+    {
+     "label": "bid:4",
+     "child": 769
+    }
+   ]
+  },
+  {
+   "id": 766,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 767
+    },
+    {
+     "label": "bid:3",
+     "child": 768
+    }
+   ]
+  },
+  {
+   "id": 767,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 768,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 769,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 770
+    },
+    {
+     "label": "bid:3",
+     "child": 771
+    }
+   ]
+  },
+  {
+   "id": 770,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 771,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 772,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,2 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 773
+    },
+    {
+     "label": "bid:4",
+     "child": 776
+    }
+   ]
+  },
+  {
+   "id": 773,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 774
+    },
+    {
+     "label": "bid:3",
+     "child": 775
+    }
+   ]
+  },
+  {
+   "id": 774,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 775,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 776,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 777
+    },
+    {
+     "label": "bid:3",
+     "child": 778
+    }
+   ]
+  },
+  {
+   "id": 777,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 778,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 779,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,2 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 780
+    },
+    {
+     "label": "bid:4",
+     "child": 783
+    }
+   ]
+  },
+  {
+   "id": 780,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 781
+    },
+    {
+     "label": "bid:2",
+     "child": 782
+    }
+   ]
+  },
+  {
+   "id": 781,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 782,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 783,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,2 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 784
+    },
+    {
+     "label": "bid:2",
+     "child": 785
+    }
+   ]
+  },
+  {
+   "id": 784,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 785,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 786,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=3 p1=4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 787
+    },
+    {
+     "label": "bid:2",
+     "child": 794
+    },
+    {
+     "label": "bid:3",
+     "child": 801
+    }
+   ]
+  },
+  {
+   "id": 787,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,4 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 788
+    },
+    {
+     "label": "bid:2",
+     "child": 791
+    }
+   ]
+  },
+  {
+   "id": 788,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 789
+    },
+    {
+     "label": "bid:3",
+     "child": 790
+    }
+   ]
+  },
+  {
+   "id": 789,
+   "kind": "terminal",
+   "payoff_p0": "-6"
+  },
+  {
+   "id": 790,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 791,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 792
+    },
+    {
+     "label": "bid:3",
+     "child": 793
+    }
+   ]
+  },
+  {
+   "id": 792,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 793,
+   "kind": "terminal",
+   "payoff_p0": "-6"
+  },
+  {
+   "id": 794,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,4 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 795
+    },
+    {
+     "label": "bid:2",
+     "child": 798
+    }
+   ]
+  },
+  {
+   "id": 795,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 796
+    },
+    {
+     "label": "bid:3",
+     "child": 797
+    }
+   ]
+  },
+  {
+   "id": 796,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 797,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 798,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 799
+    },
+    {
+     "label": "bid:3",
+     "child": 800
+    }
+   ]
+  },
+  {
+   "id": 799,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 800,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 801,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=3,4 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 802
+    },
+    {
+     "label": "bid:2",
+     "child": 805
+    }
+   ]
+  },
+  {
+   "id": 802,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 803
+    },
+    {
+     "label": "bid:2",
+     "child": 804
+    }
+   ]
+  },
+  {
+   "id": 803,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 804,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 805,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=3,4 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 806
+    },
+    {
+     "label": "bid:2",
+     "child": 807
+    }
+   ]
+  },
+  {
+   "id": 806,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 807,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 808,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1 p0= p1=",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 809
+    },
+    {
+     "label": "bid:2",
+     "child": 876
+    },
+    {
+     "label": "bid:3",
+     "child": 943
+    },
+    {
+     "label": "bid:4",
+     "child": 1010
+    }
+   ]
+  },
+  {
+   "id": 809,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=4 p1=1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 810
+    },
+    {
+     "label": "bid:2",
+     "child": 832
+    },
+    {
+     "label": "bid:3",
+     "child": 854
+    }
+   ]
+  },
+  {
+   "id": 810,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=4 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 811
+    },
+    {
+     "label": "bid:3",
+     "child": 818
+    },
+    {
+     "label": "bid:4",
+     "child": 825
+    }
+   ]
+  },
+  {
+   "id": 811,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,1 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 812
+    },
+    {
+     "label": "bid:3",
+     "child": 815
+    }
+   ]
+  },
+  {
+   "id": 812,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 813
+    },
+    {
+     "label": "bid:4",
+     "child": 814
+    }
+   ]
+  },
+  {
+   "id": 813,
+   "kind": "terminal",
+   "payoff_p0": "-8"
+  },
+  {
+   "id": 814,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 815,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 816
+    },
+    {
+     "label": "bid:4",
+     "child": 817
+    }
+   ]
+  },
+  {
+   "id": 816,
+   "kind": "terminal",
+   "payoff_p0": "-5"
+  },
+  {
+   "id": 817,
+   "kind": "terminal",
+   "payoff_p0": "-8"
+  },
+  {
+   "id": 818,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,1 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 819
+    },
+    {
+     "label": "bid:3",
+     "child": 822
+    }
+   ]
+  },
+  {
+   "id": 819,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 820
+    },
+    {
+     "label": "bid:4",
+     "child": 821
+    }
+   ]
+  },
+  {
+   "id": 820,
+   "kind": "terminal",
+   "payoff_p0": "-5"
+  },
+  {
+   "id": 821,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 822,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 823
+    },
+    {
+     "label": "bid:4",
+     "child": 824
+    }
+   ]
+  },
+  {
+   "id": 823,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 824,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 825,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,1 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 826
+    },
+    {
+     "label": "bid:3",
+     "child": 829
+    }
+   ]
+  },
+  {
+   "id": 826,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 827
+    },
+    {
+     "label": "bid:3",
+     "child": 828
+    }
+   ]
+  },
+  {
+   "id": 827,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 828,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 829,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 830
+    },
+    {
+     "label": "bid:3",
+     "child": 831
+    }
+   ]
+  },
+  {
+   "id": 830,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 831,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 832,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=4 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 833
+    },
+    {
+     "label": "bid:3",
+     "child": 840
+    },
+    {
+     "label": "bid:4",
+     "child": 847
+    }
+   ]
+  },
+  {
+   "id": 833,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,2 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 834
+    },
+    {
+     "label": "bid:3",
+     "child": 837
+    }
+   ]
+  },
+  {
+   "id": 834,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 835
+    },
+    {
+     "label": "bid:4",
+     "child": 836
+    }
+   ]
+  },
+  {
+   "id": 835,
+   "kind": "terminal",
+   "payoff_p0": "-6"
+  },
+  {
+   "id": 836,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 837,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 838
+    },
+    {
+     "label": "bid:4",
+     "child": 839
+    }
+   ]
+  },
+  {
+   "id": 838,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 839,
+   "kind": "terminal",
+   "payoff_p0": "-6"
+  },
+  {
+   "id": 840,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,2 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 841
+    },
+    {
+     "label": "bid:3",
+     "child": 844
+    }
+   ]
+  },
+  {
+   "id": 841,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 842
+    },
+    {
+     "label": "bid:4",
+     "child": 843
+    }
+   ]
+  },
+  {
+   "id": 842,
+   "kind": "terminal",
+   "payoff_p0": "-8"
+  },
+  {
+   "id": 843,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 844,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 845
+    },
+    {
+     "label": "bid:4",
+     "child": 846
+    }
+   ]
+  },
+  {
+   "id": 845,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 846,
+   "kind": "terminal",
+   "payoff_p0": "-8"
+  },
+  {
+   "id": 847,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,2 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 848
+    },
+    {
+     "label": "bid:3",
+     "child": 851
+    }
+   ]
+  },
+  {
+   "id": 848,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 849
+    },
+    {
+     "label": "bid:3",
+     "child": 850
+    }
+   ]
+  },
+  {
+   "id": 849,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 850,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 851,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 852
+    },
+    {
+     "label": "bid:3",
+     "child": 853
+    }
+   ]
+  },
+  {
+   "id": 852,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 853,
+   "kind": "terminal",
+   "payoff_p0": "-5"
+  },
+  {
+   "id": 854,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=4 p1=1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 855
+    },
+    {
+     "label": "bid:3",
+     "child": 862
+    },
+    {
+     "label": "bid:4",
+     "child": 869
+    }
+   ]
+  },
+  {
+   "id": 855,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,3 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 856
+    },
+    {
+     "label": "bid:2",
+     "child": 859
+    }
+   ]
+  },
+  {
+   "id": 856,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 857
+    },
+    {
+     "label": "bid:4",
+     "child": 858
+    }
+   ]
+  },
+  {
+   "id": 857,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 858,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 859,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=1,2",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 860
+    },
+    {
+     "label": "bid:4",
+     "child": 861
+    }
+   ]
+  },
+  {
+   "id": 860,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 861,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 862,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,3 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 863
+    },
+    {
+     "label": "bid:2",
+     "child": 866
+    }
+   ]
+  },
+  {
+   "id": 863,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 864
+    },
+    {
+     "label": "bid:4",
+     "child": 865
+    }
+   ]
+  },
+  {
+   "id": 864,
+   "kind": "terminal",
+   "payoff_p0": "-6"
+  },
+  {
+   "id": 865,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 866,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=1,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 867
+    },
+    {
+     "label": "bid:4",
+     "child": 868
+    }
+   ]
+  },
+  {
+   "id": 867,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 868,
+   "kind": "terminal",
+   "payoff_p0": "-6"
+  },
+  {
+   "id": 869,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,3 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 870
+    },
+    {
+     "label": "bid:2",
+     "child": 873
+    }
+   ]
+  },
+  {
+   "id": 870,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 871
+    },
+    {
+     "label": "bid:3",
+     "child": 872
+    }
+   ]
+  },
+  {
+   "id": 871,
+   "kind": "terminal",
+   "payoff_p0": "-8"
+  },
+  {
+   "id": 872,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 873,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=1,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 874
+    },
+    {
+     "label": "bid:3",
+     "child": 875
+    }
+   ]
+  },
+  {
+   "id": 874,
+   "kind": "terminal",
+   "payoff_p0": "-5"
+  },
+  {
+   "id": 875,
+   "kind": "terminal",
+   "payoff_p0": "-8"
+  },
+  {
+   "id": 876,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=4 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 877
+    },
+    {
+     "label": "bid:2",
+     "child": 899
+    },
+    {
+     "label": "bid:3",
+     "child": 921
+    }
+   ]
+  },
+  {
+   "id": 877,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=4 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 878
+    },
+    {
+     "label": "bid:3",
+     "child": 885
+    },
+    {
+     "label": "bid:4",
+     "child": 892
+    }
+   ]
+  },
+  {
+   "id": 878,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,1 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 879
+    },
+    {
+     "label": "bid:3",
+     "child": 882
+    }
+   ]
+  },
+  {
+   "id": 879,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 880
+    },
+    {
+     "label": "bid:4",
+     "child": 881
+    }
+   ]
+  },
+  {
+   "id": 880,
+   "kind": "terminal",
+   "payoff_p0": "-6"
+  },
+  {
+   "id": 881,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 882,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 883
+    },
+    {
+     "label": "bid:4",
+     "child": 884
+    }
+   ]
+  },
+  {
+   "id": 883,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 884,
+   "kind": "terminal",
+   "payoff_p0": "-6"
+  },
+  {
+   "id": 885,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,1 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 886
+    },
+    {
+     "label": "bid:3",
+     "child": 889
+    }
+   ]
+  },
+  {
+   "id": 886,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 887
+    },
+    {
+     "label": "bid:4",
+     "child": 888
+    }
+   ]
+  },
+  {
+   "id": 887,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 888,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 889,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 890
+    },
+    {
+     "label": "bid:4",
+     "child": 891
+    }
+   ]
+  },
+  {
+   "id": 890,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 891,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 892,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,1 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 893
+    },
+    {
+     "label": "bid:3",
+     "child": 896
+    }
+   ]
+  },
+  {
+   "id": 893,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 894
+    },
+    {
+     "label": "bid:3",
+     "child": 895
+    }
+   ]
+  },
+  {
+   "id": 894,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 895,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 896,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 897
+    },
+    {
+     "label": "bid:3",
+     "child": 898
+    }
+   ]
+  },
+  {
+   "id": 897,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 898,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 899,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=4 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 900
+    },
+    {
+     "label": "bid:3",
+     "child": 907
+    },
+    {
+     "label": "bid:4",
+     "child": 914
+    }
+   ]
+  },
+  {
+   "id": 900,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,2 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 901
+    },
+    {
+     "label": "bid:3",
+     "child": 904
+    }
+   ]
+  },
+  {
+   "id": 901,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 902
+    },
+    {
+     "label": "bid:4",
+     "child": 903
+    }
+   ]
+  },
+  {
+   "id": 902,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 903,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 904,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 905
+    },
+    {
+     "label": "bid:4",
+     "child": 906
+    }
+   ]
+  },
+  {
+   "id": 905,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 906,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 907,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,2 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 908
+    },
+    {
+     "label": "bid:3",
+     "child": 911
+    }
+   ]
+  },
+  {
+   "id": 908,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 909
+    },
+    {
+     "label": "bid:4",
+     "child": 910
+    }
+   ]
+  },
+  {
+   "id": 909,
+   "kind": "terminal",
+   "payoff_p0": "-5"
+  },
+  {
+   "id": 910,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 911,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 912
+    },
+    {
+     "label": "bid:4",
+     "child": 913
+    }
+   ]
+  },
+  {
+   "id": 912,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 913,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 914,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,2 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 915
+    },
+    {
+     "label": "bid:3",
+     "child": 918
+    }
+   ]
+  },
+  {
+   "id": 915,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 916
+    },
+    {
+     "label": "bid:3",
+     "child": 917
+    }
+   ]
+  },
+  {
+   "id": 916,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 917,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 918,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 919
+    },
+    {
+     "label": "bid:3",
+     "child": 920
+    }
+   ]
+  },
+  {
+   "id": 919,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 920,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 921,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=4 p1=2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 922
+    },
+    {
+     "label": "bid:3",
+     "child": 929
+    },
+    {
+     "label": "bid:4",
+     "child": 936
+    }
+   ]
+  },
+  {
+   "id": 922,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,3 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 923
+    },
+    {
+     "label": "bid:2",
+     "child": 926
+    }
+   ]
+  },
+  {
+   "id": 923,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 924
+    },
+    {
+     "label": "bid:4",
+     "child": 925
+    }
+   ]
+  },
+  {
+   "id": 924,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 925,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 926,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=2,1",
+   "actions": [
+    {
+     "label": "bid:3",
+     "child": 927
+    },
+    {
+     "label": "bid:4",
+     "child": 928
+    }
+   ]
+  },
+  {
+   "id": 927,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 928,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 929,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,3 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 930
+    },
+    {
+     "label": "bid:2",
+     "child": 933
+    }
+   ]
+  },
+  {
+   "id": 930,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 931
+    },
+    {
+     "label": "bid:4",
+     "child": 932
+    }
+   ]
+  },
+  {
+   "id": 931,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 932,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 933,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=2,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 934
+    },
+    {
+     "label": "bid:4",
+     "child": 935
+    }
+   ]
+  },
+  {
+   "id": 934,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 935,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 936,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,3 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 937
+    },
+    {
+     "label": "bid:2",
+     "child": 940
+    }
+   ]
+  },
+  {
+   "id": 937,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 938
+    },
+    {
+     "label": "bid:3",
+     "child": 939
+    }
+   ]
+  },
+  {
+   "id": 938,
+   "kind": "terminal",
+   "payoff_p0": "-5"
+  },
+  {
+   "id": 939,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 940,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=2,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 941
+    },
+    {
+     "label": "bid:3",
+     "child": 942
+    }
+   ]
+  },
+  {
+   "id": 941,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 942,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 943,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=4 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 944
+    },
+    {
+     "label": "bid:2",
+     "child": 966
+    },
+    {
+     "label": "bid:3",
+     "child": 988
+    }
+   ]
+  },
+  {
+   "id": 944,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=4 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 945
+    },
+    {
+     "label": "bid:2",
+     "child": 952
+    },
+    {
+     "label": "bid:4",
+     "child": 959
+    }
+   ]
+  },
+  {
+   "id": 945,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,1 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 946
+    },
+    {
+     "label": "bid:3",
+     "child": 949
+    }
+   ]
+  },
+  {
+   "id": 946,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 947
+    },
+    {
+     "label": "bid:4",
+     "child": 948
+    }
+   ]
+  },
+  {
+   "id": 947,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 948,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 949,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 950
+    },
+    {
+     "label": "bid:4",
+     "child": 951
+    }
+   ]
+  },
+  {
+   "id": 950,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 951,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 952,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,1 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 953
+    },
+    {
+     "label": "bid:3",
+     "child": 956
+    }
+   ]
+  },
+  {
+   "id": 953,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 954
+    },
+    {
+     "label": "bid:4",
+     "child": 955
+    }
+   ]
+  },
+  {
+   "id": 954,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 955,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 956,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 957
+    },
+    {
+     "label": "bid:4",
+     "child": 958
+    }
+   ]
+  },
+  {
+   "id": 957,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 958,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 959,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,1 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 960
+    },
+    {
+     "label": "bid:3",
+     "child": 963
+    }
+   ]
+  },
+  {
+   "id": 960,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 961
+    },
+    {
+     "label": "bid:2",
+     "child": 962
+    }
+   ]
+  },
+  {
+   "id": 961,
+   "kind": "terminal",
+   "payoff_p0": "6"
+  },
+  {
+   "id": 962,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 963,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 964
+    },
+    {
+     "label": "bid:2",
+     "child": 965
+    }
+   ]
+  },
+  {
+   "id": 964,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 965,
+   "kind": "terminal",
+   "payoff_p0": "6"
+  },
+  {
+   "id": 966,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=4 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 967
+    },
+    {
+     "label": "bid:2",
+     "child": 974
+    },
+    {
+     "label": "bid:4",
+     "child": 981
+    }
+   ]
+  },
+  {
+   "id": 967,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,2 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 968
+    },
+    {
+     "label": "bid:3",
+     "child": 971
+    }
+   ]
+  },
+  {
+   "id": 968,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 969
+    },
+    {
+     "label": "bid:4",
+     "child": 970
+    }
+   ]
+  },
+  {
+   "id": 969,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 970,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 971,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 972
+    },
+    {
+     "label": "bid:4",
+     "child": 973
+    }
+   ]
+  },
+  {
+   "id": 972,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 973,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 974,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,2 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 975
+    },
+    {
+     "label": "bid:3",
+     "child": 978
+    }
+   ]
+  },
+  {
+   "id": 975,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 976
+    },
+    {
+     "label": "bid:4",
+     "child": 977
+    }
+   ]
+  },
+  {
+   "id": 976,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 977,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 978,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 979
+    },
+    {
+     "label": "bid:4",
+     "child": 980
+    }
+   ]
+  },
+  {
+   "id": 979,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 980,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 981,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,2 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 982
+    },
+    {
+     "label": "bid:3",
+     "child": 985
+    }
+   ]
+  },
+  {
+   "id": 982,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 983
+    },
+    {
+     "label": "bid:2",
+     "child": 984
+    }
+   ]
+  },
+  {
+   "id": 983,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 984,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 985,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 986
+    },
+    {
+     "label": "bid:2",
+     "child": 987
+    }
+   ]
+  },
+  {
+   "id": 986,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 987,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 988,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=4 p1=3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 989
+    },
+    {
+     "label": "bid:2",
+     "child": 996
+    },
+    {
+     "label": "bid:4",
+     "child": 1003
+    }
+   ]
+  },
+  {
+   "id": 989,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,3 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 990
+    },
+    {
+     "label": "bid:2",
+     "child": 993
+    }
+   ]
+  },
+  {
+   "id": 990,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 991
+    },
+    {
+     "label": "bid:4",
+     "child": 992
+    }
+   ]
+  },
+  {
+   "id": 991,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 992,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 993,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=3,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 994
+    },
+    {
+     "label": "bid:4",
+     "child": 995
+    }
+   ]
+  },
+  {
+   "id": 994,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 995,
+   "kind": "terminal",
+   "payoff_p0": "-4"
+  },
+  {
+   "id": 996,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,3 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 997
+    },
+    {
+     "label": "bid:2",
+     "child": 1000
+    }
+   ]
+  },
+  {
+   "id": 997,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 998
+    },
+    {
+     "label": "bid:4",
+     "child": 999
+    }
+   ]
+  },
+  {
+   "id": 998,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 999,
+   "kind": "terminal",
+   "payoff_p0": "4"
+  },
+  {
+   "id": 1000,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=3,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1001
+    },
+    {
+     "label": "bid:4",
+     "child": 1002
+    }
+   ]
+  },
+  {
+   "id": 1001,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 1002,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 1003,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,3 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1004
+    },
+    {
+     "label": "bid:2",
+     "child": 1007
+    }
+   ]
+  },
+  {
+   "id": 1004,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1005
+    },
+    {
+     "label": "bid:2",
+     "child": 1006
+    }
+   ]
+  },
+  {
+   "id": 1005,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 1006,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 1007,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=3,4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1008
+    },
+    {
+     "label": "bid:2",
+     "child": 1009
+    }
+   ]
+  },
+  {
+   "id": 1008,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 1009,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 1010,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2 p0=4 p1=4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1011
+    },
+    {
+     "label": "bid:2",
+     "child": 1033
+    },
+    {
+     "label": "bid:3",
+     "child": 1055
+    }
+   ]
+  },
+  {
+   "id": 1011,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=4 p1=4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1012
+    },
+    {
+     "label": "bid:2",
+     "child": 1019
+    },
+    {
+     "label": "bid:3",
+     "child": 1026
+    }
+   ]
+  },
+  {
+   "id": 1012,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,1 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 1013
+    },
+    {
+     "label": "bid:3",
+     "child": 1016
+    }
+   ]
+  },
+  {
+   "id": 1013,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 1014
+    },
+    {
+     "label": "bid:3",
+     "child": 1015
+    }
+   ]
+  },
+  {
+   "id": 1014,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 1015,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 1016,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 1017
+    },
+    {
+     "label": "bid:3",
+     "child": 1018
+    }
+   ]
+  },
+  {
+   "id": 1017,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 1018,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 1019,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,1 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 1020
+    },
+    {
+     "label": "bid:3",
+     "child": 1023
+    }
+   ]
+  },
+  {
+   "id": 1020,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1021
+    },
+    {
+     "label": "bid:3",
+     "child": 1022
+    }
+   ]
+  },
+  {
+   "id": 1021,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 1022,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 1023,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1024
+    },
+    {
+     "label": "bid:3",
+     "child": 1025
+    }
+   ]
+  },
+  {
+   "id": 1024,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 1025,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 1026,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,1 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 1027
+    },
+    {
+     "label": "bid:3",
+     "child": 1030
+    }
+   ]
+  },
+  {
+   "id": 1027,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1028
+    },
+    {
+     "label": "bid:2",
+     "child": 1029
+    }
+   ]
+  },
+  {
+   "id": 1028,
+   "kind": "terminal",
+   "payoff_p0": "5"
+  },
+  {
+   "id": 1029,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 1030,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,1 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1031
+    },
+    {
+     "label": "bid:2",
+     "child": 1032
+    }
+   ]
+  },
+  {
+   "id": 1031,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 1032,
+   "kind": "terminal",
+   "payoff_p0": "5"
+  },
+  {
+   "id": 1033,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=4 p1=4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1034
+    },
+    {
+     "label": "bid:2",
+     "child": 1041
+    },
+    {
+     "label": "bid:3",
+     "child": 1048
+    }
+   ]
+  },
+  {
+   "id": 1034,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,2 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1035
+    },
+    {
+     "label": "bid:3",
+     "child": 1038
+    }
+   ]
+  },
+  {
+   "id": 1035,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 1036
+    },
+    {
+     "label": "bid:3",
+     "child": 1037
+    }
+   ]
+  },
+  {
+   "id": 1036,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 1037,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 1038,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 1039
+    },
+    {
+     "label": "bid:3",
+     "child": 1040
+    }
+   ]
+  },
+  {
+   "id": 1039,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 1040,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 1041,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,2 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1042
+    },
+    {
+     "label": "bid:3",
+     "child": 1045
+    }
+   ]
+  },
+  {
+   "id": 1042,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1043
+    },
+    {
+     "label": "bid:3",
+     "child": 1044
+    }
+   ]
+  },
+  {
+   "id": 1043,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 1044,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 1045,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1046
+    },
+    {
+     "label": "bid:3",
+     "child": 1047
+    }
+   ]
+  },
+  {
+   "id": 1046,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 1047,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 1048,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,2 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1049
+    },
+    {
+     "label": "bid:3",
+     "child": 1052
+    }
+   ]
+  },
+  {
+   "id": 1049,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1050
+    },
+    {
+     "label": "bid:2",
+     "child": 1051
+    }
+   ]
+  },
+  {
+   "id": 1050,
+   "kind": "terminal",
+   "payoff_p0": "2"
+  },
+  {
+   "id": 1051,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 1052,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,2 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1053
+    },
+    {
+     "label": "bid:2",
+     "child": 1054
+    }
+   ]
+  },
+  {
+   "id": 1053,
+   "kind": "terminal",
+   "payoff_p0": "-3"
+  },
+  {
+   "id": 1054,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 1055,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2 p0=4 p1=4",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1056
+    },
+    {
+     "label": "bid:2",
+     "child": 1063
+    },
+    {
+     "label": "bid:3",
+     "child": 1070
+    }
+   ]
+  },
+  {
+   "id": 1056,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,3 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1057
+    },
+    {
+     "label": "bid:2",
+     "child": 1060
+    }
+   ]
+  },
+  {
+   "id": 1057,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 1058
+    },
+    {
+     "label": "bid:3",
+     "child": 1059
+    }
+   ]
+  },
+  {
+   "id": 1058,
+   "kind": "terminal",
+   "payoff_p0": "-5"
+  },
+  {
+   "id": 1059,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 1060,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=4,1",
+   "actions": [
+    {
+     "label": "bid:2",
+     "child": 1061
+    },
+    {
+     "label": "bid:3",
+     "child": 1062
+    }
+   ]
+  },
+  {
+   "id": 1061,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 1062,
+   "kind": "terminal",
+   "payoff_p0": "-5"
+  },
+  {
+   "id": 1063,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,3 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1064
+    },
+    {
+     "label": "bid:2",
+     "child": 1067
+    }
+   ]
+  },
+  {
+   "id": 1064,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1065
+    },
+    {
+     "label": "bid:3",
+     "child": 1066
+    }
+   ]
+  },
+  {
+   "id": 1065,
+   "kind": "terminal",
+   "payoff_p0": "-2"
+  },
+  {
+   "id": 1066,
+   "kind": "terminal",
+   "payoff_p0": "3"
+  },
+  {
+   "id": 1067,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=4,2",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1068
+    },
+    {
+     "label": "bid:3",
+     "child": 1069
+    }
+   ]
+  },
+  {
+   "id": 1068,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 1069,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 1070,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0 prizes=1,2,3 p0=4,3 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1071
+    },
+    {
+     "label": "bid:2",
+     "child": 1074
+    }
+   ]
+  },
+  {
+   "id": 1071,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1072
+    },
+    {
+     "label": "bid:2",
+     "child": 1073
+    }
+   ]
+  },
+  {
+   "id": 1072,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 1073,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 1074,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1 prizes=1,2,3 p0=4,3 p1=4,3",
+   "actions": [
+    {
+     "label": "bid:1",
+     "child": 1075
+    },
+    {
+     "label": "bid:2",
+     "child": 1076
+    }
+   ]
+  },
+  {
+   "id": 1075,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 1076,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  }
+ ]
+}

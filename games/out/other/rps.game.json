@@ -1,0 +1,135 @@
+{
+ "format": "bluff-game-v1",
+ "name": "rps",
+ "description": "Rock-paper-scissors as a tree: p0 moves, p1 moves in one infoset without seeing p0's choice (simultaneous move). Win +1, loss -1, tie 0.",
+ "known_value_p0": "0",
+ "known_value_source": "antisymmetric payoff matrix, so the value is 0; uniform play is the equilibrium",
+ "root": 0,
+ "nodes": [
+  {
+   "id": 0,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0",
+   "actions": [
+    {
+     "label": "R",
+     "child": 1
+    },
+    {
+     "label": "P",
+     "child": 5
+    },
+    {
+     "label": "S",
+     "child": 9
+    }
+   ]
+  },
+  {
+   "id": 1,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1",
+   "actions": [
+    {
+     "label": "R",
+     "child": 2
+    },
+    {
+     "label": "P",
+     "child": 3
+    },
+    {
+     "label": "S",
+     "child": 4
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 3,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 4,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 5,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1",
+   "actions": [
+    {
+     "label": "R",
+     "child": 6
+    },
+    {
+     "label": "P",
+     "child": 7
+    },
+    {
+     "label": "S",
+     "child": 8
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 7,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  },
+  {
+   "id": 8,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 9,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1",
+   "actions": [
+    {
+     "label": "R",
+     "child": 10
+    },
+    {
+     "label": "P",
+     "child": 11
+    },
+    {
+     "label": "S",
+     "child": 12
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 11,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 12,
+   "kind": "terminal",
+   "payoff_p0": "0"
+  }
+ ]
+}

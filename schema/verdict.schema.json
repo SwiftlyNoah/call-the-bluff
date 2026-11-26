@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://call-the-bluff.local/schema/verdict.schema.json",
+  "title": "bluff-verdict-v1",
+  "description": "The checker's verdict on a strategy profile (CONTRACTS.md section 3). All values are exact rationals except exploitability_float, which is a convenience. verified is true only when produced by the compiled Dafny core.",
+  "type": "object",
+  "required": [
+    "format", "game", "value_p0", "br_value_p0", "br_value_p1", "nash_conv",
+    "exploitability", "exploitability_float", "best_response_p0", "best_response_p1", "verified"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "format": {"const": "bluff-verdict-v1"},
+    "game": {"type": "string", "minLength": 1},
+    "value_p0": {"$ref": "#/$defs/rational"},
+    "br_value_p0": {"$ref": "#/$defs/rational"},
+    "br_value_p1": {"$ref": "#/$defs/rational"},
+    "nash_conv": {"$ref": "#/$defs/nonneg_rational"},
+    "exploitability": {"$ref": "#/$defs/nonneg_rational"},
+    "exploitability_float": {"type": "number", "minimum": 0},
+    "best_response_p0": {"$ref": "#/$defs/pure_strategy"},
+    "best_response_p1": {"$ref": "#/$defs/pure_strategy"},
+    "verified": {"type": "boolean"}
+  },
+  "$defs": {
+    "rational": {
+      "type": "string",
+      "pattern": "^-?(?:[0-9]+(?:\\.[0-9]+)?|[0-9]+/0*[1-9][0-9]*)$"
+    },
+    "nonneg_rational": {
+      "type": "string",
+      "pattern": "^(?:[0-9]+(?:\\.[0-9]+)?|[0-9]+/0*[1-9][0-9]*)$"
+    },
+    "pure_strategy": {
+      "description": "Infoset label to chosen action label.",
+      "type": "object",
+      "additionalProperties": {"type": "string", "minLength": 1}
+    }
+  }
+}

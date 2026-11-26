@@ -1,0 +1,97 @@
+{
+ "format": "bluff-game-v1",
+ "name": "forgetful_b",
+ "description": "imperfect recall: player 0 forgets its own first move",
+ "root": 0,
+ "nodes": [
+  {
+   "kind": "chance",
+   "outcomes": [
+    {
+     "label": "h",
+     "prob": "1/2",
+     "child": 1
+    },
+    {
+     "label": "t",
+     "prob": "1/2",
+     "child": 6
+    }
+   ],
+   "id": 0
+  },
+  {
+   "kind": "decision",
+   "player": 0,
+   "infoset": "p0:A",
+   "actions": [
+    {
+     "label": "L",
+     "child": 2
+    },
+    {
+     "label": "R",
+     "child": 5
+    }
+   ],
+   "id": 1
+  },
+  {
+   "kind": "decision",
+   "player": 0,
+   "infoset": "p0:later",
+   "actions": [
+    {
+     "label": "L",
+     "child": 3
+    },
+    {
+     "label": "R",
+     "child": 4
+    }
+   ],
+   "id": 2
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "1",
+   "id": 3
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "0",
+   "id": 4
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "0",
+   "id": 5
+  },
+  {
+   "kind": "decision",
+   "player": 0,
+   "infoset": "p0:later",
+   "actions": [
+    {
+     "label": "L",
+     "child": 7
+    },
+    {
+     "label": "R",
+     "child": 8
+    }
+   ],
+   "id": 6
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "0",
+   "id": 7
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "1",
+   "id": 8
+  }
+ ]
+}

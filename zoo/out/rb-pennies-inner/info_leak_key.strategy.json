@@ -1,0 +1,65 @@
+{
+ "format": "bluff-strategy-v1",
+ "game": "rb-pennies-inner",
+ "producer": "zoo/mutants/info_leak_key.py --algo cfrplus",
+ "probs": {
+  "p1|start:R|RB L1": {
+   "discard R": "0.5005918203949211",
+   "discard B": "0.4994081796050789"
+  },
+  "p0|start:R|RB L1 d1 r2:s0 ro:R": {
+   "bid 1R": "0.24980152248549087",
+   "bid 2R": "0.5003969550290182",
+   "bid 1B": "0.24980152248549087",
+   "bid 2B": "0.0"
+  },
+  "p1|start:R|RB L1 dis:R r2:s0 ro:B 0:1R": {
+   "challenge": "0.5",
+   "bid 2R": "0.5"
+  },
+  "p0|start:R|RB L1 d1 r2:s0 ro:R 0:1R 1:ch": {
+   "flip0": "1.0",
+   "flip1": "0.0"
+  },
+  "p1|start:R|RB L1 dis:R r2:s0 ro:B 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB L1 d1 r2:s0 ro:R 0:2R 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB L1 dis:R r2:s0 ro:B 0:1B": {
+   "challenge": "0.5",
+   "bid 2B": "0.5"
+  },
+  "p0|start:R|RB L1 d1 r2:s0 ro:R 0:1B 1:ch": {
+   "flip0": "0.0",
+   "flip1": "1.0"
+  },
+  "p1|start:R|RB L1 dis:R r2:s0 ro:B 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p0|start:R|RB L1 d1 r2:s0 ro:R 0:2B 1:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB L1 dis:B r2:s0 ro:R 0:1R": {
+   "challenge": "1.7775145023623863e-06",
+   "bid 2R": "0.9999982224854976"
+  },
+  "p1|start:R|RB L1 dis:B r2:s0 ro:R 0:1R 1:2R 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  },
+  "p1|start:R|RB L1 dis:B r2:s0 ro:R 0:1B": {
+   "challenge": "0.9999982224854976",
+   "bid 2B": "1.7775145023623863e-06"
+  },
+  "p1|start:R|RB L1 dis:B r2:s0 ro:R 0:1B 1:2B 0:ch": {
+   "flip0": "0.5",
+   "flip1": "0.5"
+  }
+ }
+}

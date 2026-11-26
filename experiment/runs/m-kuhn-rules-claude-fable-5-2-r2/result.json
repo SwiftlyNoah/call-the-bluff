@@ -1,0 +1,200 @@
+{
+ "format": "bluff-experiment-trial-v1",
+ "run_id": "m-kuhn-rules-claude-fable-5-2-r2",
+ "game": "kuhn",
+ "variant": "rules",
+ "model_requested": "claude-fable-5-2",
+ "game_file": "games/out/kuhn.game.json",
+ "game_file_sha256": "31829086a5a36abb678ec0384bcfeea6229fe60983983df1be60a265fa79b068",
+ "prompt_file": "experiment/prompts/kuhn_rules.md",
+ "prompt_sha256": "390ab11a640771b3905f8bb8007a0ccf83921a49e1b17cd3227d20a1732734e0",
+ "pot": 2,
+ "timeout_s": 1800,
+ "max_budget_usd": 5.0,
+ "started_at": "2026-11-20T19:47:40-05:00",
+ "isolated_workspace": "/var/folders/km/r10tsfhx0815z44_014w924r0000gn/T/cfr-1gbyvkgr/workspace",
+ "agent": {
+  "exit_code": 0,
+  "timed_out": false,
+  "wall_seconds": 76.4,
+  "stderr_tail": "",
+  "is_error": false,
+  "subtype": "success",
+  "num_turns": 6,
+  "duration_ms": 75292,
+  "total_cost_usd": 0.6447592,
+  "usage": {
+   "input_tokens": 10,
+   "cache_creation_input_tokens": 19383,
+   "cache_read_input_tokens": 143956,
+   "output_tokens": 7644,
+   "output_tokens_details": {
+    "thinking_tokens": 1308
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 19383,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 865,
+     "cache_read_input_tokens": 35930,
+     "cache_creation_input_tokens": 1358,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 1358
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard",
+   "fallback_credit": null
+  },
+  "models_used": [
+   "claude-fable-5-2"
+  ],
+  "model_usage": {
+   "claude-fable-5-2": {
+    "inputTokens": 10,
+    "outputTokens": 7644,
+    "cacheReadInputTokens": 143956,
+    "cacheCreationInputTokens": 19383,
+    "webSearchRequests": 0,
+    "costUSD": 0.6447592,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 1308,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 19383,
+    "canonicalModel": "claude-fable-5-2",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "tool_calls": 5,
+  "snoop_hits": []
+ },
+ "ended_at": "2026-11-20T19:48:56-05:00",
+ "claim": {
+  "claim_converged": true,
+  "claimed_exploitability": 1.3151181568e-06,
+  "claimed_value_p0": -0.05555555555094215,
+  "confidence": "high",
+  "notes": "CFR+ (alternating updates, linear averaging), 200000 iterations. Exploitability and value were computed in exact rational arithmetic from the strategy.json file as written, with best responses cross-checked by brute-force enumeration of pure strategies. Value matches the known game value of -1/18. Probabilities are decimal strings rounded to 12 places that sum to exactly 1 per information set."
+ },
+ "claim_source": "final_reply",
+ "agent_files": [
+  "solve_kuhn.py",
+  "strategy.json"
+ ],
+ "grading": {
+  "graded_at": "2026-11-20T19:48:56-05:00",
+  "strategy_found": true,
+  "strict": {
+   "checker": "bin/bluff",
+   "command": "bin/bluff check games/out/kuhn.game.json experiment/runs/m-kuhn-rules-claude-fable-5-2-r2/agent_files/strategy.json",
+   "exit_code": 0,
+   "stderr_tail": "",
+   "verdict": {
+    "format": "bluff-verdict-v1",
+    "game": "kuhn",
+    "value_p0": "-41666666663206611930656329982113267/750000000000000000000000000000000000",
+    "br_value_p0": "-333323283007/6000000000000",
+    "br_value_p1": "55556510737480266984829/1000000000000000000000000",
+    "nash_conv": "7890708940800954487/3000000000000000000000000",
+    "exploitability": "7890708940800954487/6000000000000000000000000",
+    "exploitability_float": 1.3151181568001591e-06,
+    "best_response_p0": {
+     "J:cb": "fold",
+     "J:": "check",
+     "Q:cb": "call",
+     "Q:": "check",
+     "K:cb": "fold",
+     "K:": "bet"
+    },
+    "best_response_p1": {
+     "Q:c": "check",
+     "Q:b": "fold",
+     "K:c": "bet",
+     "K:b": "call",
+     "J:c": "check",
+     "J:b": "fold"
+    },
+    "verified": true
+   }
+  },
+  "coverage": {
+   "game_infosets": 12,
+   "agent_infosets": 12,
+   "matched": 12,
+   "missing": 0,
+   "bad_rows": 0,
+   "extra": 0,
+   "coverage": 1.0,
+   "missing_sample": [],
+   "bad_sample": [],
+   "extra_sample": []
+  },
+  "filled": {
+   "checker": "bin/bluff",
+   "command": "bin/bluff check games/out/kuhn.game.json experiment/runs/m-kuhn-rules-claude-fable-5-2-r2/graded_strategy_filled.json",
+   "exit_code": 0,
+   "stderr_tail": "",
+   "verdict": {
+    "format": "bluff-verdict-v1",
+    "game": "kuhn",
+    "value_p0": "-41666666663206611930656329982113267/750000000000000000000000000000000000",
+    "br_value_p0": "-333323283007/6000000000000",
+    "br_value_p1": "55556510737480266984829/1000000000000000000000000",
+    "nash_conv": "7890708940800954487/3000000000000000000000000",
+    "exploitability": "7890708940800954487/6000000000000000000000000",
+    "exploitability_float": 1.3151181568001591e-06,
+    "best_response_p0": {
+     "J:cb": "fold",
+     "J:": "check",
+     "Q:cb": "call",
+     "Q:": "check",
+     "K:cb": "fold",
+     "K:": "bet"
+    },
+    "best_response_p1": {
+     "Q:c": "check",
+     "Q:b": "fold",
+     "K:c": "bet",
+     "K:b": "call",
+     "J:c": "check",
+     "J:b": "fold"
+    },
+    "verified": true
+   }
+  }
+ },
+ "summary": {
+  "agent_finished": true,
+  "strategy_found": true,
+  "strict_accepted": true,
+  "graded_on": "strict",
+  "checker": "bin/bluff",
+  "verified_checker": true,
+  "coverage": 1.0,
+  "exploitability": "7890708940800954487/6000000000000000000000000",
+  "exploitability_float": 1.3151181568001591e-06,
+  "value_p0": "-41666666663206611930656329982113267/750000000000000000000000000000000000",
+  "threshold_1pct_pot": 0.02,
+  "claim_converged": true,
+  "claimed_exploitability": 1.3151181568e-06,
+  "claimed_value_p0": -0.05555555555094215,
+  "confidence": "high",
+  "certified_converged": true,
+  "claimed_converged_but_exploitable": false,
+  "claim_minus_certified_exploitability": -1.590304358469949e-19,
+  "claim_minus_certified_value_p0": 0.0
+ }
+}

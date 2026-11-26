@@ -1,0 +1,46 @@
+{
+ "info_leak_key": {
+  "old": "        return node[\"infoset\"]\n",
+  "new": "        return node[\"infoset\"] + \"|\" + \"/\".join(path)\n"
+ },
+ "reach_per_node": {
+  "old": "            r[pl] = reach[pl] * sigma[a]\n",
+  "new": "            r[pl] = sigma[a]\n"
+ },
+ "avg_by_prior_mass": {
+  "old": "                ss[ix[a]] += w * reach[pl] * sigma[a]\n",
+  "new": "                ss[ix[a]] += w * reach[2] * sigma[a]\n"
+ },
+ "avg_gated_on_opp_reach": {
+  "old": "        else:\n            w = self.avg_weight()\n",
+  "new": "        elif reach[p] > 0:\n            w = self.avg_weight()\n"
+ },
+ "current_not_average": {
+  "old": "    def output_strategy(self, k: str) -> list[float]:\n        return self.average(k)\n",
+  "new": "    def output_strategy(self, k: str) -> list[float]:\n        return self.current(k)\n"
+ },
+ "regret_floor_instantaneous": {
+  "old": "                    reg[a] += d[a]\n",
+  "new": "                    reg[a] += max(d[a], 0.0)\n"
+ },
+ "opp_reach_omitted": {
+  "old": "            cf = reach[1 - p] * reach[2]\n",
+  "new": "            cf = reach[2]\n"
+ },
+ "chance_ignored": {
+  "old": "        return [(num(o[\"prob\"]), o[\"child\"], o[\"label\"]) for o in node[\"outcomes\"]]\n",
+  "new": "        return [(1.0 / len(node[\"outcomes\"]), o[\"child\"], o[\"label\"]) for o in node[\"outcomes\"]]\n"
+ },
+ "players_off_by_one": {
+  "old": "        for p in range(NUM_PLAYERS):\n",
+  "new": "        for p in range(1, NUM_PLAYERS):\n"
+ },
+ "regret_inplace": {
+  "old": "            acc = pending.setdefault(k, [0.0] * len(vals))\n",
+  "new": "            acc = self.regret[k]\n"
+ },
+ "color_swap_imposed": {
+  "old": "        return node[\"infoset\"]\n\n    def act_label(self, node: dict, label: str) -> str:\n        \"\"\"The row label of one of the node's actions. Nodes that share a key share a row, matched\n        by label, so they may list their actions in any order.\"\"\"\n        return label\n",
+  "new": "        return min(node[\"infoset\"], self.imposed_swap(node[\"infoset\"]))\n\n    @staticmethod\n    def imposed_swap(s: str) -> str:\n        return \" \".join(t if \"|start:\" in t else color_swap(t) for t in s.split(\" \"))\n\n    def act_label(self, node: dict, label: str) -> str:\n        \"\"\"The imposed swap renames the actions of the image infoset to match its row.\"\"\"\n        if self.imposed_swap(node[\"infoset\"]) < node[\"infoset\"]:\n            return color_swap(label)\n        return label\n"
+ }
+}

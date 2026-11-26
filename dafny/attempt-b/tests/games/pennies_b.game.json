@@ -1,0 +1,76 @@
+{
+ "format": "bluff-game-v1",
+ "name": "pennies_b",
+ "description": "matching pennies, written for attempt-b",
+ "root": 0,
+ "nodes": [
+  {
+   "kind": "decision",
+   "player": 0,
+   "infoset": "p0",
+   "actions": [
+    {
+     "label": "H",
+     "child": 1
+    },
+    {
+     "label": "T",
+     "child": 4
+    }
+   ],
+   "id": 0
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "p1",
+   "actions": [
+    {
+     "label": "H",
+     "child": 2
+    },
+    {
+     "label": "T",
+     "child": 3
+    }
+   ],
+   "id": 1
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "1",
+   "id": 2
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-1",
+   "id": 3
+  },
+  {
+   "kind": "decision",
+   "player": 1,
+   "infoset": "p1",
+   "actions": [
+    {
+     "label": "H",
+     "child": 5
+    },
+    {
+     "label": "T",
+     "child": 6
+    }
+   ],
+   "id": 4
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "-1",
+   "id": 5
+  },
+  {
+   "kind": "terminal",
+   "payoff_p0": "1",
+   "id": 6
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "format": "bluff-game-v1",
+ "name": "matching_pennies",
+ "description": "Matching pennies as a tree: p0 picks H or T, p1 picks H or T in one infoset without seeing p0's choice (simultaneous move). p0 wins 1 on a match, loses 1 otherwise.",
+ "known_value_p0": "0",
+ "known_value_source": "symmetric zero-sum game; equilibrium is uniform for both players (von Neumann)",
+ "root": 0,
+ "nodes": [
+  {
+   "id": 0,
+   "kind": "decision",
+   "player": 0,
+   "infoset": "P0",
+   "actions": [
+    {
+     "label": "H",
+     "child": 1
+    },
+    {
+     "label": "T",
+     "child": 4
+    }
+   ]
+  },
+  {
+   "id": 1,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1",
+   "actions": [
+    {
+     "label": "H",
+     "child": 2
+    },
+    {
+     "label": "T",
+     "child": 3
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  },
+  {
+   "id": 3,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 4,
+   "kind": "decision",
+   "player": 1,
+   "infoset": "P1",
+   "actions": [
+    {
+     "label": "H",
+     "child": 5
+    },
+    {
+     "label": "T",
+     "child": 6
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "kind": "terminal",
+   "payoff_p0": "-1"
+  },
+  {
+   "id": 6,
+   "kind": "terminal",
+   "payoff_p0": "1"
+  }
+ ]
+}

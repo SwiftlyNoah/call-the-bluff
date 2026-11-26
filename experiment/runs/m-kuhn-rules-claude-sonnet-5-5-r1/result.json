@@ -1,0 +1,200 @@
+{
+ "format": "bluff-experiment-trial-v1",
+ "run_id": "m-kuhn-rules-claude-sonnet-5-5-r1",
+ "game": "kuhn",
+ "variant": "rules",
+ "model_requested": "claude-sonnet-5-5",
+ "game_file": "games/out/kuhn.game.json",
+ "game_file_sha256": "31829086a5a36abb678ec0384bcfeea6229fe60983983df1be60a265fa79b068",
+ "prompt_file": "experiment/prompts/kuhn_rules.md",
+ "prompt_sha256": "390ab11a640771b3905f8bb8007a0ccf83921a49e1b17cd3227d20a1732734e0",
+ "pot": 2,
+ "timeout_s": 1800,
+ "max_budget_usd": 5.0,
+ "started_at": "2026-11-20T19:40:22-05:00",
+ "isolated_workspace": "/var/folders/km/r10tsfhx0815z44_014w924r0000gn/T/cfr-6f6hzr88/workspace",
+ "agent": {
+  "exit_code": 0,
+  "timed_out": false,
+  "wall_seconds": 30.7,
+  "stderr_tail": "",
+  "is_error": false,
+  "subtype": "success",
+  "num_turns": 3,
+  "duration_ms": 29602,
+  "total_cost_usd": 0.0743554,
+  "usage": {
+   "input_tokens": 6,
+   "cache_creation_input_tokens": 11054,
+   "cache_read_input_tokens": 70874,
+   "output_tokens": 2304,
+   "output_tokens_details": {
+    "thinking_tokens": 110
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 11054,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 426,
+     "cache_read_input_tokens": 26693,
+     "cache_creation_input_tokens": 2266,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 2266
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard",
+   "fallback_credit": null
+  },
+  "models_used": [
+   "claude-sonnet-5-5"
+  ],
+  "model_usage": {
+   "claude-sonnet-5-5": {
+    "inputTokens": 6,
+    "outputTokens": 2304,
+    "cacheReadInputTokens": 70874,
+    "cacheCreationInputTokens": 11054,
+    "webSearchRequests": 0,
+    "costUSD": 0.0743554,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 128000,
+    "thinkingTokens": 110,
+    "cacheCreationEphemeral5mInputTokens": 0,
+    "cacheCreationEphemeral1hInputTokens": 11054,
+    "canonicalModel": "claude-sonnet-5-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "tool_calls": 2,
+  "snoop_hits": []
+ },
+ "ended_at": "2026-11-20T19:40:53-05:00",
+ "claim": {
+  "claim_converged": true,
+  "claimed_exploitability": 0.000475,
+  "claimed_value_p0": -0.0555553,
+  "confidence": "high",
+  "notes": "Vanilla CFR, 200k iterations, average strategy. Exploitability computed exactly by enumerating the tree and best-responding. Value matches the theoretical -1/18. Some probabilities are near 0 but not exactly 0 (about 1e-6), which is expected from averaging."
+ },
+ "claim_source": "final_reply",
+ "agent_files": [
+  "kuhn_cfr.py",
+  "strategy.json"
+ ],
+ "grading": {
+  "graded_at": "2026-11-20T19:40:53-05:00",
+  "strategy_found": true,
+  "strict": {
+   "checker": "bin/bluff",
+   "command": "bin/bluff check games/out/kuhn.game.json experiment/runs/m-kuhn-rules-claude-sonnet-5-5-r1/agent_files/strategy.json",
+   "exit_code": 0,
+   "stderr_tail": "",
+   "verdict": {
+    "format": "bluff-verdict-v1",
+    "game": "kuhn",
+    "value_p0": "-131317791915864551241713447807265386427169435741586857975059704867652770969628625334781416040585560653307272259682131649995811948635639/2363730912872878635478182763674123482586573275657263091241188431099957486864111836221871127980274288435561158437275993981837680000000000",
+    "br_value_p0": "-155091195685143482353/2823529411764705600000",
+    "br_value_p1": "55878746476277285929912234182362417690926093756564746667483/1000000000000000052518699999999995551122000000000029925200000",
+    "nash_conv": "2236740402640692056304338947233833440389894097129276781714557771650398341/2352941176470588123573411764705859527651764705883470148235294117640017600000",
+    "exploitability": "2236740402640692056304338947233833440389894097129276781714557771650398341/4705882352941176247146823529411719055303529411766940296470588235280035200000",
+    "exploitability_float": 0.0004753073355611471,
+    "best_response_p0": {
+     "J:cb": "fold",
+     "J:": "check",
+     "Q:cb": "fold",
+     "Q:": "check",
+     "K:cb": "fold",
+     "K:": "bet"
+    },
+    "best_response_p1": {
+     "Q:c": "check",
+     "Q:b": "fold",
+     "K:c": "bet",
+     "K:b": "call",
+     "J:c": "check",
+     "J:b": "fold"
+    },
+    "verified": true
+   }
+  },
+  "coverage": {
+   "game_infosets": 12,
+   "agent_infosets": 12,
+   "matched": 12,
+   "missing": 0,
+   "bad_rows": 0,
+   "extra": 0,
+   "coverage": 1.0,
+   "missing_sample": [],
+   "bad_sample": [],
+   "extra_sample": []
+  },
+  "filled": {
+   "checker": "bin/bluff",
+   "command": "bin/bluff check games/out/kuhn.game.json experiment/runs/m-kuhn-rules-claude-sonnet-5-5-r1/graded_strategy_filled.json",
+   "exit_code": 0,
+   "stderr_tail": "",
+   "verdict": {
+    "format": "bluff-verdict-v1",
+    "game": "kuhn",
+    "value_p0": "-131317791915864551241713447807265386427169435741586857975059704867652770969628625334781416040585560653307272259682131649995811948635639/2363730912872878635478182763674123482586573275657263091241188431099957486864111836221871127980274288435561158437275993981837680000000000",
+    "br_value_p0": "-155091195685143482353/2823529411764705600000",
+    "br_value_p1": "55878746476277285929912234182362417690926093756564746667483/1000000000000000052518699999999995551122000000000029925200000",
+    "nash_conv": "2236740402640692056304338947233833440389894097129276781714557771650398341/2352941176470588123573411764705859527651764705883470148235294117640017600000",
+    "exploitability": "2236740402640692056304338947233833440389894097129276781714557771650398341/4705882352941176247146823529411719055303529411766940296470588235280035200000",
+    "exploitability_float": 0.0004753073355611471,
+    "best_response_p0": {
+     "J:cb": "fold",
+     "J:": "check",
+     "Q:cb": "fold",
+     "Q:": "check",
+     "K:cb": "fold",
+     "K:": "bet"
+    },
+    "best_response_p1": {
+     "Q:c": "check",
+     "Q:b": "fold",
+     "K:c": "bet",
+     "K:b": "call",
+     "J:c": "check",
+     "J:b": "fold"
+    },
+    "verified": true
+   }
+  }
+ },
+ "summary": {
+  "agent_finished": true,
+  "strategy_found": true,
+  "strict_accepted": true,
+  "graded_on": "strict",
+  "checker": "bin/bluff",
+  "verified_checker": true,
+  "coverage": 1.0,
+  "exploitability": "2236740402640692056304338947233833440389894097129276781714557771650398341/4705882352941176247146823529411719055303529411766940296470588235280035200000",
+  "exploitability_float": 0.0004753073355611471,
+  "value_p0": "-131317791915864551241713447807265386427169435741586857975059704867652770969628625334781416040585560653307272259682131649995811948635639/2363730912872878635478182763674123482586573275657263091241188431099957486864111836221871127980274288435561158437275993981837680000000000",
+  "threshold_1pct_pot": 0.02,
+  "claim_converged": true,
+  "claimed_exploitability": 0.000475,
+  "claimed_value_p0": -0.0555553,
+  "confidence": "high",
+  "certified_converged": true,
+  "claimed_converged_but_exploitable": false,
+  "claim_minus_certified_exploitability": -3.073355611470747e-07,
+  "claim_minus_certified_value_p0": 5.047925653867136e-09
+ }
+}
